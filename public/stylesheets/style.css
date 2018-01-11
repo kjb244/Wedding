@@ -1,0 +1,127 @@
+nav {
+    margin: 20px;
+}
+
+nav .wrapper {
+    display: flex;
+}
+
+nav h5{
+    font-family: 'Pacifico', cursive;
+    font-size: 26px;
+}
+
+nav p{
+    margin-bottom: 0;
+}
+
+nav .date{
+    font-family: 'Petit Formal Script';
+
+}
+
+
+nav ul {
+    display: flex;
+    margin-left: auto;
+}
+
+nav li:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+nav li.show-border:after {
+    width: 100%;
+    background: #008CBA;
+}
+
+
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul >li:not(:last-child) {
+    margin-right: 30px;
+}
+
+.rsvp .add-another-person, .rsvp .remove-person{
+    float: right;
+}
+
+.rsvp .button{
+    width: 100%;
+}
+
+.rsvp p{
+    text-align: center;
+    font-size: 25px;
+}
+
+.rsvp .checkbox-on-off{
+    display: flex;
+    align-items: center;
+}
+
+.home .img-container{
+    background-image: url('/images/KR_Sitting.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+
+
+}
+
+.home .card{
+    padding: 20px;
+    background-color: white;
+    width: 49.5% !important;
+    border-radius: 7px;
+}
+
+.home .card .header h6{
+    color: #ff6756;
+}
+
+.home .card .main p{
+    padding-top: 20px;
+    border-top: 1px solid #ff9384;
+}
+
+.home .section-cards{
+    margin-top: -80px !important;
+}
+
+
+
+.animate-switch.ng-animate {
+  	transition:opacity cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s, 
+  	            left cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+	
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+}
+
+.animate-switch.ng-enter {
+  left:100%;
+}
+
+.animate-switch.ng-leave,
+.animate-switch.ng-enter.ng-enter-active {
+  left:0;
+}
+
+.animate-switch.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+

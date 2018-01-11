@@ -1,0 +1,30 @@
+<script src="../../public/javascripts/services.js"></script>
+<nav>
+    <div class="wrapper">
+        <div>
+            <h5>Kevin & Robyn</h5>
+            <p class="date">October 27, 2018</p>
+            <p class="location">Charlotte, NC</p>
+        </div>
+        <ul>
+            <li  ng-class="{'show-border':menuChange=='Home'}">
+                <a href='javascript:void(0);' ng-click="menuChange='Home'">Home</a>
+            </li>
+            <li ng-class="{'show-border':menuChange=='Story'}">
+                <a href='javascript:void(0);' ng-click="menuChange='Story'">Story</a>
+            </li>
+            <li ng-class="{'show-border':menuChange=='Schedule'}">
+                <a href='javascript:void(0);' ng-click="menuChange='Schedule'">Events Schedule</a>
+            </li>
+            <li ng-class="{'show-border':menuChange=='Registry'}">
+                <a href='javascript:void(0);' ng-click="menuChange='Registry'">Registry</a>
+            </li>
+            <li ng-class="{'show-border':menuChange=='RSVP'}">
+                <a href='javascript:void(0);' ng-click="menuChange='RSVP'">RSVP</a>
+            </li>
+
+
+        </ul>
+    </div>
+
+</nav>

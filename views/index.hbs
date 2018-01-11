@@ -1,0 +1,33 @@
+<div ng-app="myApp" ng-controller="ctrlMain">
+    <div class="row collapse">
+        <div class="small-12 columns">
+            <nav-bar-dir/>
+        </div>
+    </div>
+
+    <div class="row collapse">
+        <div class="small-12 columns">
+            <div class="switch-angular" ng-switch on="menuChange">
+                <div ng-switch-when="Home" class="animate-switch home">
+                    {{> mainImage}}
+                    {{> storyContent}}
+                </div>
+                <div ng-switch-when="Story" class="animate-switch">
+                    there
+                </div>
+                <div ng-switch-when="RSVP" class="animate-switch">
+                    <div class="row">
+                        <div class="medium-8 medium-centered small-12 columns">
+                            <rsvp-dir/>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+

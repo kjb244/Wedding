@@ -1,6 +1,6 @@
 
 
-app.directive('navBarDir', function(){
+app.directive('navBarDir', function($timeout){
   return {
     restrict: 'EA',
     scope: false,
@@ -8,11 +8,34 @@ app.directive('navBarDir', function(){
     link: function($scope, elem, attrs){
     },
     controller: function($scope){
+        $scope.menuChangeClick = function(inp){
+            var oldMenu = $scope.menuChange;
+            $scope.menuChange = inp;
+            if(oldMenu === inp) return;
+            var body = document.querySelector('body');
+            body.classList.add('hide-scroll');
+            $timeout(function(){
+                body.classList.remove('hide-scroll');
+            },700);
+        }
 
     }
   };
 });
 
+app.directive('storyCardsDir', function(){
+    return {
+        restrict: 'EA',
+        scope: false,
+        templateUrl: 'directive_templates/story-cards.html',
+        link: function($scope, elem, attrs){
+        },
+        controller: function($scope){
+
+
+        }
+    };
+});
 
 
 app.directive('rsvpDir', function(){

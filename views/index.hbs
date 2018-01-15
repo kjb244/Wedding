@@ -7,15 +7,14 @@
 
     <div class="row collapse">
         <div class="small-12 columns">
-            <div class="switch-angular" ng-switch on="menuChange">
-                <div ng-switch-when="Home" class="animate-switch home">
-                    {{> mainImage}}
-                    {{> storyContent}}
+            <div class="animate-switch-container" ng-switch on="menuChange">
+                <div ng-switch-when="Home" class="animate-switch home" data-section="home">
+                    <story-cards-dir>
                 </div>
                 <div ng-switch-when="Story" class="animate-switch">
                     there
                 </div>
-                <div ng-switch-when="RSVP" class="animate-switch">
+                <div ng-switch-when="RSVP" class="animate-switch" data-section="rsvp">
                     <div class="row">
                         <div class="medium-8 medium-centered small-12 columns">
                             <rsvp-dir/>

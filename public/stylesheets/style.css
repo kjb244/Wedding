@@ -1,3 +1,7 @@
+body.hide-scroll {
+    overflow-y: hidden;
+}
+
 nav {
     margin: 20px;
 }
@@ -7,7 +11,7 @@ nav .wrapper {
 }
 
 nav h5{
-    font-family: 'Pacifico', cursive;
+    font-family: 'Ruluko', sans-serif;
     font-size: 26px;
 }
 
@@ -15,8 +19,8 @@ nav p{
     margin-bottom: 0;
 }
 
-nav .date{
-    font-family: 'Petit Formal Script';
+nav .date, nav .location{
+    font-family: 'Ruluko', sans-serif;
 
 }
 
@@ -51,23 +55,81 @@ nav ul >li:not(:last-child) {
     margin-right: 30px;
 }
 
-.rsvp .add-another-person, .rsvp .remove-person{
+[data-section="rsvp"] > .row, [data-section="home"] > .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+[data-section="rsvp"] .add-another-person, [data-section="rsvp"] .remove-person{
     float: right;
 }
 
-.rsvp .button{
+.animate-switch-container{
+    position: relative;
+}
+
+.animate-switch.ng-animate {
+    transition:opacity cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s,
+    left cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+
+.animate-switch.ng-enter {
+    left:100%;
+
+}
+
+.animate-switch.ng-leave,
+.animate-switch.ng-enter.ng-enter-active {
+    left:0;
+}
+
+.animate-switch.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+
+.repeat-add-people {
+    opacity: 1;
+}
+.repeat-add-people.ng-enter {
+
+    transition: all 1s ease-in;
+    opacity: 0;
+}
+
+.repeat-add-people.ng-enter-active {
+    opacity: 1;
+
+}
+
+.repeat-add-people.ng-leave {
+    transition: all .3s linear;
+    margin-left: 0;
+    margin-right: 0;
+
+}
+
+.repeat-add-people.ng-leave.ng-leave-active {
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
+[data-section="rsvp"] .button{
     width: 100%;
 }
 
-.rsvp p{
+[data-section="rsvp"] .header p{
     text-align: center;
     font-size: 25px;
 }
 
-.rsvp .checkbox-on-off{
-    display: flex;
-    align-items: center;
-}
+
 
 .home .img-container{
     background-image: url('/images/KR_Sitting.jpg');
@@ -101,27 +163,4 @@ nav ul >li:not(:last-child) {
 
 
 
-.animate-switch.ng-animate {
-  	transition:opacity cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s, 
-  	            left cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-	
-	position:absolute;
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-}
-
-.animate-switch.ng-enter {
-  left:100%;
-}
-
-.animate-switch.ng-leave,
-.animate-switch.ng-enter.ng-enter-active {
-  left:0;
-}
-
-.animate-switch.ng-leave.ng-leave-active {
-  opacity: 0;
-}
 

@@ -1,0 +1,43 @@
+{
+  "navBar": {
+    "heading": {
+      "who": "Kevin & Robyn",
+      "date": "October 27, 2018",
+      "location": "Charlotte, NC"
+    },
+    "links": [
+      "Home",
+      "Story",
+      "Events Schedule",
+      "Registry",
+      "RSVP"
+    ]
+  },
+  "routes": {
+    "home": {
+      "backgroundImage": "",
+      "leftPane": {
+        "heading": "Robyn Gonzales",
+        "subHeading": "Good Girl",
+        "para": "lre ld lksj lksj dkjs skdj"
+      },
+      "rightPane": {
+        "heading": "Kevin Bacino",
+        "subHeading": "Bad Boy",
+        "para": "lre ld lksj lksj dkjs skdj"
+      }
+    },
+    "rsvp": {
+      "heading": "We hope you can attend!",
+      "addAnother": "Add Another Person",
+      "inputFirst": {
+        "placeholder": "first name*"
+      },
+      "inputSecond": {
+        "placeholder": "last name*"
+      },
+      "switchButtonLabel": "Attending?",
+      "submitButtonLabel": "Find Invitation"
+    }
+  }
+}

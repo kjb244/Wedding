@@ -3,11 +3,11 @@
 let express = require('express');
 let router = express.Router();
 let path = require('path');
-let homeContent = require('../copy/home.json');
+let content = require('../copy/content.json');
 
 //GETS
 router.get('/', function(req, res, next) {
-  res.render('index', homeContent);
+  res.render('index', {});
 
 });
 
@@ -20,6 +20,10 @@ router.get('/directive_templates/:name', function (req, res) {
   var name = req.params.name;
   res.sendFile(path.join(__dirname, '../', 'views', 'directive_templates', name));
 });
+
+router.get('/getContent', function(req, res){
+  return res.json(content);
+})
 
 
 

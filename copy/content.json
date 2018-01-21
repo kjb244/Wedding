@@ -8,7 +8,8 @@
     "links": [
       "Home",
       "Story",
-      "Events Schedule",
+      "Schedule",
+      "Things to Do",
       "Registry",
       "RSVP"
     ]
@@ -27,6 +28,83 @@
         "para": "lre ld lksj lksj dkjs skdj"
       }
     },
+    "schedule": {
+      "mainHeading": "Schedule",
+      "nodes": [
+        {
+          "sub": {
+            "title": "Ceremony",
+            "subTitle": "xyx yxs",
+            "link": {
+              "title": "4pm"
+            }
+          },
+          "details": {
+            "image": "",
+            "heading": "abc",
+            "paras": [
+              "klajfkdj akdj fasd fsdflk sdlfj sl"
+            ],
+            "aside": {
+              "place": "aksjdf",
+              "mapLink": {
+                "href": "www.google.com",
+                "text": "xyz"
+              },
+              "dress": "xyz"
+            }
+          }
+        },
+        {
+          "sub": {
+            "title": "Ceremony",
+            "subTitle": "xyx yxs",
+            "link": {
+              "title": "4pm"
+            }
+          },
+          "details": {
+            "image": "",
+            "heading": "def",
+            "paras": [
+              "klajfkdj akdj fasd fsdflk sdlfj sl"
+            ],
+            "aside": {
+              "place": "aksjdf",
+              "mapLink": {
+                "href": "www.google.com",
+                "text": "xyz"
+              },
+              "dress": "xyz"
+            }
+          }
+        },
+        {
+          "sub": {
+            "title": "Ceremony",
+            "subTitle": "xyx yxs",
+            "link": {
+              "title": "4pm"
+            }
+          },
+          "details": {
+            "image": "",
+            "heading": "sdf",
+            "paras": [
+              "klajfkdj akdj fasd fsdflk sdlfj sl"
+            ],
+            "aside": {
+              "place": "aksjdf",
+              "mapLink": {
+                "href": "www.google.com",
+                "text": "xyz"
+              },
+              "dress": "xyz"
+            }
+          }
+        }
+      ]
+    },
     "rsvp": {
       "heading": "We hope you can attend!",
       "addAnother": "Add Another Person",
@@ -38,6 +116,116 @@
       },
       "switchButtonLabel": "Attending?",
       "submitButtonLabel": "Find Invitation"
+    },
+    "thingsToDo": {
+      "heading": "akljdf lsjd slkjdf",
+      "headingParas": [
+        "Morbi tellus risus, tempus viverra ultricies eget, malesuada at metus. Vestibulum ornare, arcu vitae pulvinar faucibus, nulla nisl cursus quam, nec tincidunt elit nisl sed eros. Duis lobortis, dui id interdum facilisis, ligula justo gravida tortor, vel finibus lorem arcu at felis. Vivamus ut aliquet leo, quis congue risus. Quisque vehicula condimentum nunc non sodales. Etiam vitae dui gravida, facilisis purus sit amet, ornare ante. Ut a velit in libero iaculis tempor."
+      ],
+      "cards": [
+        {
+          "heading": {
+            "text": "7th Street Market",
+            "link": "http://www.7thstreetpublicmarket.com/"
+          },
+          "para": "Charlotte's own bustling food destination in the heart of the city! Great coffee, food, and even a few bars inside with tvs. Think of a smaller version of Philadelphia's reading terminal market",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "yes"
+            },
+            {
+              "heading": "Time Required",
+              "text": "30 minutes - 2 hours"
+            }
+          ]
+        },
+        {
+          "heading": {
+            "text": "Sycamore Brewery",
+            "link": "https://www.sycamorebrew.com"
+          },
+          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+            },
+            {
+              "heading": "Time Required",
+              "text": "30 minutes to - 3 hours"
+            }
+          ]
+        },
+        {
+          "heading": {
+            "text": "US National White Water Center",
+            "link": "http://usnwc.org"
+          },
+          "para": "If you have the time on Saturday, this is a cool place. Guests can enjoy whitewater rafting and kayaking, flatwater kayaking, stand-up paddle boarding, rock climbing, zip lines, ropes courses, a canopy tour, and mountain biking on our 30+ mile trail system.",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "no - but you can Uber if you don't have a car"
+            },
+            {
+              "heading": "Time Required",
+              "text": "2-4 hours"
+            }
+          ]
+        },
+        {
+          "heading": {
+            "text": "NASCAR Hall of Fame",
+            "link": "http://www.nascarhall.com/"
+          },
+          "para": "We actually have not been here, but have heard it's a fun time. The NASCAR Hall of Fame is an interactive entertainment attraction honoring the history and heritage of NASCAes courses, a canopy tour, and mountain biking on our 30+ mile trail system.",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "yes"
+            },
+            {
+              "heading": "Time Required",
+              "text": "1-3 hours"
+            }
+          ]
+        },
+        {
+          "heading": {
+            "text": "Levine Museum of the new South",
+            "link": "http://www.museumofthenewsouth.org/"
+          },
+          "para": "Levine Museum's mission is to engage a broad-based audience in the exploration and appreciation of the diverse history of the South since the Civil War, with a focus on Charlotte and the surrounding Carolina Piedmont.",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "yes"
+            },
+            {
+              "heading": "Time Required",
+              "text": "1-3 hours"
+            }
+          ]
+        },
+        {
+          "heading": {
+            "text": "Walk Around Uptown",
+            "link": "#"
+          },
+          "para": "Charlotte is a very walkable modern city; also being October, the weather should be nice. The city have everything to offer - from a good Southern Cooked meal at abc, to def",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "yes"
+            },
+            {
+              "heading": "Time Required",
+              "text": "1-3 hours"
+            }
+          ]
+        }
+      ]
     }
   }
 }

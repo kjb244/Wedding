@@ -12,6 +12,34 @@ app.service('utilityFunctions', function(){
     return false;
   }
 
+  this.getPosition = function(element){
+      var xPosition = 0;
+      var yPosition = 0;
+
+      while(element) {
+          xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+          yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+          element = element.offsetParent;
+      }
+
+      return { x: xPosition, y: yPosition };
+  }
+
+  this.debounce = function(func, wait, immediate){
+      var timeout;
+      return function() {
+          var context = this, args = arguments;
+          var later = function() {
+              timeout = null;
+              if (!immediate) func.apply(context, args);
+          };
+          var callNow = immediate && !timeout;
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+          if (callNow) func.apply(context, args);
+      };
+  }
+
 });
 
 

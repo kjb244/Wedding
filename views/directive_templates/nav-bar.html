@@ -1,5 +1,5 @@
 <nav>
-    <div class="wrapper">
+    <div class="wrapper show-for-medium">
         <div>
             <h5>{{copy.navBar.heading.who}}</h5>
             <p class="date">{{copy.navBar.heading.date}}</p>
@@ -10,6 +10,24 @@
                 <a href='javascript:void(0);' ng-click="menuChangeClick(rec)">{{rec}}</a>
             </li>
         </ul>
+    </div>
+    <div class="show-for-small-only">
+        <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
+            <button class="menu-icon" ng-init="menuClick=false" ng-click="menuClick = !menuClick" type="button" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+
+        <div class="top-bar" ng-class="{'open':menuClick}">
+            <div class="top-bar-child">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li ng-repeat="rec in copy.navBar.links" >
+                        <a href='javascript:void(0);' ng-click="menuChangeClick(rec)">
+                            <span ng-class="{'show-border': menuChange==rec}">{{rec}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
 </nav>

@@ -2,35 +2,40 @@ body.hide-scroll {
     overflow-y: hidden;
 }
 
-nav {
+.row .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+nav .show-for-medium {
     margin: 20px;
 }
 
-nav .wrapper {
+nav .show-for-medium.wrapper {
     display: flex;
 }
 
-nav h5{
+nav .show-for-medium h5{
     font-family: 'Ruluko', sans-serif;
     font-size: 26px;
 }
 
-nav p{
+nav .show-for-medium p{
     margin-bottom: 0;
 }
 
-nav .date, nav .location{
+nav .show-for-medium .date, nav .location{
     font-family: 'Ruluko', sans-serif;
 
 }
 
 
-nav ul {
+nav .show-for-medium ul {
     display: flex;
     margin-left: auto;
 }
 
-nav li:after {
+nav .show-for-medium li:after, nav .show-for-small-only li span:after {
     content: '';
     display: block;
     margin: auto;
@@ -40,25 +45,125 @@ nav li:after {
     transition: width .5s ease, background-color .5s ease;
 }
 
-nav li.show-border:after {
+nav .show-for-medium li.show-border:after, nav .show-for-small-only li span.show-border:after {
     width: 100%;
     background: #008CBA;
 }
 
+nav .show-for-small-only li span{
+    display: inline-block;
+}
 
-
-nav ul li {
+nav .show-for-medium ul li {
     list-style-type: none;
 }
 
-nav ul >li:not(:last-child) {
+nav .show-for-medium ul >li:not(:last-child) {
     margin-right: 30px;
 }
 
-[data-section="rsvp"] > .row, [data-section="home"] > .row {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+nav .show-for-small-only .top-bar{
+
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height .4s ease-in, opacity .6s ease-in;
+    padding: 0 !important;
 }
+
+nav .show-for-small-only .top-bar.open{
+    opacity: 1;
+
+    max-height: 120px;
+}
+nav .show-for-small-only .top-bar-child{
+    height: inherit;
+}
+
+
+nav .show-for-small-only .top-bar-child ul li{
+    width: 50%;
+    float: left;
+}
+
+[data-section="schdedule"] .ng-hide-add {
+
+    transition: opacity .5s;
+    opacity: 0;
+}
+
+
+
+[data-section="scheddule"] .ng-hide-remove {
+
+    opacity: 1;
+    transition: opacity .5s ease-in;
+
+}
+
+[data-section="scheddule"] .wrapper-show-hide-node.ng-hide{
+
+    opacity: 0;
+
+}
+
+[data-section="schedule"] .wrapper-show-hide-node{
+    opacity: 1;
+    transition: all 1s ease-in;
+}
+
+[data-section="schedule"] .wrapper-show-hide-node.ng-hide {
+    opacity: 0;
+}
+
+[data-section="things-to-do"] .cards{
+    padding: 10px;
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px 4px #f6f1f1;
+    margin-bottom: 30px;
+    transition: background-color 1s ease-in;
+
+}
+
+[data-section="things-to-do"] .cards:hover{
+    background-color: #f2fbff;
+}
+
+[data-section="things-to-do"] .cards .left-content{
+    margin-right: 10px;
+    flex: 0 0 53%;
+}
+
+[data-section="things-to-do"] .cards .right-content{
+    flex: 0 0 42%;
+    background: url('/images/uswwc.jpg') no-repeat;
+    background-size: cover;
+    max-height: 150px;
+}
+
+[data-section="things-to-do"] .cards h5 {
+    color: #5656df
+}
+
+[data-section="things-to-do"] #map {
+
+    position: sticky !important;
+    margin: auto;
+    top: 0;
+}
+
+@media screen and (max-width: 39.9375em) {
+    [data-section="things-to-do"] #map{
+        width: 96%;
+    }
+}
+
+
+
+
+
+
 
 [data-section="rsvp"] .add-another-person, [data-section="rsvp"] .remove-person{
     float: right;

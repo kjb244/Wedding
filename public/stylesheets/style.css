@@ -86,35 +86,22 @@ nav .show-for-small-only .top-bar-child ul li{
     float: left;
 }
 
-[data-section="schdedule"] .ng-hide-add {
 
-    transition: opacity .5s;
-    opacity: 0;
+
+[data-section="schedule"] .wrapper-show-hide-node.ng-hide-remove{
+
+    animation: opacityZeroToHundred 2s ease-out;
 }
 
-
-
-[data-section="scheddule"] .ng-hide-remove {
-
-    opacity: 1;
-    transition: opacity .5s ease-in;
-
+@keyframes opacityZeroToHundred {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
-[data-section="scheddule"] .wrapper-show-hide-node.ng-hide{
-
-    opacity: 0;
-
-}
-
-[data-section="schedule"] .wrapper-show-hide-node{
-    opacity: 1;
-    transition: all 1s ease-in;
-}
-
-[data-section="schedule"] .wrapper-show-hide-node.ng-hide {
-    opacity: 0;
-}
 
 [data-section="things-to-do"] .cards{
     padding: 10px;

@@ -1,0 +1,60 @@
+[data-section="schedule"] .wrapper-show-hide-node.ng-hide-remove{
+
+    animation: opacityZeroToHundred 2s ease-out;
+}
+
+@keyframes opacityZeroToHundred {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+[data-section="schedule"] .sub-details .data{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+[data-section="schedule"] .sub-details .line-spacer{
+    border-top: 1px solid #c5bbbb;
+    margin-bottom: 10px;
+}
+
+[data-section="schedule"] .sub-details .node-wrapper{
+    position: relative;
+}
+
+[data-section="schedule"] .sub-details .node{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+[data-section="schedule"] .sub-details .node.black::before{
+    content: '';
+    left: calc(50% - 12px);
+    top: -15px;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #777171;
+    display: inline-block;
+
+}
+
+[data-section="schedule"] .sub-details .node.clear::before{
+    content: '';
+    left: calc(50% - 12px);
+    top: -15px;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: white;
+
+}

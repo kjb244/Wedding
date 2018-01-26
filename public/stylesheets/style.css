@@ -88,21 +88,6 @@ nav .show-for-small-only .top-bar-child ul li{
 
 
 
-[data-section="schedule"] .wrapper-show-hide-node.ng-hide-remove{
-
-    animation: opacityZeroToHundred 2s ease-out;
-}
-
-@keyframes opacityZeroToHundred {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-
 [data-section="things-to-do"] .cards{
     padding: 10px;
     display: flex;

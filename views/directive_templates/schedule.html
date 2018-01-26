@@ -2,30 +2,30 @@
     <div class="row details" ng-repeat="rec in copy.routes.schedule.nodes">
         <div class="parent-wrapper-show-hide-node" ng-show="showHideNode($index)">
             <div class="wrapper-show-hide-node" ng-show="showHideNode($index)">
-                <div class="show-for-medium medium-2 columns">
 
-                </div>
-                <div class="small-9 medium-8 columns">
-                    <h6>{{rec.details.heading}}</h6>
+                <div class="small-9 medium-7 medium-push-1 columns">
+                    <h4>{{rec.details.heading}}</h4>
                     <p ng-repeat="paras in rec.details.paras">
                         {{paras}}
                     </p>
                 </div>
-                <div class="small-3 medium-2 columns">
+                <div class="small-3 medium-3 medium-pull-1 columns">
                     <h6>{{rec.details.aside.place}}</h6>
                     <a href="{{rec.details.aside.mapLink.href}}">{{rec.details.aside.mapLink.text}}</a>
-                    <p>Dress: {{rec.details.aside.mapLink.dress}}</p>
+                    <div><b>Dress:</b> {{rec.details.aside.dress}}</div>
                 </div>
             </div>
         </div>
     </div>
     <div class="row sub-details">
-        <div class="small-12 columns">
-            <div ng-repeat="rec in copy.routes.schedule.nodes">
-                <div class="circle"></div>
-                <h6>{{rec.sub.title}}</h6>
-                <p>{{rec.sub.subTitle}}</p>
-                <a href="javascript:void(0)" ng-click="subMenuClick($index)">{{rec.sub.link.title}}</a>
+        <div class="line-spacer small-12 columns"></div>
+        <div class="small-12 columns data">
+            <div ng-repeat="rec in copy.routes.schedule.nodes" class="node-wrapper">
+                <div class="node" ng-class="{black: currIndex == $index, clear: currIndex !== $index}">
+                    <a href="javascript:void(0)" ng-click="subMenuClick($index)">{{rec.sub.title}}</a>
+                    <div>{{rec.sub.subTitle}}</div>
+                    <div>{{rec.sub.subSubTitle}}</div>
+                </div>
             </div>
         </div>
     </div>

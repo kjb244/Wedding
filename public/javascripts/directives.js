@@ -52,6 +52,7 @@ app.directive('scheduleDir', function($timeout){
             }
             $scope.subMenuClick = function(idx){
                 $scope.currIndex = idx;
+
             }
 
         }

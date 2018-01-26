@@ -35,23 +35,21 @@
           "sub": {
             "title": "Ceremony",
             "subTitle": "xyx yxs",
-            "link": {
-              "title": "4pm"
-            }
+            "subSubTitle": "4pm"
           },
           "details": {
             "image": "",
             "heading": "abc",
             "paras": [
-              "klajfkdj akdj fasd fsdflk sdlfj sl"
+              "klajfkdj akdj fasd fsdflk sdlfj sl lasjdf asldfj lasdj fasd jf asdf asdlf jasld fjasdf sadl fasd fas jflk asjfkl as fjasdlf asflajdlaf a"
             ],
             "aside": {
-              "place": "aksjdf",
+              "place": "Levine Museum New South",
               "mapLink": {
                 "href": "www.google.com",
-                "text": "xyz"
+                "text": "Map View"
               },
-              "dress": "xyz"
+              "dress": "casual"
             }
           }
         },
@@ -59,9 +57,7 @@
           "sub": {
             "title": "Ceremony",
             "subTitle": "xyx yxs",
-            "link": {
-              "title": "4pm"
-            }
+            "subSubTitle": "4pm"
           },
           "details": {
             "image": "",
@@ -83,9 +79,7 @@
           "sub": {
             "title": "Ceremony",
             "subTitle": "xyx yxs",
-            "link": {
-              "title": "4pm"
-            }
+            "subSubTitle": "4pm"
           },
           "details": {
             "image": "",

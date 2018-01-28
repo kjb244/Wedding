@@ -4,6 +4,7 @@ let express = require('express');
 let router = express.Router();
 let path = require('path');
 let content = require('../copy/content.json');
+let dbutils = require('../utils/dbutils.js');
 
 //GETS
 router.get('/', function(req, res, next) {
@@ -23,7 +24,17 @@ router.get('/directive_templates/:name', function (req, res) {
 
 router.get('/getContent', function(req, res){
   return res.json(content);
-})
+});
+
+router.get('/lookupByEmail', function(req, res){
+  let email = req.query['email'] || '';
+  console.log('email', email);
+  let prom = dbutils.getByEmail(email);
+  prom.then(function(payload){
+    res.json(payload);
+  })
+
+});
 
 
 

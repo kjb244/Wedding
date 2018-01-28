@@ -1,28 +1,30 @@
 <form name="rsvpForm" novalidate>
     <div class="header">
         <p>{{copy.routes.rsvp.heading}}</p>
-        <a href="javascript:void(0)" class="add-another-person" ng-click="addAnotherPerson()">{{copy.routes.rsvp.addAnother}}</a>
+        <div class="lookup-container">
+            <input type="text" placeholder="lookup by email" name="email" ng-model="formData.email"/>
+            <a class="button" ng-click="lookupByEmail()">Lookup</a>
+        </div>
+
     </div>
-    <div ng-repeat="rec in rsvpFormArray"  class="repeat-add-people">
+    <div ng-show="formData.rsvpFormArray.length" ng-repeat="rec in formData.rsvpFormArray"  class="repeat-add-people">
+        <p ng-if="$index > 0" class="guest-info">Guest Name</p>
         <div class="row collapse">
             <div class="small-12 columns">
-                <a ng-if="$index > 0" href="javascript:void(0)" class="remove-person" ng-click="rsvpFormArray.splice($index,1);">
-                    <i class="fa fa-window-close" aria-hidden="true"></i>
-                </a>
-                <input type="text" placeholder="{{copy.routes.rsvp.inputFirst.placeholder}}" name="personFirstName_{{$index}}" ng-model="rec.firstName" required/>
-                <input type="text" placeholder="{{copy.routes.rsvp.inputSecond.placeholder}}" name="personLastName_{{$index}}" ng-model="rec.lastName" required/>
+                <input type="text" placeholder="{{copy.routes.rsvp.inputFirst.placeholder}}" name="personFirstName_{{$index}}" ng-model="rec.firstName" ng-readonly="rec.readOnly" required/>
+                <input type="text" placeholder="{{copy.routes.rsvp.inputSecond.placeholder}}" name="personLastName_{{$index}}" ng-model="rec.lastName" ng-readonly="rec.readOnly" required/>
             </div>
         </div>
         <p>{{copy.routes.rsvp.switchButtonLabel}}</p>
         <div class="switch large">
-            <input class="switch-input" id="attending-{{$index}}" type="checkbox" ng-model="rec.attending" name="attending-${{index}}">
+            <input class="switch-input" id="attending-{{$index}}" type="checkbox" ng-change="checkboxChanged($index)" ng-model="rec.attending" name="attending-${{index}}">
             <label class="switch-paddle" for="attending-{{$index}}">
-                <span class="show-for-sr">Attending?</span>
+                <span class="show-for-sr">{{copy.routes.rsvp.switchButtonLabel}}</span>
                 <span class="switch-active" aria-hidden="true">Yes</span>
                 <span class="switch-inactive" aria-hidden="true">No</span>
             </label>
         </div>
     </div>
-    <a class="button small" ng-disabled="rsvpForm.$invalid">{{copy.routes.rsvp.submitButtonLabel}}</a>
+    <a  ng-show="formData.rsvpFormArray.length" class="button" ng-disabled="rsvpForm.$invalid">{{copy.routes.rsvp.submitButtonLabel}}</a>
 
 </form>

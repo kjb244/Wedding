@@ -50,9 +50,6 @@
 
 
 
-[data-section="rsvp"] .add-another-person, [data-section="rsvp"] .remove-person{
-    float: right;
-}
 
 .animate-switch-container{
     position: relative;
@@ -84,40 +81,9 @@
     opacity: 0;
 }
 
-.repeat-add-people {
-    opacity: 1;
-}
-.repeat-add-people.ng-enter {
 
-    transition: all 1s ease-in;
-    opacity: 0;
-}
 
-.repeat-add-people.ng-enter-active {
-    opacity: 1;
 
-}
-
-.repeat-add-people.ng-leave {
-    transition: all .3s linear;
-    margin-left: 0;
-    margin-right: 0;
-
-}
-
-.repeat-add-people.ng-leave.ng-leave-active {
-    margin-left: 50%;
-    margin-right: 50%;
-}
-
-[data-section="rsvp"] .button{
-    width: 100%;
-}
-
-[data-section="rsvp"] .header p{
-    text-align: center;
-    font-size: 25px;
-}
 
 
 

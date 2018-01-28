@@ -167,24 +167,39 @@ app.directive('cardsWithMapDir', function(utilityFunctions){
 });
 
 
-app.directive('rsvpDir', function(){
+app.directive('rsvpDir', function(ajaxFetch){
     return {
         restrict: 'EA',
         scope: true,
         templateUrl: 'directive_templates/rsvp.html',
         link: function($scope, elem, attrs){
-            $scope.rsvpFormArray = [{firstName: '', lastName: ''}];
+            $scope.formData = {};
+            $scope.formData.email = null;
+            $scope.formData.rsvpFormArray = [];
 
         },
         controller: function($scope){
-          $scope.addAnotherPerson = function(){
-            if ($scope.rsvpFormArray.length === 1){
-                $scope.rsvpFormArray.push({firstName: '', lastName: ''});
-            }
+          $scope.checkboxChanged = function(idx){
+              var formArr = $scope.formData.rsvpFormArray;
+              if (formArr.length > 1 && formArr[0].attending === false ){
+                  $scope.formData.rsvpFormArray[1].attending = false;
+              }
           }
-
-          $scope.checkFormStatus = function(){
-
+          $scope.lookupByEmail = function(){
+            var email = $scope.formData.email;
+            ajaxFetch.getData('/lookupByEmail', 'GET', {email: email})
+              .then(function(res) {
+                  $scope.formData.rsvpFormArray = [];
+                  res.data.map(function(e){
+                      $scope.formData.rsvpFormArray.push(
+                          {firstName: e.firstName,
+                          lastName: e.lastName,
+                          attending: e.attending,
+                          readOnly: (e.firstName || '').length && (e.lastName || '').length
+                          }
+                      )
+                  })
+              });
 
           }
         }

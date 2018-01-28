@@ -1,0 +1,64 @@
+[data-section="rsvp"] .button{
+    width: 100%;
+}
+
+[data-section="rsvp"] .header p{
+    text-align: center;
+    font-size: 25px;
+}
+
+
+[data-section="rsvp"] .repeat-add-people {
+    opacity: 1;
+}
+[data-section="rsvp"] .repeat-add-people.ng-enter {
+
+    transition: all 1s ease-in;
+    opacity: 0;
+}
+
+[data-section="rsvp"] .repeat-add-people.ng-enter-active {
+    opacity: 1;
+
+}
+
+
+[data-section="rsvp"] .lookup-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+
+
+@media screen and (min-width: 39.9376em) {
+    [data-section="rsvp"] .lookup-container {
+        flex-direction: row;
+    }
+    [data-section="rsvp"] .lookup-container input {
+        flex: 0 0 60%;
+        margin-right: 2%;
+    }
+
+    [data-section="rsvp"] .lookup-container .button{
+        flex: 0 0 38%;
+    }
+
+}
+
+[data-section="rsvp"] .repeat-add-people ~ .repeat-add-people{
+    margin-top: 40px;
+}
+
+[data-section="rsvp"] .guest-info{
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+
+
+
+

@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kjb244/AnuglarSPA"
+    "url": "https://github.com/kjb244/Wedding"
   },
   "dependencies": {
     "angular": "^1.6.4",

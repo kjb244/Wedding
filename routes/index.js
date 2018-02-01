@@ -4,7 +4,7 @@ let express = require('express');
 let router = express.Router();
 let path = require('path');
 let content = require('../copy/content.json');
-let dbutils = require('../utils/dbutils.js');
+let dbutils = require('../utils/dbUtils.js');
 
 //GETS
 router.get('/', function(req, res, next) {

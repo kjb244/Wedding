@@ -1,5 +1,31 @@
 app.service('utilityFunctions', function(){
 
+    this.scrollTop = function(element, speed){
+        speed = speed || 500;
+
+        var finalY = 0;
+        var ping = 20;
+        var doc = document.documentElement;
+        var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+        if (element){
+            var el = document.querySelector(element);
+            if (el){
+                finalY = el.getBoundingClientRect().top;
+            }
+        }
+        var diff = top - finalY;
+        if (diff < 0) return;
+        if (top === 0) return;
+
+        for (var i=0; i< Math.ceil(speed / ping); i++){
+            setTimeout(function(){
+                window.scrollTo(0,top-ping);
+                top = top-ping;
+            }, ping * i);
+        }
+
+    }
+
   this.getQueryParams =  function(){
     var hash = window.location.hash;
     var matchArr = hash.match(/(\?)(.*)/);

@@ -1,10 +1,13 @@
 <form name="rsvpForm" novalidate>
     <div class="header">
         <p>{{copy.routes.rsvp.heading}}</p>
+        <div ng-show="invitationComplete" class="invitation-complete">Invitation Complete!</div>
+
         <div class="lookup-container">
             <input type="text" placeholder="lookup by email" name="email" ng-model="formData.email"/>
             <a class="button" ng-click="lookupByEmail()">Lookup</a>
         </div>
+
 
     </div>
     <div ng-show="formData.rsvpFormArray.length" ng-repeat="rec in formData.rsvpFormArray"  class="repeat-add-people">
@@ -25,6 +28,6 @@
             </label>
         </div>
     </div>
-    <a  ng-show="formData.rsvpFormArray.length" class="button" ng-disabled="rsvpForm.$invalid">{{copy.routes.rsvp.submitButtonLabel}}</a>
+    <a  ng-show="formData.rsvpFormArray.length" class="button" ng-disabled="rsvpForm.$invalid" ng-click="submitData()">{{copy.routes.rsvp.submitButtonLabel}}</a>
 
 </form>

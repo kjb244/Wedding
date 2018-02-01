@@ -167,7 +167,7 @@ app.directive('cardsWithMapDir', function(utilityFunctions){
 });
 
 
-app.directive('rsvpDir', function(ajaxFetch){
+app.directive('rsvpDir', function(ajaxFetch, utilityFunctions){
     return {
         restrict: 'EA',
         scope: true,
@@ -179,12 +179,23 @@ app.directive('rsvpDir', function(ajaxFetch){
 
         },
         controller: function($scope){
+
           $scope.checkboxChanged = function(idx){
               var formArr = $scope.formData.rsvpFormArray;
               if (formArr.length > 1 && formArr[0].attending === false ){
                   $scope.formData.rsvpFormArray[1].attending = false;
               }
           }
+          $scope.submitData = function(){
+              ajaxFetch.getData('/submitRSVPData', 'POST', $scope.formData)
+                  .then(function(res){
+                    if (res.data.rowsUpdated) {
+                        $scope.invitationComplete = true;
+                        utilityFunctions.scrollTop();
+                    }
+                  })
+          }
+
           $scope.lookupByEmail = function(){
             var email = $scope.formData.email;
             ajaxFetch.getData('/lookupByEmail', 'GET', {email: email})
@@ -195,7 +206,7 @@ app.directive('rsvpDir', function(ajaxFetch){
                           {firstName: e.firstName,
                           lastName: e.lastName,
                           attending: e.attending,
-                          readOnly: (e.firstName || '').length && (e.lastName || '').length
+                          readOnly: (e.firstName || '').length > 0 && (e.lastName || '').length > 0
                           }
                       )
                   })

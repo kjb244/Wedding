@@ -47,6 +47,13 @@
 
 }
 
+[data-section="rsvp"] .invitation-complete{
+    font-size: 18px;
+    color: red;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
 [data-section="rsvp"] .repeat-add-people ~ .repeat-add-people{
     margin-top: 40px;
 }

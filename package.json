@@ -5,6 +5,10 @@
   "scripts": {
     "start": "node ./bin/www"
   },
+  "engines": {
+    "node": "6.10.2",
+    "npm": "3.10.10"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/kjb244/Wedding"

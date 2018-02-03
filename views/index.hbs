@@ -5,31 +5,9 @@
         </div>
     </div>
 
-    <div class="row collapse">
-        <div class="small-12 columns">
-            <div class="animate-switch-container" ng-switch on="menuChange">
-                <div ng-switch-when="Home" class="animate-switch home" data-section="home">
-                    <story-cards-dir/>
-                </div>
-                <div ng-switch-when="Story" class="animate-switch">
-                    there
-                </div>
-                <div ng-switch-when="Schedule" class="animate-switch" data-section="schedule">
-                    <schedule-dir/>
-                </div>
-                <div ng-switch-when="Things to Do" class="animate-switch" data-section="things-to-do">
-                    <cards-with-map-dir/>
-                </div>
-                <div ng-switch-when="RSVP" class="animate-switch" data-section="rsvp">
-                    <div class="row">
-                        <div class="medium-8 medium-centered small-12 columns">
-                            <rsvp-dir/>
-                        </div>
-                    </div>
 
-                </div>
-            </div>
-        </div>
+    <div id="main" class="animate-switch-container">
+        <div class="animate-switch" ng-view></div>
     </div>
 
 

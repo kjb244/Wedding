@@ -22,6 +22,11 @@ router.get('/directive_templates/:name', function (req, res) {
   res.sendFile(path.join(__dirname, '../', 'views', 'directive_templates', name));
 });
 
+router.get('/route_templates/:name', function (req, res) {
+    var name = req.params.name;
+    res.sendFile(path.join(__dirname, '../', 'views', 'route_templates', name));
+})
+
 router.get('/getContent', function(req, res){
   return res.json(content);
 });

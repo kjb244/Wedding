@@ -6,8 +6,8 @@
             <p class="location">{{copy.navBar.heading.location}}</p>
         </div>
         <ul>
-            <li ng-repeat="rec in copy.navBar.links" ng-class="{'show-border': menuChange==rec}">
-                <a href='javascript:void(0);' ng-click="menuChangeClick(rec)">{{rec}}</a>
+            <li ng-repeat="rec in copy.navBar.links" ng-class="{'show-border': menuChange==rec.name}">
+                <a href='#{{rec.route}}' ng-click="menuChangeClick(rec.name)">{{rec.name}}</a>
             </li>
         </ul>
     </div>
@@ -21,8 +21,8 @@
             <div class="top-bar-child">
                 <ul class="dropdown menu" data-dropdown-menu>
                     <li ng-repeat="rec in copy.navBar.links" >
-                        <a href='javascript:void(0);' ng-click="menuChangeClick(rec)">
-                            <span ng-class="{'show-border': menuChange==rec}">{{rec}}</span>
+                        <a href='#{{rec.route}}' ng-click="menuChangeClick(rec.name)">
+                            <span ng-class="{'show-border': menuChange==rec.name}">{{rec.name}}</span>
                         </a>
                     </li>
                 </ul>

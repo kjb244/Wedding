@@ -6,12 +6,30 @@
       "location": "Charlotte, NC"
     },
     "links": [
-      "Home",
-      "Story",
-      "Schedule",
-      "Things to Do",
-      "Registry",
-      "RSVP"
+      {
+        "name": "Home",
+        "route": "home"
+      },
+      {
+        "name": "Story",
+        "route": "story"
+      },
+      {
+        "name": "Schedule",
+        "route": "schedule"
+      },
+      {
+        "name": "Things to Do",
+        "route": "things-to-do"
+      },
+      {
+        "name": "Registry",
+        "route": "registry"
+      },
+      {
+        "name": "RSVP",
+        "route": "rsvp"
+      }
     ]
   },
   "routes": {

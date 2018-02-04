@@ -12,6 +12,15 @@
     }
 }
 
+[data-section="schedule"] .image-container{
+    background-image: url('/images/levine_museum.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 81px;
+    padding: 10px;
+}
+
+
 [data-section="schedule"] .sub-details .data{
     display: flex;
     justify-content: space-between;

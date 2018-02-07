@@ -9,17 +9,20 @@
     </div>
     <div class="row">
         <div class="small-12 medium-7 large-6 columns">
-            <div ng-repeat="rec in copy.routes.thingsToDo.cards" ng-mouseover="hoverOnCard($index)" class="cards">
-                <div class="left-content">
+            <div ng-repeat="rec in copy.routes.thingsToDo.cards" ng-mouseover="hoverOnCard($index)" class="cards row">
+                <div class="left-content small-8 medium-7 columns">
                     <h5>
                         <a href="{{rec.heading.link}}">{{rec.heading.text}}</a>
                     </h5>
                     <p>{{rec.para}}</p>
+                </div>
+                <div class="right-content small-4 medium-5 image-container columns">
+
+                </div>
+                <div class="footer-content small-12 columns">
                     <div ng-repeat="rec2 in rec.sideNotes" class="side-notes">
                         <div><b>{{rec2.heading}}&nbsp;</b><span>{{rec2.text}}</span></div>
                     </div>
-                </div>
-                <div class="right-content">
                 </div>
             </div>
         </div>

@@ -3,7 +3,6 @@
 
 [data-section="things-to-do"] .cards{
     padding: 10px;
-    display: flex;
     border-radius: 5px;
     box-shadow: 2px 3px 5px 4px #f6f1f1;
     margin-bottom: 30px;
@@ -15,16 +14,11 @@
     background-color: #f2fbff;
 }
 
-[data-section="things-to-do"] .cards .left-content{
-    margin-right: 10px;
-    flex: 0 0 53%;
-}
 
 [data-section="things-to-do"] .cards .right-content{
-    flex: 0 0 42%;
     background: url('/images/uswwc.jpg') no-repeat;
     background-size: cover;
-    max-height: 150px;
+    height: 120px;
 }
 
 [data-section="things-to-do"] .cards h5 {
@@ -57,7 +51,7 @@
 
 .animate-switch.ng-animate {
     transition:opacity cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s,
-    left cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+    left cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s;
 
     position:absolute;
     top:0;
@@ -68,7 +62,7 @@
 
 
 .animate-switch.ng-enter {
-    left:100%;
+    left:120%;
 
 }
 

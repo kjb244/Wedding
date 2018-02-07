@@ -16,10 +16,13 @@
     background-image: url('/images/levine_museum.png');
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
     height: 81px;
     padding: 10px;
 }
-
+[data-section="schedule"] .sub-details{
+    margin-top: 20px;
+}
 
 [data-section="schedule"] .sub-details .data{
     display: flex;

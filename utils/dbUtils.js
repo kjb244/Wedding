@@ -10,7 +10,7 @@ class dbUtils{
 
     updateByEmail(email, payload){
         return new Promise(function(resolve, reject){
-            console.log(`updating db for email: ${email} with payload: ${payload}`)
+            console.log(`updating db for email: ${email} with payload: ${JSON.stringify(payload)}`)
             client = new pg.Client(conString);
             client.connect();
             let query = null;

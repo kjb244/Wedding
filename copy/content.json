@@ -1,4 +1,15 @@
 {
+  "modal": {
+    "heading": "This site requires a password",
+    "inputs": [
+      {
+        "type": "password",
+        "placeholder": "password",
+        "model": "password"
+      }
+    ],
+    "buttonText": "Submit"
+  },
   "navBar": {
     "heading": {
       "who": "Kevin & Robyn",

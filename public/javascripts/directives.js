@@ -38,6 +38,32 @@ app.directive('storyCardsDir', function(){
     };
 });
 
+app.directive('modalOverlayDir', function(){
+    return {
+        restrict: 'EA',
+        scope: false,
+        templateUrl: 'directive_templates/modal-overlay.html',
+        link: function($scope, elem, attrs){
+        },
+        controller: function($scope){
+            $scope.inputs = [];
+            $scope.showModal=true;
+            $scope.submitModal = function(){
+                if ($scope.inputs[0] === 'test') {
+                    document.querySelector('body .overlay').classList.add('hidden');
+                    $scope.showModal=false;
+                }
+            }
+
+        }
+    };
+});
+
+
+
+
+
+
 app.directive('scheduleDir', function($timeout){
     return {
         restrict: 'EA',

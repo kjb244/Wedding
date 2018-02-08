@@ -53,7 +53,7 @@
           "sub": {
             "title": "Ceremony",
             "subTitle": "xyx yxs",
-            "subSubTitle": "4pm"
+            "subSubTitle": "5:30pm"
           },
           "details": {
             "image": "",
@@ -73,9 +73,9 @@
         },
         {
           "sub": {
-            "title": "Ceremony",
+            "title": "Cocktail Hour",
             "subTitle": "xyx yxs",
-            "subSubTitle": "4pm"
+            "subSubTitle": "6pm-7pm"
           },
           "details": {
             "image": "",
@@ -95,9 +95,9 @@
         },
         {
           "sub": {
-            "title": "Ceremony",
+            "title": "Reception",
             "subTitle": "xyx yxs",
-            "subSubTitle": "4pm"
+            "subSubTitle": "7pm-10pm"
           },
           "details": {
             "image": "",

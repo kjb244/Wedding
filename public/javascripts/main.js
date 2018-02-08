@@ -32,7 +32,7 @@ app.config(function($routeProvider) {
 
 
 app.controller("ctrlMain", function($scope,ajaxFetch ) {
-    $scope.menuChange = 'Home';
+    $scope.menuChange = window.location.hash.replace(/#\//g,'');
     if(!document.querySelector('body').classList.contains('content-loaded')) {
         ajaxFetch.getData('/getContent')
             .then(function (res) {

@@ -2,11 +2,9 @@
   "modal": {
     "heading": "This site requires a password",
     "inputs": [
-      {
-        "type": "password",
-        "placeholder": "password",
-        "model": "password"
-      }
+      {"type": "password",
+      "placeholder": "password",
+      "model": "password"}
     ],
     "buttonText": "Submit"
   },
@@ -63,12 +61,12 @@
         {
           "sub": {
             "title": "Ceremony",
-            "subTitle": "xyx yxs",
+            "subTitle": "Saturday",
             "subSubTitle": "5:30pm"
           },
           "details": {
             "image": "",
-            "heading": "abc",
+            "heading": "Ceremony",
             "paras": [
               "klajfkdj akdj fasd fsdflk sdlfj sl lasjdf asldfj lasdj fasd jf asdf asdlf jasld fjasdf sadl fasd fas jflk asjfkl as fjasdlf asflajdlaf a"
             ],
@@ -85,12 +83,12 @@
         {
           "sub": {
             "title": "Cocktail Hour",
-            "subTitle": "xyx yxs",
+            "subTitle": "Saturday",
             "subSubTitle": "6pm-7pm"
           },
           "details": {
             "image": "",
-            "heading": "def",
+            "heading": "Cocktail Hour",
             "paras": [
               "klajfkdj akdj fasd fsdflk sdlfj sl"
             ],
@@ -107,12 +105,12 @@
         {
           "sub": {
             "title": "Reception",
-            "subTitle": "xyx yxs",
+            "subTitle": "Saturday",
             "subSubTitle": "7pm-10pm"
           },
           "details": {
             "image": "",
-            "heading": "sdf",
+            "heading": "Reception",
             "paras": [
               "klajfkdj akdj fasd fsdflk sdlfj sl"
             ],
@@ -138,7 +136,7 @@
         "placeholder": "last name*"
       },
       "switchButtonLabel": "Attending?",
-      "submitButtonLabel": "Find Invitation"
+      "submitButtonLabel": "Submit Invitation"
     },
     "thingsToDo": {
       "heading": "akljdf lsjd slkjdf",

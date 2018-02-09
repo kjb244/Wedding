@@ -1,3 +1,12 @@
+[data-section="schedule"] section{
+    margin: 10px;
+}
+
+[data-section="schedule"] .header-details{
+    border: 1px solid #d7c3c3;
+    padding: 20px;
+}
+
 [data-section="schedule"] .wrapper-show-hide-node.ng-hide-remove{
 
     animation: opacityZeroToHundred 2s ease-out;
@@ -22,6 +31,10 @@
 }
 [data-section="schedule"] .sub-details{
     margin-top: 20px;
+}
+
+[data-section="schedule"] .sub-details p{
+    margin: 0;
 }
 
 [data-section="schedule"] .sub-details .data{

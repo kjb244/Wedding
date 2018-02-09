@@ -11,15 +11,21 @@ section.modal-wrapper .modal{
 }
 
 section.modal-wrapper .modal-bootstrapped{
-    animation: topDown 1s ease-out forwards;
+    animation: topDown .8s ease-out forwards;
 }
 
 @keyframes topDown {
     0%{
-        top: 0;
+        top: -600px;
+        opacity: 0;
+    }
+    80%{
+        top: 180px;
+        opacity: .8;
     }
     100%{
         top: 100px;
+        opacity: 1;
     }
 }
 

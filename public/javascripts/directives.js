@@ -227,7 +227,9 @@ app.directive('rsvpDir', function(ajaxFetch, utilityFunctions){
             ajaxFetch.getData('/lookupByEmail', 'GET', {email: email})
               .then(function(res) {
                   $scope.formData.rsvpFormArray = [];
+                  console.log(res.data);
                   res.data.map(function(e){
+                      if (e.dateUpdate) $scope.invitationComplete = true;
                       $scope.formData.rsvpFormArray.push(
                           {firstName: e.firstName,
                           lastName: e.lastName,

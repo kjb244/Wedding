@@ -2,6 +2,22 @@ body.hide-scroll {
     overflow-y: hidden;
 }
 
+body h4, body h6, body p, body a{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+body p{
+    font-weight: 300;
+    font-size: 14px;
+}
+body h4{
+    font-size: 18px;
+}
+body h6{
+    font-size: 16px;
+}
+
 .overlay{
     z-index: 10;
     height: 100%;

@@ -1,4 +1,6 @@
-
+[data-section="menu"] nav a{
+    font-size: 17px;
+}
 [data-section="menu"] nav .show-for-medium {
     margin: 20px;
 }

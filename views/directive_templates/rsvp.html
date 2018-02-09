@@ -1,7 +1,7 @@
 <form name="rsvpForm" novalidate>
     <div class="header">
         <p>{{copy.routes.rsvp.heading}}</p>
-        <div ng-show="invitationComplete" class="invitation-complete">Invitation Complete!</div>
+        <p ng-show="invitationComplete" class="invitation-complete">Invitation Complete!</p>
 
         <div class="lookup-container">
             <input type="text" placeholder="lookup by email" name="email" ng-model="formData.email"/>

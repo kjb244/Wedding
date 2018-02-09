@@ -1,22 +1,24 @@
 <section>
-    <div class="row details" ng-repeat="rec in copy.routes.schedule.nodes">
-        <div class="parent-wrapper-show-hide-node" ng-show="showHideNode($index)">
-            <div class="wrapper-show-hide-node" ng-show="showHideNode($index)">
-                <div class="medium-3 small-12 columns">
-                    <div class="image-container">
+    <div class="header-details">
+        <div class="row details" ng-repeat="rec in copy.routes.schedule.nodes">
+            <div class="parent-wrapper-show-hide-node" ng-show="showHideNode($index)">
+                <div class="wrapper-show-hide-node" ng-show="showHideNode($index)">
 
+                    <div class="small-12 medium-9 columns">
+                        <h4>{{rec.details.heading}}</h4>
+                        <p ng-repeat="paras in rec.details.paras">
+                            {{paras}}
+                        </p>
+                        <h6>{{rec.details.aside.place}}</h6>
+                        <a class="button small" href="{{rec.details.aside.mapLink.href}}">{{rec.details.aside.mapLink.text}}</a>
+                        <p><b>Dress:</b> {{rec.details.aside.dress}}</p>
                     </div>
-                </div>
-                <div class="small-12 medium-6 columns">
-                    <h4>{{rec.details.heading}}</h4>
-                    <p ng-repeat="paras in rec.details.paras">
-                        {{paras}}
-                    </p>
-                </div>
-                <div class="small-12 medium-3 columns">
-                    <h6>{{rec.details.aside.place}}</h6>
-                    <a href="{{rec.details.aside.mapLink.href}}">{{rec.details.aside.mapLink.text}}</a>
-                    <div><b>Dress:</b> {{rec.details.aside.dress}}</div>
+                    <div class="medium-3 small-12 columns">
+                        <div class="image-container">
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -27,8 +29,8 @@
             <div ng-repeat="rec in copy.routes.schedule.nodes" class="node-wrapper">
                 <div class="node" ng-class="{black: currIndex == $index, clear: currIndex !== $index}">
                     <a href="javascript:void(0)" ng-click="subMenuClick($index)">{{rec.sub.title}}</a>
-                    <div>{{rec.sub.subTitle}}</div>
-                    <div>{{rec.sub.subSubTitle}}</div>
+                    <p>{{rec.sub.subTitle}}</p>
+                    <p>{{rec.sub.subSubTitle}}</p>
                 </div>
             </div>
         </div>

@@ -25,6 +25,10 @@
     color: #5656df
 }
 
+[data-section="things-to-do"] .cards .side-notes p{
+    margin: 0;
+}
+
 [data-section="things-to-do"] #map {
 
     position: sticky !important;
@@ -98,7 +102,7 @@
     border-radius: 7px;
 }
 
-.home .card .header h6{
+.home .card .header h4{
     color: #ff6756;
 }
 

@@ -38,7 +38,7 @@ class dbUtils{
             console.log(`before running update query: ${queryString} ${queryArr}`);
             client.query(queryString, queryArr, function(err, result){
                 if (err) {
-                   console.log(`update query error: ${error}`);
+                   console.log(`update query error: ${err}`);
                 }
                 console.log(`update query ran successfully`);
                 resolve(result.rowCount);
@@ -58,7 +58,7 @@ class dbUtils{
             client = new pg.Client(conString);
             client.connect();
 
-            let query = client.query('select firstname, lastname, email, attending  from wedding_list where email =  $1 order by id, length(lastname)', [email]);
+            let query = client.query('select firstname, lastname, email, attending, dateupdate  from wedding_list where email =  $1 order by id, length(lastname)', [email]);
             let arr = [];
             query.on('error', function(err){
                 console.log(`email lookup db call failed for: ${email}`);
@@ -69,7 +69,8 @@ class dbUtils{
                 {firstName: row.firstname,
                 lastName: row.lastname,
                 email: row.email,
-                attending: row.attending || false}
+                attending: row.attending || false,
+                dateUpdate: row.dateupdate}
                 );
             });
 

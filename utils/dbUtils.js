@@ -1,7 +1,7 @@
 'use strict';
 
 const pg = require('pg');
-const conStringLocal = "postgres://postgres:xxx@localhost:5432/wedding";
+const conStringLocal = "postgres://postgres:xxx!@localhost:5432/wedding";
 const conString = process.env.DATABASE_URL || conStringLocal;
 let client = null;
 

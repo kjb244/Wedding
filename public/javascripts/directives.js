@@ -47,7 +47,7 @@ app.directive('modalOverlayDir', function($timeout){
             $timeout(function(){
                 $scope.showModal=true;
                 document.querySelector('body').classList.add('hide-scroll');
-            },500);
+            },1000);
         },
         controller: function($scope){
             $scope.inputs = [];

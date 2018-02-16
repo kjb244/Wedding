@@ -211,13 +211,13 @@ app.directive('spinnerOverlayDir', function(){
         ].join(','),*/
         link: function($scope, elem, attrs){
             var spinnerOverlay = document.createElement('div');
-            spinnerOverlay.classList.add('spinner-overlay-dir');
+            spinnerOverlay.setAttribute('data','spinner-overlay');
             spinnerOverlay.classList.add('hide');
             spinnerOverlay.style.cssText = 'top: 0; position: fixed; height: 100%; background-color: gray; width: 100%; opacity: .7';
             document.body.appendChild(spinnerOverlay);
 
             var spinnerOverlaySpinner = document.createElement('div');
-            spinnerOverlaySpinner.classList.add('spinner-overlay-spinner-dir');
+            spinnerOverlaySpinner.setAttribute('data','spinner-modal');
             spinnerOverlaySpinner.classList.add('hide');
             spinnerOverlaySpinner.style.cssText = 'height: 100%; position: fixed; top: 0; left: 0; width: 100%;';
             var spinnerOverlaySpinnerChild = document.createElement('div');
@@ -227,14 +227,18 @@ app.directive('spinnerOverlayDir', function(){
             document.body.appendChild(spinnerOverlaySpinner);
         },
         controller: function($scope){
-            $scope.$watch('toggle', function(newVal, oldVal){
+
+            $scope.$watch('toggle', function(newVal){
+                var spinnerModal = document.querySelector('[data="spinner-modal"]');
+                var spinnerOverlay = document.querySelector('[data="spinner-overlay"]');
+                if (spinnerModal === null || spinnerOverlay === null) return false;
                 if(newVal == true){
-                    document.querySelector('.spinner-overlay-spinner-dir').classList.remove('hide');
-                    document.querySelector('.spinner-overlay-dir').classList.remove('hide');
+                    spinnerModal.classList.remove('hide');
+                    spinnerOverlay.classList.remove('hide');
                 }
                 else{
-                    document.querySelector('.spinner-overlay-spinner-dir').classList.add('hide');
-                    document.querySelector('.spinner-overlay-dir').classList.add('hide');
+                    spinnerModal.classList.add('hide');
+                    spinnerOverlay.classList.add('hide');
 
                 }
             });

@@ -1,3 +1,21 @@
+
+app.service('angularStore', function(){
+    var content = {};
+    var getContent = function(key){
+        return content[key] || null;
+    }
+
+    var setContent = function(key, cont){
+        content[key] = cont;
+    }
+
+    return {
+        getContent: getContent,
+        setContent: setContent
+    }
+
+})
+
 app.service('utilityFunctions', function(){
 
     this.scrollTop = function(element, speed){

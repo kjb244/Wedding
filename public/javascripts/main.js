@@ -31,13 +31,13 @@ app.config(function($routeProvider) {
 
 
 
-app.controller("ctrlMain", function($scope,ajaxFetch ) {
+app.controller("ctrlMain", function($scope,ajaxFetch, angularStore) {
     $scope.menuChange = window.location.hash.replace(/#\//g,'');
-    if(!document.querySelector('body').classList.contains('content-loaded')) {
+    if(angularStore.getContent('copy') === null) {
         ajaxFetch.getData('/getContent')
             .then(function (res) {
+                angularStore.setContent('copy', res.data);
                 $scope.copy = res.data;
-                document.querySelector('body').classList.add('content-loaded');
             });
     }
 

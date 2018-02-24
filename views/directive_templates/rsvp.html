@@ -5,9 +5,10 @@
         <p ng-show="invitationComplete" class="invitation-complete">Invitation Complete!</p>
 
         <div class="lookup-container">
-            <input type="text" placeholder="lookup by email" name="email" ng-model="formData.email"/>
-            <a class="button" ng-click="lookupByEmail()">Lookup</a>
+            <input type="email" required placeholder="lookup by email" name="email" ng-model="formData.email"/>
+            <a class="button" ng-click="lookupByEmail()" ng-disabled="rsvpForm.email.$invalid">Lookup</a>
         </div>
+
 
 
     </div>

@@ -10,18 +10,13 @@
 }
 
 [data-section="menu"] nav .show-for-medium h5{
-    font-family: 'Ruluko', sans-serif;
-    font-size: 26px;
+    font-size: 18px;
 }
 
 [data-section="menu"] nav .show-for-medium p{
     margin-bottom: 0;
 }
 
-[data-section="menu"] nav .show-for-medium .date, [data-section="menu"] nav .location{
-    font-family: 'Ruluko', sans-serif;
-
-}
 
 
 [data-section="menu"] nav .show-for-medium ul {

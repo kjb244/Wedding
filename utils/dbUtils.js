@@ -9,6 +9,7 @@ let client = null;
 class dbUtils{
 
     updateByEmail(email, payload){
+        email = (email || '').toLowerCase();
         return new Promise(function(resolve, reject){
             console.log(`updating db for email: ${email} with payload: ${JSON.stringify(payload)}`)
             client = new pg.Client(conString);
@@ -24,7 +25,7 @@ class dbUtils{
                 lastname = $2,
                 attending = $3,
                 dateupdate = $4
-                where email = $5 and firstname is null and lastname is null`;
+                where lower(email) = $5 and firstname is null and lastname is null`;
                 queryArr =  [payload.firstName || null, payload.lastName || null, payload.attending, currDate, email || ''];
             }
             else{
@@ -32,7 +33,7 @@ class dbUtils{
                 queryString = `update wedding_list
                 set attending = $1,
                 dateupdate = $2
-                where email = $3 and firstname = $4 and lastname = $5`;
+                where lower(email) = $3 and firstname = $4 and lastname = $5`;
                 queryArr = [payload.attending, currDate, email || '', payload.firstName || '', payload.lastName || ''];
             }
             console.log(`before running update query: ${queryString} ${queryArr}`);
@@ -53,12 +54,13 @@ class dbUtils{
     }
 
     getByEmail(email){
+        email = (email || '').toLowerCase();
         return new Promise(function(resolve, reject){
             console.log(`making email call from db`);
             client = new pg.Client(conString);
             client.connect();
 
-            let query = client.query('select firstname, lastname, email, attending, dateupdate  from wedding_list where email =  $1 order by id, length(lastname)', [email]);
+            let query = client.query('select firstname, lastname, email, attending, dateupdate  from wedding_list where lower(email) =  $1 order by id, length(lastname)', [email]);
             let arr = [];
             query.on('error', function(err){
                 console.log(`email lookup db call failed for: ${email}`);

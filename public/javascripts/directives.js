@@ -202,13 +202,6 @@ app.directive('spinnerOverlayDir', function(){
         scope: {
             toggle: '='
         },
-        /*template: [
-            '<div spinner-overlay ng-show="displayOverlay" style="height: 100%; position: fixed; top: 0; left: 0; width: 100%;">',
-                '<div style="position: absolute; left: 50%; top: 200px; color: #7676d0">',
-                    '<i class="fa fa-3x fa-spin fa-circle-o-notch"></i>',
-                '</div>',
-            '</div>'
-        ].join(','),*/
         link: function($scope, elem, attrs){
             var spinnerOverlay = document.createElement('div');
             spinnerOverlay.setAttribute('data','spinner-overlay');
@@ -221,10 +214,12 @@ app.directive('spinnerOverlayDir', function(){
             spinnerOverlaySpinner.classList.add('hide');
             spinnerOverlaySpinner.style.cssText = 'height: 100%; position: fixed; top: 0; left: 0; width: 100%;';
             var spinnerOverlaySpinnerChild = document.createElement('div');
-            spinnerOverlaySpinnerChild.innerHTML = '<div class="wrapper" style="margin: auto; width: 80%; background-color: white; padding: 20px; border-radius: 5px; "><div class="loader"></div></div>';
-            spinnerOverlaySpinnerChild.style.cssText = 'position: absolute; width:100%; top: 200px; color: #7676d0';
+            spinnerOverlaySpinnerChild.innerHTML = '<div class="wrapper" style="margin: auto; width: 80%; background-color: white; padding: 30px; border-radius: 5px; "><div class="loader"></div></div>';
+            spinnerOverlaySpinnerChild.style.cssText = 'position: absolute; width:100%; color: #7676d0';
             spinnerOverlaySpinner.appendChild(spinnerOverlaySpinnerChild);
             document.body.appendChild(spinnerOverlaySpinner);
+
+
         },
         controller: function($scope){
 
@@ -232,9 +227,14 @@ app.directive('spinnerOverlayDir', function(){
                 var spinnerModal = document.querySelector('[data="spinner-modal"]');
                 var spinnerOverlay = document.querySelector('[data="spinner-overlay"]');
                 if (spinnerModal === null || spinnerOverlay === null) return false;
-                if(newVal == true){
+                if (newVal === true){
                     spinnerModal.classList.remove('hide');
                     spinnerOverlay.classList.remove('hide');
+                    var windowHeight = window.innerHeight;
+                    var wrapperHeight = document.querySelector('[data="spinner-modal"] .wrapper').clientHeight;
+                    var topPos = (windowHeight - wrapperHeight) /2;
+                    document.querySelector('[data="spinner-modal"] .wrapper').parentNode.style.top = topPos + 'px';
+
                 }
                 else{
                     spinnerModal.classList.add('hide');

@@ -44,6 +44,7 @@ app.directive('modalOverlayDir', function($timeout){
         scope: false,
         templateUrl: 'directive_templates/modal-overlay.html',
         link: function($scope, elem, attrs){
+            $scope.showModal = false;
             $timeout(function(){
                 $scope.showModal=true;
                 document.querySelector('body').classList.add('hide-scroll');

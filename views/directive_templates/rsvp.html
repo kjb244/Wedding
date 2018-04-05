@@ -14,10 +14,11 @@
     </div>
     <div ng-show="formData.rsvpFormArray.length" ng-repeat="rec in formData.rsvpFormArray"  class="repeat-add-people">
         <p ng-if="$index > 0" class="guest-info">Guest Name</p>
+        <p ng-if="$index > 0" class="guest-info-sub">(Leave Names Blank if Not Attending)</p>
         <div class="row collapse">
             <div class="small-12 columns">
-                <input type="text" placeholder="{{copy.routes.rsvp.inputFirst.placeholder}}" name="personFirstName_{{$index}}" ng-model="rec.firstName" ng-readonly="rec.readOnly" required/>
-                <input type="text" placeholder="{{copy.routes.rsvp.inputSecond.placeholder}}" name="personLastName_{{$index}}" ng-model="rec.lastName" ng-readonly="rec.readOnly" required/>
+                <input type="text" placeholder="{{copy.routes.rsvp.inputFirst.placeholder}}" name="personFirstName_{{$index}}" ng-model="rec.firstName" ng-readonly="rec.readOnly" ng-required="$index === 0 || ($index === 1 && rec.attending)"/>
+                <input type="text" placeholder="{{copy.routes.rsvp.inputSecond.placeholder}}" name="personLastName_{{$index}}" ng-model="rec.lastName" ng-readonly="rec.readOnly" ng-required="$index === 0 || ($index === 1 && rec.attending)"/>
             </div>
         </div>
         <p>{{copy.routes.rsvp.switchButtonLabel}}</p>

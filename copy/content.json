@@ -2,9 +2,11 @@
   "modal": {
     "heading": "This site requires a password",
     "inputs": [
-      {"type": "password",
-      "placeholder": "password",
-      "model": "password"}
+      {
+        "type": "password",
+        "placeholder": "password",
+        "model": "password"
+      }
     ],
     "buttonText": "Submit"
   },
@@ -44,15 +46,10 @@
   "routes": {
     "home": {
       "backgroundImage": "",
-      "leftPane": {
-        "heading": "Robyn Gonzales",
-        "subHeading": "Good Girl",
-        "para": "lre ld lksj lksj dkjs skdj"
-      },
-      "rightPane": {
-        "heading": "Kevin Bacino",
-        "subHeading": "Bad Boy",
-        "para": "lre ld lksj lksj dkjs skdj"
+      "pane": {
+        "heading": "Heading",
+        "subHeading": "sub heading",
+        "para": "para para para para"
       }
     },
     "schedule": {
@@ -143,8 +140,21 @@
       "headingParas": [
         "Morbi tellus risus, tempus viverra ultricies eget, malesuada at metus. Vestibulum ornare, arcu vitae pulvinar faucibus, nulla nisl cursus quam, nec tincidunt elit nisl sed eros. Duis lobortis, dui id interdum facilisis, ligula justo gravida tortor, vel finibus lorem arcu at felis. Vivamus ut aliquet leo, quis congue risus. Quisque vehicula condimentum nunc non sodales. Etiam vitae dui gravida, facilisis purus sit amet, ornare ante. Ut a velit in libero iaculis tempor."
       ],
+      "dropDown": {
+        "select": [
+          "beer",
+          "food",
+          "activities"
+        ],
+        "label": "Filter on Type"
+      },
       "cards": [
         {
+          "googleLatLong": [
+            35.2725889,
+            -81.0075044
+          ],
+          "type": "food",
           "heading": {
             "text": "7th Street Market",
             "link": "http://www.7thstreetpublicmarket.com/"
@@ -162,6 +172,11 @@
           ]
         },
         {
+          "googleLatLong": [
+            35.2212875,
+            -80.8456213
+          ],
+          "type": "beer",
           "heading": {
             "text": "Sycamore Brewery",
             "link": "https://www.sycamorebrew.com"
@@ -179,6 +194,11 @@
           ]
         },
         {
+          "googleLatLong": [
+            35.208721,
+            -80.864947
+          ],
+          "type": "activities",
           "heading": {
             "text": "US National White Water Center",
             "link": "http://usnwc.org"
@@ -196,6 +216,11 @@
           ]
         },
         {
+          "googleLatLong": [
+            35.208731,
+            -80.864947
+          ],
+          "type": "activities",
           "heading": {
             "text": "NASCAR Hall of Fame",
             "link": "http://www.nascarhall.com/"
@@ -213,6 +238,11 @@
           ]
         },
         {
+          "googleLatLong": [
+            35.208751,
+            -80.864947
+          ],
+          "type": "activities",
           "heading": {
             "text": "Levine Museum of the new South",
             "link": "http://www.museumofthenewsouth.org/"
@@ -230,6 +260,11 @@
           ]
         },
         {
+          "googleLatLong": [
+            35.205761,
+            -80.864947
+          ],
+          "type": "beer",
           "heading": {
             "text": "Walk Around Uptown",
             "link": "#"

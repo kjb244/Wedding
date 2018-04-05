@@ -98,12 +98,15 @@
 .home .card{
     padding: 20px;
     background-color: white;
-    width: 49.5% !important;
     border-radius: 7px;
 }
 
 .home .card .header h4{
     color: #ff6756;
+}
+
+.home .card .header{
+    text-align: center;
 }
 
 .home .card .main p{

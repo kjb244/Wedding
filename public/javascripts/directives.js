@@ -91,12 +91,14 @@ app.directive('scheduleDir', function($timeout){
 });
 
 
-app.directive('cardsWithMapDir', function(utilityFunctions){
+app.directive('cardsWithMapDir', function(angularStore){
     return {
         restrict: 'EA',
         scope: false,
         templateUrl: 'directive_templates/cards-with-map.html',
         link: function($scope, elem, attrs){
+            var copy = angularStore.getContent('copy');
+            copy = copy.routes.thingsToDo;
             $scope.googleMapMarkers = [];
 
             var map;
@@ -118,12 +120,15 @@ app.directive('cardsWithMapDir', function(utilityFunctions){
             }
 
             function loadGoogleMaps(){
-                var locations = [
-                    ['US National White Water Center', 35.2725889,-81.0075044],
-                    ['7th Street Market', 35.224351,-80.840249],
-                    ['Nascar Hall of Fame', 35.2212875,-80.8456213],
-                    ['Sycamore Brewery', 35.208721,-80.864947]
-                ];
+                var locations = [];
+                copy.cards.map(function(data){
+                    var arr = [];
+                    arr.push(data.heading.text);
+                    arr.push(data.googleLatLong[0]);
+                    arr.push(data.googleLatLong[1]);
+                    locations.push(arr);
+                });
+
 
                 map = new google.maps.Map(document.getElementById('map'), {
                     //zoom: 13,
@@ -142,7 +147,8 @@ app.directive('cardsWithMapDir', function(utilityFunctions){
                 for (i = 0; i < locations.length; i++) {
                     marker = new google.maps.Marker({
                         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-                        map: map
+                        map: map,
+                        title: locations[i][0]
                     });
                     $scope.googleMapMarkers.push(marker);
                     markers.push(marker);
@@ -188,9 +194,11 @@ app.directive('cardsWithMapDir', function(utilityFunctions){
 
         },
         controller: function($scope){
-            $scope.hoverOnCard = function(idx){
-                var currMarker = $scope.googleMapMarkers[idx];
-                google.maps.event.trigger(currMarker, 'click');
+            $scope.hoverOnCard = function(header){
+                var currMarker = $scope.googleMapMarkers.filter(function(rec){
+                    return rec.title === header;
+                })[0];
+                //google.maps.event.trigger(currMarker, 'click');
             }
 
         }

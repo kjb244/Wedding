@@ -61,7 +61,14 @@
 [data-section="rsvp"] .guest-info{
     font-size: 20px;
     text-align: center;
+    margin: 0;
 }
+
+[data-section="rsvp"] .guest-info-sub{
+    text-align: center;
+}
+
+
 
 
 

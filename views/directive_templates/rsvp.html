@@ -21,15 +21,24 @@
                 <input type="text" placeholder="{{copy.routes.rsvp.inputSecond.placeholder}}" name="personLastName_{{$index}}" ng-model="rec.lastName" ng-readonly="rec.readOnly" ng-required="$index === 0 || ($index === 1 && rec.attending)"/>
             </div>
         </div>
-        <p>{{copy.routes.rsvp.switchButtonLabel}}</p>
-        <div class="switch large">
-            <input class="switch-input" id="attending-{{$index}}" type="checkbox" ng-change="checkboxChanged($index)" ng-model="rec.attending" name="attending-${{index}}">
-            <label class="switch-paddle" for="attending-{{$index}}">
-                <span class="show-for-sr">{{copy.routes.rsvp.switchButtonLabel}}</span>
-                <span class="switch-active" aria-hidden="true">Yes</span>
-                <span class="switch-inactive" aria-hidden="true">No</span>
-            </label>
+        <div class="row collapse">
+            <div class="small-12 columns">
+                <p>{{copy.routes.rsvp.switchButtonLabel}}</p>
+                <div class="switch large">
+                    <input class="switch-input" id="attending-{{$index}}" type="checkbox" ng-change="checkboxChanged($index)" ng-model="rec.attending" name="attending-${{index}}">
+                    <label class="switch-paddle" for="attending-{{$index}}">
+                        <span class="show-for-sr">{{copy.routes.rsvp.switchButtonLabel}}</span>
+                        <span class="switch-active" aria-hidden="true">Yes</span>
+                        <span class="switch-inactive" aria-hidden="true">No</span>
+                    </label>
+                </div>
+            </div>
+            <div class="small-12 columns" ng-show="rec.attending == true">
+                <input type="text" placeholder="Enter any dietary restrictions" id="dietaryRestrictions-{{$index}}" ng-model="rec.dietaryRestrictions" ng-name="dietaryRestrictions-{{$index}}">
+            </div>
+
         </div>
+
     </div>
     <a  ng-show="formData.rsvpFormArray.length" class="button" ng-disabled="rsvpForm.$invalid" ng-click="submitData()">{{copy.routes.rsvp.submitButtonLabel}}</a>
 

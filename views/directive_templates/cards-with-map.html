@@ -13,23 +13,25 @@
             <select name="filterDropdown" id="filterDropDown" ng-model="filterDropDown"
                     ng-options="type for type in copy.routes.thingsToDo.dropDown.select"></select>
         </div>
-        {{filterDropDown}}
     </div>
     <div class="row">
         <div class="small-12 medium-7 large-6 columns">
-            <div ng-repeat="rec in copy.routes.thingsToDo.cards | filter: filterDropDown " ng-mouseover="hoverOnCard(rec.heading.text)" class="cards row">
-                <div class="left-content small-8 medium-7 columns">
-                    <h5>
-                        <a href="{{rec.heading.link}}">{{rec.heading.text}}</a>
-                    </h5>
-                    <p>{{rec.para}}</p>
-                </div>
-                <div class="right-content small-4 medium-5 image-container columns">
+            <div ng-repeat="rec in copy.routes.thingsToDo.cards | filter: filterDropDown"
+                 ng-mouseover="hoverOnCard(rec.heading.text)">
+                <div class="cards row">
+                    <div class="left-content small-8 medium-7 columns">
+                        <h5>
+                            <a href="{{rec.heading.link}}">{{rec.heading.text}}</a>
+                        </h5>
+                        <p>{{rec.para}}</p>
+                    </div>
+                    <div class="right-content small-4 medium-5 image-container columns">
 
-                </div>
-                <div class="footer-content small-12 columns">
-                    <div ng-repeat="rec2 in rec.sideNotes" class="side-notes">
-                        <p><b>{{rec2.heading}}&nbsp;</b><span>{{rec2.text}}</span></p>
+                    </div>
+                    <div class="footer-content small-12 columns">
+                        <div ng-repeat="rec2 in rec.sideNotes" class="side-notes">
+                            <p><b>{{rec2.heading}}&nbsp;</b><span>{{rec2.text}}</span></p>
+                        </div>
                     </div>
                 </div>
             </div>

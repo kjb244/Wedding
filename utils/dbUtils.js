@@ -1,7 +1,7 @@
 'use strict';
 
 const pg = require('pg');
-const conStringLocal = "postgres://postgres:xxx!@localhost:5432/wedding";
+const conStringLocal = "postgres://postgres:sdf!@localhost:5432/wedding";
 const conString = process.env.DATABASE_URL || conStringLocal;
 let client = null;
 
@@ -24,17 +24,19 @@ class dbUtils{
                 set firstname = $1, 
                 lastname = $2,
                 attending = $3,
-                dateupdate = $4
-                where lower(email) = $5 and firstname is null and lastname is null`;
-                queryArr =  [payload.firstName || null, payload.lastName || null, payload.attending, currDate, email || ''];
+                dietaryrestrictions = $4,
+                dateupdate = $5
+                where lower(email) = $6 and firstname is null and lastname is null`;
+                queryArr =  [payload.firstName || null, payload.lastName || null, payload.attending, payload.dietaryRestrictions || null, currDate, email || ''];
             }
             else{
 
                 queryString = `update wedding_list
                 set attending = $1,
-                dateupdate = $2
-                where lower(email) = $3 and firstname = $4 and lastname = $5`;
-                queryArr = [payload.attending, currDate, email || '', payload.firstName || '', payload.lastName || ''];
+                dietaryrestrictions = $2,
+                dateupdate = $3
+                where lower(email) = $4 and firstname = $5 and lastname = $6`;
+                queryArr = [payload.attending, payload.attending == true ? (payload.dietaryRestrictions || null) : null, currDate, email || '', payload.firstName || '', payload.lastName || ''];
             }
             console.log(`before running update query: ${queryString} ${queryArr}`);
             client.query(queryString, queryArr, function(err, result){
@@ -60,7 +62,7 @@ class dbUtils{
             client = new pg.Client(conString);
             client.connect();
 
-            let query = client.query('select firstname, lastname, email, attending, dateupdate  from wedding_list where lower(email) =  $1 order by id, length(lastname)', [email]);
+            let query = client.query('select firstname, lastname, email, attending, dietaryrestrictions, dateupdate  from wedding_list where lower(email) =  $1 order by id, length(lastname)', [email]);
             let arr = [];
             query.on('error', function(err){
                 console.log(`email lookup db call failed for: ${email}`);
@@ -72,6 +74,7 @@ class dbUtils{
                 lastName: row.lastname,
                 email: row.email,
                 attending: row.attending || false,
+                dietaryRestrictions: row.dietaryrestrictions,
                 dateUpdate: row.dateupdate}
                 );
             });

@@ -12,6 +12,7 @@ app.directive('navBarDir', function($timeout){
         $scope.menuChangeClick = function(inp){
             var oldMenu = $scope.menuChange;
             $scope.menuChange = inp;
+            $scope.menuClick = !$scope.menuClick;
             if(oldMenu === inp) return;
             var body = document.querySelector('body');
             body.classList.add('hide-scroll');
@@ -161,10 +162,6 @@ app.directive('cardsWithMapDir', function(angularStore){
                         }
                     })(marker, i));
                 }
-
-
-
-
             }
 
             loadGoogleMaps();
@@ -198,7 +195,7 @@ app.directive('cardsWithMapDir', function(angularStore){
                 var currMarker = $scope.googleMapMarkers.filter(function(rec){
                     return rec.title === header;
                 })[0];
-                //google.maps.event.trigger(currMarker, 'click');
+                google.maps.event.trigger(currMarker, 'click');
             }
 
         }
@@ -274,9 +271,15 @@ app.directive('rsvpDir', function(ajaxFetch, utilityFunctions, $timeout){
 
           $scope.checkboxChanged = function(idx){
               var formArr = $scope.formData.rsvpFormArray;
+              var currElem = formArr[idx];
               if (formArr.length > 1 && formArr[0].attending === false ){
                   $scope.formData.rsvpFormArray[1].attending = false;
               }
+              formArr.map(function(e){
+                  if(!e.attending){
+                      e.dietaryRestrictions = null;
+                  }
+              })
           }
           $scope.submitData = function(){
               ajaxFetch.getData('/submitRSVPData', 'POST', $scope.formData)
@@ -302,6 +305,7 @@ app.directive('rsvpDir', function(ajaxFetch, utilityFunctions, $timeout){
                                 {firstName: e.firstName,
                                     lastName: e.lastName,
                                     attending: e.attending,
+                                    dietaryRestrictions: e.dietaryRestrictions,
                                     readOnly: (e.firstName || '').length > 0 && (e.lastName || '').length > 0
                                 }
                             )

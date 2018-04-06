@@ -5,6 +5,7 @@ CREATE TABLE wedding_list
   firstname text,
   lastname text,
   email text not null,
+  dietaryrestrictions text,
   attending boolean default false,
   dateupdate timestamp without time zone
 );
@@ -23,15 +24,17 @@ oldlastname text,
 newlastname text,
 oldattending boolean,
 newattending boolean,
-sysdate timestamp);
+olddietaryrestrictions text,
+newdietaryrestrictions text,
+  sysdate timestamp);
 
 create or replace function log_audits()
  returns trigger as
  $$
  begin
 	insert into wedding_list_audits(weddingid, oldfirstname, newfirstname, oldlastname,
-	newlastname, oldattending, newattending, sysdate)
-	values(old.id, old.firstname, new.firstname, old.lastname, new.lastname, old.attending, new.attending, now());
+	newlastname, oldattending, newattending, olddietaryrestrictions, newdietaryrestrictions sysdate)
+	values(old.id, old.firstname, new.firstname, old.lastname, new.lastname, old.attending, new.attending, olddietaryrestrictions, newdietaryrestrictions, now());
 
 	return new;
  end;

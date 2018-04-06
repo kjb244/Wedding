@@ -1,10 +1,5 @@
 <nav>
     <div class="wrapper show-for-medium">
-        <div>
-            <h5>{{copy.navBar.heading.who}}</h5>
-            <p class="date">{{copy.navBar.heading.date}}</p>
-            <p class="location">{{copy.navBar.heading.location}}</p>
-        </div>
         <ul>
             <li ng-repeat="rec in copy.navBar.links" ng-class="{'show-border': menuChange==rec.route}">
                 <a href='#{{rec.route}}' ng-click="menuChangeClick(rec.route)">{{rec.name}}</a>

@@ -26,7 +26,6 @@ oldattending boolean,
 newattending boolean,
 olddietaryrestrictions text,
 newdietaryrestrictions text,
-newdietaryrestrictions text,
   sysdate timestamp);
 
 create or replace function log_audits()

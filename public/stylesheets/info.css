@@ -1,0 +1,12 @@
+[data-section="info"] .content {
+    margin-bottom: 14px;
+
+}
+
+[data-section="info"] .content.show-border {
+    border-bottom: 1px solid #d7c3c3;
+}
+
+
+
+

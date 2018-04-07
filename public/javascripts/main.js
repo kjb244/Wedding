@@ -11,8 +11,8 @@ app.config(function($routeProvider) {
         templateUrl: 'route_templates/route-home.html',
         controller: 'ctrlMain'
     })
-    .when('/story', {
-        templateUrl: 'route_templates/route-story.html',
+    .when('/info', {
+        templateUrl: 'route_templates/route-info.html',
         controller: 'ctrlMain'
     })
     .when('/schedule', {

@@ -22,8 +22,8 @@
         "route": "home"
       },
       {
-        "name": "Story",
-        "route": "story"
+        "name": "Information",
+        "route": "info"
       },
       {
         "name": "Schedule",
@@ -51,6 +51,36 @@
         "subHeading": "sub heading",
         "para": "para para para para"
       }
+    },
+    "info": {
+      "content": [
+        {
+          "heading": "Welcome and Thanks for Sharing Our Special Day!",
+          "paras": [
+            "Morbi tellus risus, tempus viverra ultricies eget, malesuada at metus. Vestibulum ornare, arcu vitae pulvinar faucibus, nulla nisl cursus quam, nec tincidunt elit nisl sed eros"
+          ]
+        },
+        {
+          "heading": "What, Where, and When?",
+          "paras": [
+            "Morbi tellus risus, tempus viverra ultricies eget, malesuada at metus. Vestibulum ornare, arcu vitae pulvinar faucibus, nulla nisl cursus quam, nec tincidunt elit nisl sed eros"
+          ]
+        },
+        {
+          "heading": "Travel and Hotels",
+          "paras": [
+            "Morbi tellus risus, tempus viverra ultricies eget, malesuada at metus. Vestibulum ornare, arcu vitae pulvinar faucibus, nulla nisl cursus quam, nec tincidunt elit nisl sed eros"
+          ]
+        },
+        {
+          "heading": "Airport to Hotel Directions",
+          "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d52139.759188488795!2d-80.92995509352606!3d35.23796750659305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x8856987db74ad489%3A0x1aba4a6f3cc4a737!2sCharlotte+Douglas+International+Airport%2C+5501+Josh+Birmingham+Pkwy%2C+Charlotte%2C+NC+28208!3m2!1d35.2144026!2d-80.9473146!4m5!1s0x8856a024fd9b6487%3A0xa736e2d40a93d76d!2sHoliday+Inn+Charlotte-Center+City%2C+230+N+College+St%2C+Charlotte%2C+NC+28202!3m2!1d35.2275673!2d-80.83978139999999!5e0!3m2!1sen!2sus!4v1523046196648\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>"
+        },
+        {
+          "heading": "Hotel to Ceremony/Reception Directions (Walkable)",
+          "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3259.132314762799!2d-80.8412948355745!3d35.22807613030241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x8856a024fd9b6487%3A0xa736e2d40a93d76d!2sHoliday+Inn+Charlotte-Center+City%2C+North+College+Street%2C+Charlotte%2C+NC!3m2!1d35.2275673!2d-80.83978139999999!4m5!1s0x8856a024bc5716dd%3A0x709e0e7838b9b467!2sLevine+Museum+of+the+New+South%2C+East+7th+Street%2C+Charlotte%2C+NC!3m2!1d35.2281616!2d-80.8383917!5e0!3m2!1sen!2sus!4v1523048339602\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>"
+        }
+      ]
     },
     "schedule": {
       "mainHeading": "Schedule",

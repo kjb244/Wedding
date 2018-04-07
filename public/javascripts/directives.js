@@ -39,6 +39,32 @@ app.directive('storyCardsDir', function(){
     };
 });
 
+app.directive('infoDir', function(){
+    return {
+        restrict: 'EA',
+        scope: false,
+        templateUrl: 'directive_templates/info.html',
+        link: function($scope, elem, attrs){
+        },
+        controller: function($scope, $sce, angularStore){
+            var copy = angularStore.getContent('copy');
+            copy = copy.routes.info;
+            $scope.trustIframe = [];
+            copy.content.map(function(e){
+                if (e.iframe){
+                    $scope.trustIframe.push($sce.trustAsHtml(e.iframe));
+                }
+            });
+            $scope.iframeCntr = -1;
+            $scope.countInit = function(){
+                return ++$scope.iframeCntr;
+            }
+
+
+        }
+    };
+});
+
 app.directive('modalOverlayDir', function($timeout){
     return {
         restrict: 'EA',

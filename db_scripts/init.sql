@@ -26,6 +26,7 @@ oldattending boolean,
 newattending boolean,
 olddietaryrestrictions text,
 newdietaryrestrictions text,
+newdietaryrestrictions text,
   sysdate timestamp);
 
 create or replace function log_audits()
@@ -33,7 +34,7 @@ create or replace function log_audits()
  $$
  begin
 	insert into wedding_list_audits(weddingid, oldfirstname, newfirstname, oldlastname,
-	newlastname, oldattending, newattending, olddietaryrestrictions, newdietaryrestrictions sysdate)
+	newlastname, oldattending, newattending, olddietaryrestrictions, newdietaryrestrictions, sysdate)
 	values(old.id, old.firstname, new.firstname, old.lastname, new.lastname, old.attending, new.attending, olddietaryrestrictions, newdietaryrestrictions, now());
 
 	return new;

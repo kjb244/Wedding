@@ -73,7 +73,7 @@ app.directive('modalOverlayDir', function($timeout){
         link: function($scope, elem, attrs){
             $scope.showModal = false;
             $timeout(function(){
-                if(window.location.origin.indexOf(('localhost') > -1)){
+                if(window.location.origin.indexOf('localhost') > -1){
                     document.querySelector('body .overlay').classList.add('hidden');
                     document.querySelector('body').classList.remove('hide-scroll')
                     return true;

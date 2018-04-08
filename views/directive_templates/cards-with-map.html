@@ -3,20 +3,38 @@
         <div class="small-12 columns">
             <h4>{{copy.routes.thingsToDo.heading}}</h4>
             <p ng-repeat="rec in copy.routes.thingsToDo.headingParas">
-                {{rec}}
+                <span ng-bind-html="rec"></span>
             </p>
         </div>
     </div>
     <div class="row">
         <div class="small-12 medium-4 columns">
-            <label>{{copy.routes.thingsToDo.dropDown.label}}</label>
-            <select name="filterDropdown" id="filterDropDown" ng-model="filterDropDown"
-                    ng-options="type for type in copy.routes.thingsToDo.dropDown.select"></select>
+            <label>{{copy.routes.thingsToDo.dropDown.activity.label}}</label>
+            <select name="activityDropDown" id="activityDropDown"
+                    ng-model="activityDropDown" ng-change="updateActivity()"
+                    ng-options="type for type in copy.routes.thingsToDo.dropDown.activity.select">
+
+            </select>
+            <label ng-show="showLocationDropDown">{{copy.routes.thingsToDo.dropDown.location.label}}</label>
+            <select ng-show="showLocationDropDown" name="locationDropDown" id="locationDropDown"
+                    ng-model="locationDropDown" ng-change=""
+                    ng-options="type for type in copy.routes.thingsToDo.dropDown.location.select">
+
+            </select>
+            <label ng-show="showFoodTypeDropDown">{{copy.routes.thingsToDo.dropDown.foodType.label}}</label>
+            <select ng-show="showFoodTypeDropDown" name="foodTypeDropDown" id="foodTypeDropDown"
+                    ng-model="foodTypeDropDown" ng-change=""
+                    ng-options="type for type in copy.routes.thingsToDo.dropDown.foodType.select">
+
+            </select>
         </div>
     </div>
     <div class="row">
         <div class="small-12 medium-7 large-6 columns">
-            <div ng-repeat="rec in copy.routes.thingsToDo.cards | filter: filterDropDown"
+            <div ng-repeat="rec in copy.routes.thingsToDo.cards
+             | filter: activityDropDownFilter
+             | filter: locationDropDownFilter
+             | filter: foodTypeDropDownFilter"
                  ng-mouseover="hoverOnCard(rec.heading.text)">
                 <div class="cards row">
                     <div class="left-content small-8 medium-7 columns">

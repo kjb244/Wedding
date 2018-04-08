@@ -62,9 +62,10 @@
         },
         {
           "heading": "Attire",
-          "paras": ["Semi-formal"]
+          "paras": [
+            "Semi-formal"
+          ]
         },
-
         {
           "heading": "Menu",
           "paras": [
@@ -122,7 +123,7 @@
         {
           "sub": {
             "title": "Cocktail Hour",
-          "subTitle": "Saturday",
+            "subTitle": "Saturday",
             "subSubTitle": "6pm-7pm"
           },
           "details": {
@@ -181,17 +182,34 @@
       "heading": "Things to Do",
       "headingParas": [
         "If you're in town for the whole weekend, here are some of our suggestions on how to get to know Charlotte better. We have broken our favorite things to do by types below.",
-        "Beer - Charlotte is home to over 30 local breweries. If you're looking for a fun afternoon, you can walk the Rail Trail in South End or stroll around NoDa to hit up some of the more popular spots.",
-        "Food - While Charlotte might not be on the culinary level of bigger cities like New York or Chicago, the food scene is rapidly growing. And for all of you Yankees, Charlotte knows how to do Southern food right.",
-        "Activities - You don't need to eat or drink to have fun!"
+        "<b>Beer</b> - Charlotte is home to over 30 local breweries. If you're looking for a fun afternoon, you can walk the Rail Trail in South End or stroll around NoDa to hit up some of the more popular spots.",
+        "<b>Food</b> - While Charlotte might not be on the culinary level of bigger cities like New York or Chicago, the food scene is rapidly growing. And for all of you Yankees, Charlotte knows how to do Southern food right.",
+        "<b>Activities</b> - You don't need to eat or drink to have fun!"
       ],
       "dropDown": {
-        "select": [
-          "Beer",
-          "Food",
-          "Activities"
-        ],
-        "label": "Filter on Type"
+        "activity": {
+          "select": [
+            "Beer",
+            "Food",
+            "Activities"
+          ],
+          "label": "Filter on Type"
+        },
+        "location": {
+          "select": [
+            "SouthEnd",
+            "NoDa",
+            "Plaza Midwood"
+          ],
+          "label": "Filter on Location"
+        },
+        "foodType": {
+          "select": [
+            "Southern",
+            "Everything Else"
+          ],
+          "label": "Filter on Food Type"
+        }
       },
       "cards": [
         {
@@ -200,6 +218,7 @@
             -81.0075044
           ],
           "type": "food",
+          "foodType": "Everything Else",
           "heading": {
             "text": "7th Street Market",
             "link": "http://www.7thstreetpublicmarket.com/"
@@ -218,10 +237,406 @@
         },
         {
           "googleLatLong": [
+            35.2725889,
+            -81.0075044
+          ],
+          "type": "food",
+          "foodType": "Everything Else",
+          "heading": {
+            "text": "Amelies",
+            "link": "http://www.7thstreetpublicmarket.com/"
+          },
+          "para": "Charlotte's own bustling food destination in the heart of the city! Great coffee, food, and even a few bars inside with tvs. Think of a smaller version of Philadelphia's reading terminal market",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "yes"
+            },
+            {
+              "heading": "Time Required",
+              "text": "30 minutes - 2 hours"
+            }
+          ]
+        },
+        {
+          "googleLatLong": [
+            35.2725889,
+            -81.0075044
+          ],
+          "type": "food",
+          "foodType": "Everything Else",
+          "heading": {
+            "text": "Essex",
+            "link": "http://www.7thstreetpublicmarket.com/"
+          },
+          "para": "Charlotte's own bustling food destination in the heart of the city! Great coffee, food, and even a few bars inside with tvs. Think of a smaller version of Philadelphia's reading terminal market",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "yes"
+            },
+            {
+              "heading": "Time Required",
+              "text": "30 minutes - 2 hours"
+            }
+          ]
+        },
+
+        {
+          "googleLatLong": [
+            35.2725889,
+            -81.0075044
+          ],
+          "type": "food",
+          "foodType": "Southern",
+          "heading": {
+            "text": "Prices Chicken",
+            "link": "http://www.7thstreetpublicmarket.com/"
+          },
+          "para": "Charlotte's own bustling food destination in the heart of the city! Great coffee, food, and even a few bars inside with tvs. Think of a smaller version of Philadelphia's reading terminal market",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "yes"
+            },
+            {
+              "heading": "Time Required",
+              "text": "30 minutes - 2 hours"
+            }
+          ]
+        },
+        {
+          "googleLatLong": [
+            35.2725889,
+            -81.0075044
+          ],
+          "type": "food",
+          "foodType": "Southern",
+          "heading": {
+            "text": "Macs BBQ",
+            "link": "http://www.7thstreetpublicmarket.com/"
+          },
+          "para": "Charlotte's own bustling food destination in the heart of the city! Great coffee, food, and even a few bars inside with tvs. Think of a smaller version of Philadelphia's reading terminal market",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "yes"
+            },
+            {
+              "heading": "Time Required",
+              "text": "30 minutes - 2 hours"
+            }
+          ]
+        },
+        {
+          "googleLatLong": [
+            35.2725889,
+            -81.0075044
+          ],
+          "type": "food",
+          "foodType": "Southern",
+          "heading": {
+            "text": "Roosters",
+            "link": "http://www.7thstreetpublicmarket.com/"
+          },
+          "para": "Charlotte's own bustling food destination in the heart of the city! Great coffee, food, and even a few bars inside with tvs. Think of a smaller version of Philadelphia's reading terminal market",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "yes"
+            },
+            {
+              "heading": "Time Required",
+              "text": "30 minutes - 2 hours"
+            }
+          ]
+        },
+        {
+          "googleLatLong": [
+            35.2725889,
+            -81.0075044
+          ],
+          "type": "food",
+          "foodType": "Southern",
+          "heading": {
+            "text": "Saucemans BBQ",
+            "link": "http://www.7thstreetpublicmarket.com/"
+          },
+          "para": "Charlotte's own bustling food destination in the heart of the city! Great coffee, food, and even a few bars inside with tvs. Think of a smaller version of Philadelphia's reading terminal market",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "yes"
+            },
+            {
+              "heading": "Time Required",
+              "text": "30 minutes - 2 hours"
+            }
+          ]
+        },
+
+
+
+        {
+          "googleLatLong": [
             35.2212875,
             -80.8456213
           ],
           "type": "beer",
+          "location": "SouthEnd",
+          "heading": {
+            "text": "Wooden Robot",
+            "link": "https://www.sycamorebrew.com"
+          },
+          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+            },
+            {
+              "heading": "Time Required",
+              "text": "30 minutes to - 3 hours"
+            }
+          ]
+        },
+        {
+          "googleLatLong": [
+            35.2212875,
+            -80.8456213
+          ],
+          "type": "beer",
+          "location": "SouthEnd",
+          "heading": {
+            "text": "Sycamore Brewery",
+            "link": "https://www.sycamorebrew.com"
+          },
+          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+            },
+            {
+              "heading": "Time Required",
+              "text": "30 minutes to - 3 hours"
+            }
+          ]
+        },
+        {
+          "googleLatLong": [
+            35.2212875,
+            -80.8456213
+          ],
+          "type": "beer",
+          "location": "SouthEnd",
+          "heading": {
+            "text": "CCC",
+            "link": "https://www.sycamorebrew.com"
+          },
+          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+            },
+            {
+              "heading": "Time Required",
+              "text": "30 minutes to - 3 hours"
+            }
+          ]
+        },
+        {
+          "googleLatLong": [
+            35.2212875,
+            -80.8456213
+          ],
+          "type": "beer",
+          "location": "SouthEnd",
+          "heading": {
+            "text": "OMB",
+            "link": "https://www.sycamorebrew.com"
+          },
+          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+            },
+            {
+              "heading": "Time Required",
+              "text": "30 minutes to - 3 hours"
+            }
+          ]
+        },
+        {
+          "googleLatLong": [
+            35.2212875,
+            -80.8456213
+          ],
+          "type": "beer",
+          "location": "NoDa",
+          "heading": {
+            "text": "Birdsong",
+            "link": "https://www.sycamorebrew.com"
+          },
+          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+            },
+            {
+              "heading": "Time Required",
+              "text": "30 minutes to - 3 hours"
+            }
+          ]
+        },
+        {
+          "googleLatLong": [
+            35.2212875,
+            -80.8456213
+          ],
+          "type": "beer",
+          "location": "NoDa",
+          "heading": {
+            "text": "Hesit",
+            "link": "https://www.sycamorebrew.com"
+          },
+          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+            },
+            {
+              "heading": "Time Required",
+              "text": "30 minutes to - 3 hours"
+            }
+          ]
+        },
+        {
+          "googleLatLong": [
+            35.2212875,
+            -80.8456213
+          ],
+          "type": "beer",
+          "location": "NoDa",
+          "heading": {
+            "text": "Bold Missy",
+            "link": "https://www.sycamorebrew.com"
+          },
+          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+            },
+            {
+              "heading": "Time Required",
+              "text": "30 minutes to - 3 hours"
+            }
+          ]
+        },
+        {
+          "googleLatLong": [
+            35.2212875,
+            -80.8456213
+          ],
+          "type": "beer",
+          "location": "NoDa",
+          "heading": {
+            "text": "NoDa Brewery",
+            "link": "https://www.sycamorebrew.com"
+          },
+          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+            },
+            {
+              "heading": "Time Required",
+              "text": "30 minutes to - 3 hours"
+            }
+          ]
+        },
+        {
+          "googleLatLong": [
+            35.2212875,
+            -80.8456213
+          ],
+          "type": "beer",
+          "location": "Plaza Midwood",
+          "heading": {
+            "text": "Catawba Brewery",
+            "link": "https://www.sycamorebrew.com"
+          },
+          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+            },
+            {
+              "heading": "Time Required",
+              "text": "30 minutes to - 3 hours"
+            }
+          ]
+        },
+        {
+          "googleLatLong": [
+            35.2212875,
+            -80.8456213
+          ],
+          "type": "beer",
+          "location": "Plaza Midwood",
+          "heading": {
+            "text": "Legion Brewery",
+            "link": "https://www.sycamorebrew.com"
+          },
+          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+            },
+            {
+              "heading": "Time Required",
+              "text": "30 minutes to - 3 hours"
+            }
+          ]
+        },
+        {
+          "googleLatLong": [
+            35.2212875,
+            -80.8456213
+          ],
+          "type": "beer",
+          "location": "Plaza Midwood",
+          "heading": {
+            "text": "Resident Culture Brewery",
+            "link": "https://www.sycamorebrew.com"
+          },
+          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "sideNotes": [
+            {
+              "heading": "Walkable from hotel:",
+              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+            },
+            {
+              "heading": "Time Required",
+              "text": "30 minutes to - 3 hours"
+            }
+          ]
+        },
+        {
+          "googleLatLong": [
+            35.2212875,
+            -80.8456213
+          ],
+          "type": "beer",
+          "location": "SouthEnd",
           "heading": {
             "text": "Sycamore Brewery",
             "link": "https://www.sycamorebrew.com"
@@ -304,13 +719,12 @@
             }
           ]
         },
-
         {
           "googleLatLong": [
             35.205761,
             -80.864947
           ],
-          "type": "beer",
+          "type": "activity",
           "heading": {
             "text": "Walk Around Uptown",
             "link": "#"

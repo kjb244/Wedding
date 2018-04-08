@@ -73,9 +73,16 @@ app.directive('modalOverlayDir', function($timeout){
         link: function($scope, elem, attrs){
             $scope.showModal = false;
             $timeout(function(){
+                if(window.location.origin.indexOf(('localhost') > -1)){
+                    document.querySelector('body .overlay').classList.add('hidden');
+                    document.querySelector('body').classList.remove('hide-scroll')
+                    return true;
+                }
+
                 $scope.showModal=true;
                 document.querySelector('body').classList.add('hide-scroll');
             },1000);
+
         },
         controller: function($scope){
             $scope.inputs = [];
@@ -222,6 +229,47 @@ app.directive('cardsWithMapDir', function(angularStore){
                     return rec.title === header;
                 })[0];
                 google.maps.event.trigger(currMarker, 'click');
+            }
+
+            $scope.showLocationDropDown = false;
+            $scope.showFoodTypeDropDown = false;
+
+            $scope.updateActivity = function(){
+                var sc = $scope;
+                sc.showLocationDropDown = false;
+                sc.showFoodTypeDropDown = false;
+                if (sc.activityDropDown === 'Beer'){
+                    sc.showLocationDropDown = true;
+                }
+                else if (sc.activityDropDown === 'Food'){
+                    sc.showFoodTypeDropDown = true;
+                }
+            }
+
+
+            $scope.activityDropDownFilter = function(rec){
+                if(!$scope.activityDropDown) return true;
+                return rec.type.toLowerCase() === $scope.activityDropDown.toLowerCase();
+            }
+
+            $scope.locationDropDownFilter = function(rec){
+                if(!$scope.activityDropDown) return true;
+                if ($scope.activityDropDown.toLowerCase() === 'beer'){
+                    if($scope.locationDropDown){
+                        return rec.location.toLowerCase() === $scope.locationDropDown.toLowerCase();
+                    }
+                }
+                return true;
+            }
+
+            $scope.foodTypeDropDownFilter = function(rec){
+                if(!$scope.activityDropDown) return true;
+                if ($scope.activityDropDown.toLowerCase() === 'food'){
+                    if($scope.foodTypeDropDown){
+                        return rec.foodType.toLowerCase() === $scope.foodTypeDropDown.toLowerCase();
+                    }
+                }
+                return true;
             }
 
         }

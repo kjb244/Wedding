@@ -46,30 +46,42 @@
   "routes": {
     "home": {
       "backgroundImage": "",
-      "pane": {
-        "heading": "Heading",
-        "subHeading": "sub heading",
-        "para": "para para para para"
-      }
+      "heading": "Heading",
+      "subHeading": "sub heading"
     },
     "info": {
       "content": [
         {
-          "heading": "Welcome and Thanks for Sharing Our Special Day!",
+          "heading": "Information"
+        },
+        {
+          "heading": "Guests",
           "paras": [
-            "Morbi tellus risus, tempus viverra ultricies eget, malesuada at metus. Vestibulum ornare, arcu vitae pulvinar faucibus, nulla nisl cursus quam, nec tincidunt elit nisl sed eros"
+            "Respectfully, this will be an adult only event and only children of immediate family will be in attendance."
           ]
         },
         {
-          "heading": "What, Where, and When?",
+          "heading": "Attire",
+          "paras": ["Semi-formal"]
+        },
+
+        {
+          "heading": "Menu",
           "paras": [
-            "Morbi tellus risus, tempus viverra ultricies eget, malesuada at metus. Vestibulum ornare, arcu vitae pulvinar faucibus, nulla nisl cursus quam, nec tincidunt elit nisl sed eros"
+            "Dinner will be catered by Midwood Smokehouse (local Carolina BBQ joint); if you have any dietary restrictions, please indicate them on the RSVP page"
           ]
         },
         {
-          "heading": "Travel and Hotels",
+          "heading": "Accomodations",
           "paras": [
-            "Morbi tellus risus, tempus viverra ultricies eget, malesuada at metus. Vestibulum ornare, arcu vitae pulvinar faucibus, nulla nisl cursus quam, nec tincidunt elit nisl sed eros"
+            "We have blocked a book of discounted rooms in Uptown Charlotte at the Holiday Inn Charlotte Center City under 'Bacino/Gonzales'. The hotel is just around the corner from the ceremony/reception (Levine Museum). Please use the link below or call the hotel at 704.335.5400 (mention our names) to reserve your room.",
+            "Also, note that you must book by 9/26/2018 to get the group rate."
+          ]
+        },
+        {
+          "heading": "Travel",
+          "paras": [
+            "If you are flying in to Charlotte International Airport, you can get an Uber/Lyft to the hotel for about $15. There is also a shuttle (called the Sprinter bus) that will take you near the hotel for a few dollars. Put link here to Sprinter."
           ]
         },
         {
@@ -110,7 +122,7 @@
         {
           "sub": {
             "title": "Cocktail Hour",
-            "subTitle": "Saturday",
+          "subTitle": "Saturday",
             "subSubTitle": "6pm-7pm"
           },
           "details": {
@@ -166,15 +178,18 @@
       "submitButtonLabel": "Submit Invitation"
     },
     "thingsToDo": {
-      "heading": "akljdf lsjd slkjdf",
+      "heading": "Things to Do",
       "headingParas": [
-        "Morbi tellus risus, tempus viverra ultricies eget, malesuada at metus. Vestibulum ornare, arcu vitae pulvinar faucibus, nulla nisl cursus quam, nec tincidunt elit nisl sed eros. Duis lobortis, dui id interdum facilisis, ligula justo gravida tortor, vel finibus lorem arcu at felis. Vivamus ut aliquet leo, quis congue risus. Quisque vehicula condimentum nunc non sodales. Etiam vitae dui gravida, facilisis purus sit amet, ornare ante. Ut a velit in libero iaculis tempor."
+        "If you're in town for the whole weekend, here are some of our suggestions on how to get to know Charlotte better. We have broken our favorite things to do by types below.",
+        "Beer - Charlotte is home to over 30 local breweries. If you're looking for a fun afternoon, you can walk the Rail Trail in South End or stroll around NoDa to hit up some of the more popular spots.",
+        "Food - While Charlotte might not be on the culinary level of bigger cities like New York or Chicago, the food scene is rapidly growing. And for all of you Yankees, Charlotte knows how to do Southern food right.",
+        "Activities - You don't need to eat or drink to have fun!"
       ],
       "dropDown": {
         "select": [
-          "beer",
-          "food",
-          "activities"
+          "Beer",
+          "Food",
+          "Activities"
         ],
         "label": "Filter on Type"
       },
@@ -269,15 +284,15 @@
         },
         {
           "googleLatLong": [
-            35.208751,
+            35.208731,
             -80.864947
           ],
           "type": "activities",
           "heading": {
-            "text": "Levine Museum of the new South",
-            "link": "http://www.museumofthenewsouth.org/"
+            "text": "Carowinds",
+            "link": "http://www.nascarhall.com/"
           },
-          "para": "Levine Museum's mission is to engage a broad-based audience in the exploration and appreciation of the diverse history of the South since the Civil War, with a focus on Charlotte and the surrounding Carolina Piedmont.",
+          "para": "Owned by Cedar Point",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -289,6 +304,7 @@
             }
           ]
         },
+
         {
           "googleLatLong": [
             35.205761,

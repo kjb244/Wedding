@@ -95,11 +95,11 @@
 
 }
 
-.home .card{
-    padding: 20px;
-    background-color: white;
-    border-radius: 7px;
+.home .heading{
+    position: absolute;
+    top: 0;
 }
+
 
 .home .card .header h4{
     color: #ff6756;
@@ -109,14 +109,7 @@
     text-align: center;
 }
 
-.home .card .main p{
-    padding-top: 20px;
-    border-top: 1px solid #ff9384;
-}
 
-.home .section-cards{
-    margin-top: -80px !important;
-}
 
 
 

@@ -52,9 +52,6 @@
     "info": {
       "content": [
         {
-          "heading": "Information"
-        },
-        {
           "heading": "Guests",
           "paras": [
             "Respectfully, this will be an adult only event and only children of immediate family will be in attendance."
@@ -75,14 +72,14 @@
         {
           "heading": "Accomodations",
           "paras": [
-            "We have blocked a book of discounted rooms in Uptown Charlotte at the Holiday Inn Charlotte Center City under 'Bacino/Gonzales'. The hotel is just around the corner from the ceremony/reception (Levine Museum). Please use the link below or call the hotel at 704.335.5400 (mention our names) to reserve your room.",
-            "Also, note that you must book by 9/26/2018 to get the group rate."
+            "We have blocked a book of discounted rooms in Uptown Charlotte at the Holiday Inn Charlotte Center City under 'Bacino/Gonzales'. The hotel is just around the corner from the ceremony/reception (Levine Museum). Please use the link below or call the hotel at 704.335.5400 (mention our names) to reserve your room. <a href='https://www.holidayinn.com/redirect?path=hd&brandCode=HI&localeCode=en&regionCode=1&hotelCode=CLTDT&_PMID=99801505&GPC=GBW&viewfullsite=true' id='reserveRoom' target='_blank'>Reserve Room Bacino/Gonzales</a>",
+            "Also, note that you must book by <b>9/26/2018</b> to get the group rate."
           ]
         },
         {
           "heading": "Travel",
           "paras": [
-            "If you are flying in to Charlotte International Airport, you can get an Uber/Lyft to the hotel for about $15. There is also a shuttle (called the Sprinter bus) that will take you near the hotel for a few dollars. Put link here to Sprinter."
+            "If you are flying in to Charlotte International Airport, you can get an Uber/Lyft to the hotel for about $15. There is also a shuttle (<a href='https://www.charlottecentercity.org/transportation/sprinter/' id='sprinterShuttle' target='_blank'>Sprinter Shuttle</a>) that will take you near the hotel for a few dollars."
           ]
         },
         {

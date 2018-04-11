@@ -3,7 +3,7 @@
         <div ng-repeat="rec in copy.routes.info.content" class="content" ng-class="{'show-border': !rec.iframe }">
             <h4>{{rec.heading}}</h4>
             <div ng-repeat="paraRec in rec.paras" class="paras">
-                <p>{{paraRec}}</p>
+                <p ng-bind-html="paraRec"></p>
             </div>
             <div ng-if="rec.iframe" ng-init="iframeCntr = countInit()">
                 <div ng-bind-html="trustIframe[iframeCntr]" ></div>

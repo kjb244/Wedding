@@ -9,6 +9,21 @@ section.modal-wrapper .modal{
     border-radius: 3px;
     z-index: 12;
 }
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    section.modal-wrapper .modal {
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    section.modal-wrapper .modal {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
 
 section.modal-wrapper .modal-bootstrapped{
     animation: topDown .8s ease-out forwards;

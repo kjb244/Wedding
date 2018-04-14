@@ -47,7 +47,17 @@
     "home": {
       "backgroundImage": "",
       "heading": "Heading",
-      "subHeading": "sub heading"
+      "subHeading": "sub heading",
+      "aboutUs": {
+        "front": {
+          "heading": "Hello",
+          "subHeading": "Welcome to our wedding website! You should find all information you need to share our special day with us."
+        },
+        "back": {
+          "heading": "Kevin Bacino",
+          "subHeading": "test test salkjdf alsd jflk asdlfk asdlkf jasdlf asld fas f asjf"
+        }
+      }
     },
     "info": {
       "content": [
@@ -220,7 +230,7 @@
             "text": "7th Street Market",
             "link": "http://www.7thstreetpublicmarket.com/"
           },
-          "para": "Charlotte's own bustling food destination in the heart of the city! Great coffee, food, and even a few bars inside with tvs. Think of a smaller version of Philadelphia's reading terminal market",
+          "para": "Charlotte's own bustling food destination in the heart of the city! Great coffee, food, and even a few bars inside with tvs.",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -243,7 +253,7 @@
             "text": "Amelies",
             "link": "http://www.7thstreetpublicmarket.com/"
           },
-          "para": "Charlotte's own bustling food destination in the heart of the city! Great coffee, food, and even a few bars inside with tvs. Think of a smaller version of Philadelphia's reading terminal market",
+          "para": "Our first date spot! Great coffee and sandwiches.",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -266,7 +276,7 @@
             "text": "Essex",
             "link": "http://www.7thstreetpublicmarket.com/"
           },
-          "para": "Charlotte's own bustling food destination in the heart of the city! Great coffee, food, and even a few bars inside with tvs. Think of a smaller version of Philadelphia's reading terminal market",
+          "para": "Good food, but better cocktails. Great for people watching if you sit outside.",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -290,7 +300,7 @@
             "text": "Prices Chicken",
             "link": "http://www.7thstreetpublicmarket.com/"
           },
-          "para": "Charlotte's own bustling food destination in the heart of the city! Great coffee, food, and even a few bars inside with tvs. Think of a smaller version of Philadelphia's reading terminal market",
+          "para": "Classic fried food joint that's been there since the 60s. Actually, you almost go back in time when you go there since the workers dress in all white and require cash only.",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -310,10 +320,10 @@
           "type": "food",
           "foodType": "Southern",
           "heading": {
-            "text": "Macs BBQ",
+            "text": "Macs Speed Shop (BBQ)",
             "link": "http://www.7thstreetpublicmarket.com/"
           },
-          "para": "Charlotte's own bustling food destination in the heart of the city! Great coffee, food, and even a few bars inside with tvs. Think of a smaller version of Philadelphia's reading terminal market",
+          "para": "Always packed - typically Southern BBQ. It's fun to sit outside.",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -336,7 +346,7 @@
             "text": "Roosters",
             "link": "http://www.7thstreetpublicmarket.com/"
           },
-          "para": "Charlotte's own bustling food destination in the heart of the city! Great coffee, food, and even a few bars inside with tvs. Think of a smaller version of Philadelphia's reading terminal market",
+          "para": "Great reviews and even better Southern comfort food.",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -359,7 +369,7 @@
             "text": "Saucemans BBQ",
             "link": "http://www.7thstreetpublicmarket.com/"
           },
-          "para": "Charlotte's own bustling food destination in the heart of the city! Great coffee, food, and even a few bars inside with tvs. Think of a smaller version of Philadelphia's reading terminal market",
+          "para": "Award winning BBQ haunt. Some people claim it's the best in Charlotte.",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -385,7 +395,7 @@
             "text": "Wooden Robot",
             "link": "https://www.sycamorebrew.com"
           },
-          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "para": "Cool craft beer spot in the ever bustling Southend Neighborhood.",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -408,7 +418,7 @@
             "text": "Sycamore Brewery",
             "link": "https://www.sycamorebrew.com"
           },
-          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "para": "The most popular brewery in Charlotte. Tons of picnic tables for soaking in the sun; they also usually have a band on Saturdays.",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -428,10 +438,10 @@
           "type": "beer",
           "location": "SouthEnd",
           "heading": {
-            "text": "CCC",
+            "text": "CCC Brewery",
             "link": "https://www.sycamorebrew.com"
           },
-          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "para": "One of my favorite breweries since it's a little smaller and cozier. Plus they have free pretzels!",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -451,10 +461,10 @@
           "type": "beer",
           "location": "SouthEnd",
           "heading": {
-            "text": "OMB",
+            "text": "Old Mecklenburg Brewery",
             "link": "https://www.sycamorebrew.com"
           },
-          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "para": "Huge German style Bier Garden. Definitely the biggest brewery in Charlotte. Huge indoor and outdoor area.",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -474,10 +484,10 @@
           "type": "beer",
           "location": "NoDa",
           "heading": {
-            "text": "Birdsong",
+            "text": "Birdsong Brewery",
             "link": "https://www.sycamorebrew.com"
           },
-          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "para": "Small but always packed brewery in the NoDa neighborhood. Board games inside and cornhole outside.",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -497,10 +507,10 @@
           "type": "beer",
           "location": "NoDa",
           "heading": {
-            "text": "Hesit",
+            "text": "Heist Brewery",
             "link": "https://www.sycamorebrew.com"
           },
-          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "para": "German brewhouse with great food in the heart of NoDa",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -523,30 +533,7 @@
             "text": "Bold Missy",
             "link": "https://www.sycamorebrew.com"
           },
-          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
-          "sideNotes": [
-            {
-              "heading": "Walkable from hotel:",
-              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
-            },
-            {
-              "heading": "Time Required",
-              "text": "30 minutes to - 3 hours"
-            }
-          ]
-        },
-        {
-          "googleLatLong": [
-            35.2212875,
-            -80.8456213
-          ],
-          "type": "beer",
-          "location": "NoDa",
-          "heading": {
-            "text": "NoDa Brewery",
-            "link": "https://www.sycamorebrew.com"
-          },
-          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "para": "Newest brewery in Charlotte - owned and operated by all women!",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -569,7 +556,7 @@
             "text": "Catawba Brewery",
             "link": "https://www.sycamorebrew.com"
           },
-          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "para": "Catawba finally expanded from Asheville, NC to Charlotte and everyone loves it. Highly rates 4.8/5 stars on google.",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -592,7 +579,7 @@
             "text": "Legion Brewery",
             "link": "https://www.sycamorebrew.com"
           },
-          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "para": "Nestled in the heard of Plaza Midwood neighborhood. Comes with plenty of character.",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -615,7 +602,7 @@
             "text": "Resident Culture Brewery",
             "link": "https://www.sycamorebrew.com"
           },
-          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
+          "para": "Another new brewery to Charlotte. Tons of space inside and a great food truck stationed outside.",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -660,7 +647,7 @@
             "text": "US National White Water Center",
             "link": "http://usnwc.org"
           },
-          "para": "If you have the time on Saturday, this is a cool place. Guests can enjoy whitewater rafting and kayaking, flatwater kayaking, stand-up paddle boarding, rock climbing, zip lines, ropes courses, a canopy tour, and mountain biking on our 30+ mile trail system.",
+          "para": "If you have the time on Saturday, this is a cool place. Guests can enjoy whitewater rafting and kayaking, flatwater kayaking, stand-up paddle boarding, rock climbing, zip lines, ropes courses, a canopy tour, and mountain biking on the 30+ mile trail system.",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -682,7 +669,7 @@
             "text": "NASCAR Hall of Fame",
             "link": "http://www.nascarhall.com/"
           },
-          "para": "We actually have not been here, but have heard it's a fun time. The NASCAR Hall of Fame is an interactive entertainment attraction honoring the history and heritage of NASCAes courses, a canopy tour, and mountain biking on our 30+ mile trail system.",
+          "para": "We actually have not been here, but have heard it's a fun time.",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -704,7 +691,7 @@
             "text": "Carowinds",
             "link": "http://www.nascarhall.com/"
           },
-          "para": "Owned by Cedar Point",
+          "para": "Typical large amusement park; owned by Cedar Point",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",
@@ -726,7 +713,7 @@
             "text": "Walk Around Uptown",
             "link": "#"
           },
-          "para": "Charlotte is a very walkable modern city; also being October, the weather should be nice. The city have everything to offer - from a good Southern Cooked meal at abc, to def",
+          "para": "Charlotte is a very walkable modern city; also being October, the weather should be nice. It's small enough that you can explore the whole city in a about an hour or two.",
           "sideNotes": [
             {
               "heading": "Walkable from hotel:",

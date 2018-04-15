@@ -164,6 +164,9 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
                     arr.push(data.googleZoomOut || false);
                     locations.push(arr);
                 });
+                //add in hotel
+                locations.push(['Holiday Inn', '35.227039', '-80.839813', false]);
+
 
 
                 map = new google.maps.Map(document.getElementById('map'), {
@@ -181,11 +184,19 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
                 var marker, i;
 
                 for (i = 0; i < locations.length; i++) {
-                    marker = new google.maps.Marker({
+                    var mapObj = {
                         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
                         map: map,
                         title: locations[i][0]
-                    });
+                    }
+                    if(locations[i][0].indexOf('Holiday') > -1) {
+                        mapObj.icon = {
+                            url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+                            scaledSize: new google.maps.Size(40, 40), // scaled size
+
+                        }
+                    }
+                    marker = new google.maps.Marker(mapObj);
                     $scope.googleMapMarkers.push(marker);
                     markers.push(marker);
 

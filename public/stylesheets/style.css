@@ -42,8 +42,8 @@
     [data-section="things-to-do"] .map-wrapper.custom {
         position: fixed;
         top: 0;
-        margin-left: 48%;
-        width: 47.6%;
+        right: 0;
+        width: 50%;
 
     }
 }

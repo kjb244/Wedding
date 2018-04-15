@@ -249,6 +249,7 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
 
                 window.addEventListener('scroll', scrollMove);
                 window.addEventListener('touchmove', function(){
+                    alert();
                     var to = 0;
                     for(var i=0; i<20; i++){
                         setTimeout(function(){

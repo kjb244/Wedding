@@ -248,7 +248,7 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
                 }
 
 
-                window.addEventListener('dscroll', scrollMove);
+                window.addEventListener('scroll', scrollMove);
                 window.addEventListener('touchmove', scrollMove);
                 window.addEventListener('touchstart', scrollMove);
 

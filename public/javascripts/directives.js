@@ -252,7 +252,8 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
                     var to = 0;
                     for(var i=0; i<20; i++){
                         setTimeout(function(){
-                            scrollMove();
+                            window.scrollTo(window.scrollX, window.scrollY - 1);
+                            window.scrollTo(window.scrollX, window.scrollY + 1);
                         },to);
                         to+= 100;
                     }

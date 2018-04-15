@@ -239,7 +239,6 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
                     if(screenSize === 'small') return false;
                     var st = window.pageYOffset || document.documentElement.scrollTop;
                     var map = document.querySelector('.map-wrapper');
-                    var map = document.querySelector('.map-wrapper');
                     if(st > firstCardTop){
                         map.classList.add('custom');
                     }
@@ -249,7 +248,8 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
                 }
 
                 window.addEventListener('scroll', scrollMove);
-                window.addEventListener('touchmove', scrollMove)
+                window.addEventListener('touchmove', scrollMove);
+                window.addEventListener('touchstart', scrollMove);
 
             })
 

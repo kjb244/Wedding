@@ -49,14 +49,8 @@
       "heading": "Heading",
       "subHeading": "sub heading",
       "aboutUs": {
-        "front": {
-          "heading": "Hello",
-          "subHeading": "Welcome to our wedding website! You should find all information you need to share our special day with us."
-        },
-        "back": {
-          "heading": "Kevin Bacino",
-          "subHeading": "test test salkjdf alsd jflk asdlfk asdlkf jasdlf asld fas f asjf"
-        }
+        "heading": "Hello",
+        "subHeading": "Welcome to our wedding website! You should find all information you need to share our special day with us."
       }
     },
     "info": {
@@ -76,7 +70,7 @@
         {
           "heading": "Menu",
           "paras": [
-            "Dinner will be catered by Midwood Smokehouse (local Carolina BBQ joint); if you have any dietary restrictions, please indicate them on the RSVP page"
+            "Dinner will be catered by Midwood Smokehouse (local Carolina BBQ joint); there will be vegetarian options -  if you have any dietary restrictions, please indicate them on the RSVP page"
           ]
         },
         {
@@ -221,8 +215,8 @@
       "cards": [
         {
           "googleLatLong": [
-            35.2725889,
-            -81.0075044
+            35.227528,
+            -80.837982
           ],
           "type": "food",
           "foodType": "Everything Else",
@@ -233,7 +227,7 @@
           "para": "Charlotte's own bustling food destination in the heart of the city! Great coffee, food, and even a few bars inside with tvs.",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
+              "heading": "Walkable from hotel",
               "text": "yes"
             },
             {
@@ -244,8 +238,8 @@
         },
         {
           "googleLatLong": [
-            35.2725889,
-            -81.0075044
+            35.224110,
+            -80.845047
           ],
           "type": "food",
           "foodType": "Everything Else",
@@ -256,7 +250,7 @@
           "para": "Our first date spot! Great coffee and sandwiches.",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
+              "heading": "Walkable from hotel",
               "text": "yes"
             },
             {
@@ -267,8 +261,8 @@
         },
         {
           "googleLatLong": [
-            35.2725889,
-            -81.0075044
+            35.226498,
+            -80.842674
           ],
           "type": "food",
           "foodType": "Everything Else",
@@ -279,7 +273,7 @@
           "para": "Good food, but better cocktails. Great for people watching if you sit outside.",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
+              "heading": "Walkable from hotel",
               "text": "yes"
             },
             {
@@ -288,11 +282,10 @@
             }
           ]
         },
-
         {
           "googleLatLong": [
-            35.2725889,
-            -81.0075044
+            35.214382,
+            -80.857536
           ],
           "type": "food",
           "foodType": "Southern",
@@ -303,8 +296,8 @@
           "para": "Classic fried food joint that's been there since the 60s. Actually, you almost go back in time when you go there since the workers dress in all white and require cash only.",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
-              "text": "yes"
+              "heading": "Walkable from hotel",
+              "text": "no - but can take light rail"
             },
             {
               "heading": "Time Required",
@@ -314,8 +307,8 @@
         },
         {
           "googleLatLong": [
-            35.2725889,
-            -81.0075044
+            35.202915,
+            -80.864357
           ],
           "type": "food",
           "foodType": "Southern",
@@ -326,8 +319,8 @@
           "para": "Always packed - typically Southern BBQ. It's fun to sit outside.",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
-              "text": "yes"
+              "heading": "Walkable from hotel",
+              "text": "no - but can take light rail"
             },
             {
               "heading": "Time Required",
@@ -337,8 +330,8 @@
         },
         {
           "googleLatLong": [
-            35.2725889,
-            -81.0075044
+            35.226593,
+            -80.840858
           ],
           "type": "food",
           "foodType": "Southern",
@@ -349,7 +342,7 @@
           "para": "Great reviews and even better Southern comfort food.",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
+              "heading": "Walkable from hotel",
               "text": "yes"
             },
             {
@@ -360,8 +353,8 @@
         },
         {
           "googleLatLong": [
-            35.2725889,
-            -81.0075044
+            35.213947,
+            -80.861206
           ],
           "type": "food",
           "foodType": "Southern",
@@ -372,8 +365,8 @@
           "para": "Award winning BBQ haunt. Some people claim it's the best in Charlotte.",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
-              "text": "yes"
+              "heading": "Walkable from hotel",
+              "text": "no - but can take light rail"
             },
             {
               "heading": "Time Required",
@@ -381,13 +374,10 @@
             }
           ]
         },
-
-
-
         {
           "googleLatLong": [
-            35.2212875,
-            -80.8456213
+            35.217037,
+            -80.857208
           ],
           "type": "beer",
           "location": "SouthEnd",
@@ -398,8 +388,8 @@
           "para": "Cool craft beer spot in the ever bustling Southend Neighborhood.",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
-              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+              "heading": "Walkable from hotel",
+              "text": "yes (25 min)"
             },
             {
               "heading": "Time Required",
@@ -409,8 +399,8 @@
         },
         {
           "googleLatLong": [
-            35.2212875,
-            -80.8456213
+            35.208698,
+            -80.862747
           ],
           "type": "beer",
           "location": "SouthEnd",
@@ -421,8 +411,8 @@
           "para": "The most popular brewery in Charlotte. Tons of picnic tables for soaking in the sun; they also usually have a band on Saturdays.",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
-              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+              "heading": "Walkable from hotel",
+              "text": "no - but can take light rail"
             },
             {
               "heading": "Time Required",
@@ -432,32 +422,33 @@
         },
         {
           "googleLatLong": [
-            35.2212875,
-            -80.8456213
+            35.201164,
+            -80.869553
           ],
           "type": "beer",
           "location": "SouthEnd",
           "heading": {
-            "text": "CCC Brewery",
+            "text": "Triple C Brewery",
             "link": "https://www.sycamorebrew.com"
           },
           "para": "One of my favorite breweries since it's a little smaller and cozier. Plus they have free pretzels!",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
-              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+              "heading": "Walkable from hotel",
+              "text": "no - but can take light rail"
             },
             {
               "heading": "Time Required",
-              "text": "30 minutes to - 3 hours"
+              "text": "30 minutes to 3 hours"
             }
           ]
         },
         {
           "googleLatLong": [
-            35.2212875,
-            -80.8456213
+            35.187370,
+            -80.881729
           ],
+          "googleZoomOut": true,
           "type": "beer",
           "location": "SouthEnd",
           "heading": {
@@ -467,19 +458,19 @@
           "para": "Huge German style Bier Garden. Definitely the biggest brewery in Charlotte. Huge indoor and outdoor area.",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
-              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+              "heading": "Walkable from hotel",
+              "text": "no"
             },
             {
               "heading": "Time Required",
-              "text": "30 minutes to - 3 hours"
+              "text": "30 minutes to 3 hours"
             }
           ]
         },
         {
           "googleLatLong": [
-            35.2212875,
-            -80.8456213
+            35.230728,
+            -80.826462
           ],
           "type": "beer",
           "location": "NoDa",
@@ -490,19 +481,19 @@
           "para": "Small but always packed brewery in the NoDa neighborhood. Board games inside and cornhole outside.",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
-              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+              "heading": "Walkable from hotel",
+              "text": "no"
             },
             {
               "heading": "Time Required",
-              "text": "30 minutes to - 3 hours"
+              "text": "30 minutes to 3 hours"
             }
           ]
         },
         {
           "googleLatLong": [
-            35.2212875,
-            -80.8456213
+            35.245319,
+            -80.809532
           ],
           "type": "beer",
           "location": "NoDa",
@@ -513,19 +504,19 @@
           "para": "German brewhouse with great food in the heart of NoDa",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
-              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+              "heading": "Walkable from hotel",
+              "text": "no - but can take light rail"
             },
             {
               "heading": "Time Required",
-              "text": "30 minutes to - 3 hours"
+              "text": "30 minutes to 3 hours"
             }
           ]
         },
         {
           "googleLatLong": [
-            35.2212875,
-            -80.8456213
+            35.249237,
+            -80.796600
           ],
           "type": "beer",
           "location": "NoDa",
@@ -536,19 +527,19 @@
           "para": "Newest brewery in Charlotte - owned and operated by all women!",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
-              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+              "heading": "Walkable from hotel",
+              "text": "no - but can take light rail"
             },
             {
               "heading": "Time Required",
-              "text": "30 minutes to - 3 hours"
+              "text": "30 minutes to 3 hours"
             }
           ]
         },
         {
           "googleLatLong": [
-            35.2212875,
-            -80.8456213
+            35.224697,
+            -80.820816
           ],
           "type": "beer",
           "location": "Plaza Midwood",
@@ -559,19 +550,19 @@
           "para": "Catawba finally expanded from Asheville, NC to Charlotte and everyone loves it. Highly rates 4.8/5 stars on google.",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
-              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+              "heading": "Walkable from hotel",
+              "text": "no"
             },
             {
               "heading": "Time Required",
-              "text": "30 minutes to - 3 hours"
+              "text": "30 minutes to 3 hours"
             }
           ]
         },
         {
           "googleLatLong": [
-            35.2212875,
-            -80.8456213
+            35.218410,
+            -80.813026
           ],
           "type": "beer",
           "location": "Plaza Midwood",
@@ -582,19 +573,19 @@
           "para": "Nestled in the heard of Plaza Midwood neighborhood. Comes with plenty of character.",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
-              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+              "heading": "Walkable from hotel",
+              "text": "no"
             },
             {
               "heading": "Time Required",
-              "text": "30 minutes to - 3 hours"
+              "text": "30 minutes to 3 hours"
             }
           ]
         },
         {
           "googleLatLong": [
-            35.2212875,
-            -80.8456213
+            35.220207,
+            -80.805374
           ],
           "type": "beer",
           "location": "Plaza Midwood",
@@ -605,43 +596,21 @@
           "para": "Another new brewery to Charlotte. Tons of space inside and a great food truck stationed outside.",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
-              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
+              "heading": "Walkable from hotel",
+              "text": "no"
             },
             {
               "heading": "Time Required",
-              "text": "30 minutes to - 3 hours"
+              "text": "30 minutes to 3 hours"
             }
           ]
         },
         {
           "googleLatLong": [
-            35.2212875,
-            -80.8456213
+            35.272495,
+            -81.005234
           ],
-          "type": "beer",
-          "location": "SouthEnd",
-          "heading": {
-            "text": "Sycamore Brewery",
-            "link": "https://www.sycamorebrew.com"
-          },
-          "para": "Probably the busiest brewery in Charlotte - and situated in the ever so bustling heart of South End. Since it's located right on the rail trail, you can explore South End after a few drinks!",
-          "sideNotes": [
-            {
-              "heading": "Walkable from hotel:",
-              "text": "Yes, but the light rail is probably better to take (30 minute walk)"
-            },
-            {
-              "heading": "Time Required",
-              "text": "30 minutes to - 3 hours"
-            }
-          ]
-        },
-        {
-          "googleLatLong": [
-            35.208721,
-            -80.864947
-          ],
+          "googleZoomOut": true,
           "type": "activities",
           "heading": {
             "text": "US National White Water Center",
@@ -650,8 +619,8 @@
           "para": "If you have the time on Saturday, this is a cool place. Guests can enjoy whitewater rafting and kayaking, flatwater kayaking, stand-up paddle boarding, rock climbing, zip lines, ropes courses, a canopy tour, and mountain biking on the 30+ mile trail system.",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
-              "text": "no - but you can Uber if you don't have a car"
+              "heading": "Walkable from hotel",
+              "text": "no"
             },
             {
               "heading": "Time Required",
@@ -661,8 +630,8 @@
         },
         {
           "googleLatLong": [
-            35.208731,
-            -80.864947
+            35.221150,
+            -80.843930
           ],
           "type": "activities",
           "heading": {
@@ -672,7 +641,7 @@
           "para": "We actually have not been here, but have heard it's a fun time.",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
+              "heading": "Walkable from hotel",
               "text": "yes"
             },
             {
@@ -683,9 +652,10 @@
         },
         {
           "googleLatLong": [
-            35.208731,
-            -80.864947
+            35.102596,
+            -80.941864
           ],
+          "googleZoomOut": true,
           "type": "activities",
           "heading": {
             "text": "Carowinds",
@@ -694,12 +664,12 @@
           "para": "Typical large amusement park; owned by Cedar Point",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
-              "text": "yes"
+              "heading": "Walkable from hotel",
+              "text": "no"
             },
             {
               "heading": "Time Required",
-              "text": "1-3 hours"
+              "text": "2-4 hours"
             }
           ]
         },
@@ -716,7 +686,7 @@
           "para": "Charlotte is a very walkable modern city; also being October, the weather should be nice. It's small enough that you can explore the whole city in a about an hour or two.",
           "sideNotes": [
             {
-              "heading": "Walkable from hotel:",
+              "heading": "Walkable from hotel",
               "text": "yes"
             },
             {

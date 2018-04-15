@@ -160,14 +160,15 @@ app.directive('cardsWithMapDir', function(angularStore){
                     arr.push(data.heading.text);
                     arr.push(data.googleLatLong[0]);
                     arr.push(data.googleLatLong[1]);
+                    arr.push(data.googleZoomOut || false);
                     locations.push(arr);
                 });
 
 
                 map = new google.maps.Map(document.getElementById('map'), {
                     //zoom: 13,
-                    zoom: 12,
-                    center: new google.maps.LatLng(35.229628,-80.896094),
+                    zoom: 13,
+                    center: new google.maps.LatLng(35.2196305,-80.8381841),
                     mapTypeId: google.maps.MapTypeId.ROADMAP,
                     zoomControlOptions: {
                         position: google.maps.ControlPosition.LEFT_BOTTOM
@@ -189,8 +190,24 @@ app.directive('cardsWithMapDir', function(angularStore){
 
                     google.maps.event.addListener(marker, 'click', (function(marker, i) {
                         return function() {
-                            infowindow.setContent(locations[i][0]);
-                            infowindow.open(map, marker);
+                            //map.setZoom(13);
+
+
+                            //map.setZoom(12);
+                            setTimeout(function () {
+                                map.setCenter(marker.getPosition())
+                                infowindow.setContent(locations[i][0]);
+                                infowindow.open(map, marker);
+                                if(locations[i][3] ){
+                                    map.setZoom(11);
+
+                                }
+                                else{
+                                    map.setZoom(14);
+                                }
+
+                            },0);
+                            //map.setCenter({lat: locations[i][1], lng: locations[i][2]} );
 
                         }
                     })(marker, i));
@@ -200,7 +217,7 @@ app.directive('cardsWithMapDir', function(angularStore){
             loadGoogleMaps();
             setTimeout(function(){
                 window.dispatchEvent(new Event('resize'));
-                autoCenter();
+                //autoCenter();
             },500);
 
             /*var mapY = null;

@@ -243,21 +243,14 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
                         map.classList.add('custom');
                     }
                     else{
-                        map.classList.remove('custom')
+                        map.classList.remove('custom');
                     }
                 }
 
-                window.addEventListener('scroll', scrollMove);
-                window.addEventListener('touchstart', function(){
-                    var to = 0;
-                    for(var i=0; i<20; i++){
-                        setTimeout(function(){
-                            window.scrollTo(window.scrollX, window.scrollY - 1);
-                            window.scrollTo(window.scrollX, window.scrollY + 1);
-                        },to);
-                        to+= 100;
-                    }
-                })
+
+                window.addEventListener('dscroll', scrollMove);
+                window.addEventListener('touchmove', scrollMove);
+                window.addEventListener('touchstart', scrollMove);
 
             })
 

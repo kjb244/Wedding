@@ -133,6 +133,7 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
         link: function($scope, elem, attrs){
             var copy = angularStore.getContent('copy');
             copy = copy.routes.thingsToDo;
+            var screenSize = utilityFunctions.screenSize();
             $scope.googleMapMarkers = [];
 
             var map;
@@ -154,7 +155,6 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
             }
 
             function loadGoogleMaps(){
-                var screenSize = utilityFunctions.screenSize();
                 var locations = [];
                 copy.cards.map(function(data){
                     var arr = [];
@@ -203,15 +203,11 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
                                     else{
                                         map.setZoom(11);
                                     }
-
-
                                 }
                                 else{
                                     map.setZoom(14);
                                 }
-
                             },0);
-                            //map.setCenter({lat: locations[i][1], lng: locations[i][2]} );
 
                         }
                     })(marker, i));
@@ -224,22 +220,24 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
                 //autoCenter();
             },500);
 
-            /*var mapY = null;
-            var scrollMap = utilityFunctions.debounce(function(){
-                var ua = window.navigator.userAgent;
+            elem.ready(function(){
+                var firstCard = document.querySelector('.cards');
+                var firstCardTop = firstCard.getBoundingClientRect().top;
 
-                var mapEl = document.querySelector('#map');
-                var posY = window.scrollY;
-                if (mapY == null) mapY = utilityFunctions.getPosition(document.querySelector('#map')).y;
-                var posDiff = posY - mapY;
-                if (posDiff > 0){
-                    mapEl.style['margin-top'] =  posDiff + 'px';
-                }
-                else{
-                    mapEl.style['margin-top'] =  '0';
-                }
-            },0);
-            window.addEventListener('scroll', scrollMap);*/
+                window.addEventListener('scroll', function(){
+                    if(screenSize === 'small') return false;
+                    var st = window.pageYOffset || document.documentElement.scrollTop;
+                    var map = document.querySelector('.map-wrapper');
+                    var map = document.querySelector('.map-wrapper');
+                    if(st > firstCardTop){
+                        map.classList.add('custom');
+                    }
+                    else{
+                        map.classList.remove('custom')
+                    }
+                })
+
+            })
 
 
 

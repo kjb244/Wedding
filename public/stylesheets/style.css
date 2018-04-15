@@ -29,11 +29,23 @@
     margin: 0;
 }
 
-[data-section="things-to-do"] #map {
+@media screen and (min-width: 40em) {
+    [data-section="things-to-do"] .map-wrapper.custom {
+        position: fixed;
+        top: 0;
+        margin-left: 58.3333%;
+        width: 41.6666%;
+    }
+}
 
-    position: sticky !important;
-    margin: auto;
-    top: 0;
+@media screen and (min-width: 64em) {
+    [data-section="things-to-do"] .map-wrapper.custom {
+        position: fixed;
+        top: 0;
+        margin-left: 48%;
+        width: 47.6%;
+
+    }
 }
 
 @media screen and (max-width: 39.9375em) {
@@ -78,11 +90,6 @@
 .animate-switch.ng-leave.ng-leave-active {
     opacity: 0;
 }
-
-
-
-
-
 
 
 .home .img-container{

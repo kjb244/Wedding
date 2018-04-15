@@ -125,7 +125,7 @@ app.directive('scheduleDir', function($timeout){
 });
 
 
-app.directive('cardsWithMapDir', function(angularStore){
+app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
     return {
         restrict: 'EA',
         scope: false,
@@ -154,6 +154,7 @@ app.directive('cardsWithMapDir', function(angularStore){
             }
 
             function loadGoogleMaps(){
+                var screenSize = utilityFunctions.screenSize();
                 var locations = [];
                 copy.cards.map(function(data){
                     var arr = [];
@@ -190,16 +191,19 @@ app.directive('cardsWithMapDir', function(angularStore){
 
                     google.maps.event.addListener(marker, 'click', (function(marker, i) {
                         return function() {
-                            //map.setZoom(13);
 
-
-                            //map.setZoom(12);
                             setTimeout(function () {
                                 map.setCenter(marker.getPosition())
                                 infowindow.setContent(locations[i][0]);
                                 infowindow.open(map, marker);
                                 if(locations[i][3] ){
-                                    map.setZoom(11);
+                                    if(screenSize === 'small' || screenSize === 'medium'){
+                                        map.setZoom(10);
+                                    }
+                                    else{
+                                        map.setZoom(11);
+                                    }
+
 
                                 }
                                 else{

@@ -84,6 +84,19 @@ app.service('utilityFunctions', function(){
       };
   }
 
+  this.screenSize = function(){
+      var width = window.innerWidth
+          || document.documentElement.clientWidth
+          || document.body.clientWidth;
+      if (width >= 1024){
+          return 'large';
+      }
+      else if (width >= 640){
+          return 'medium';
+      }
+      return 'small';
+  }
+
 });
 
 

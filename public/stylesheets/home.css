@@ -1,0 +1,36 @@
+
+
+[data-section="home" ] .img-container{
+    background-image: url('/images/KR_Sitting.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+
+
+}
+
+[data-section="home" ] .heading{
+    position: absolute;
+    top: 0;
+}
+
+
+[data-section="home" ] .card .header h4{
+    color: #ff6756;
+}
+
+[data-section="home" ] .card .header{
+    text-align: center;
+}
+
+[data-section="home" ] .bottom-card{
+    margin-top: -50px;
+}
+
+
+[data-section="home" ] .bottom-card .container {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 7px;
+}

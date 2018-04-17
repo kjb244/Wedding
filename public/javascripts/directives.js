@@ -233,12 +233,17 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
 
             elem.ready(function(){
                 var firstCard = document.querySelector('.cards');
-                var firstCardTop = firstCard.getBoundingClientRect().top;
+                var firstCardTop;
+                if(!angularStore.getContent('cardTop')){
+                    angularStore.setContent('cardTop', firstCard.getBoundingClientRect().top);
+                }
+                firstCardTop = angularStore.getContent('cardTop');
 
                 function scrollMove(){
                     if(screenSize === 'small') return false;
                     var st = window.pageYOffset || document.documentElement.scrollTop;
                     var map = document.querySelector('.map-wrapper');
+                    if(!map) return false;
                     if(st > firstCardTop){
                         map.classList.add('custom');
                     }
@@ -248,13 +253,14 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
                 }
 
 
-                window.addEventListener('scroll', scrollMove);
-                window.addEventListener('touchmove', scrollMove);
-                window.addEventListener('touchstart', scrollMove);
+
+                    window.addEventListener('scroll', scrollMove);
+
+
+                //window.addEventListener('touchmove', scrollMove);
+                //window.addEventListener('touchstart', scrollMove);
 
             })
-
-
 
         },
         controller: function($scope){

@@ -9,9 +9,8 @@
                         <p ng-repeat="paras in rec.details.paras">
                             {{paras}}
                         </p>
-                        <h6>{{rec.details.aside.place}}</h6>
-                        <a class="button small" href="{{rec.details.aside.mapLink.href}}">{{rec.details.aside.mapLink.text}}</a>
-                        <p><b>Dress:</b> {{rec.details.aside.dress}}</p>
+                        <p ng-if="rec.details.aside.note" ng-bind-html="rec.details.aside.note"></p>
+                        <a ng-if="rec.details.aside.mapLink" class="button small" href="{{rec.details.aside.mapLink.href}}" target="_blank">{{rec.details.aside.mapLink.text}}</a>
                     </div>
                     <div class="medium-3 small-12 columns">
                         <div class="image-container">

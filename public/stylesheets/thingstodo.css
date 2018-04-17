@@ -1,0 +1,53 @@
+
+[data-section="things-to-do"] .cards{
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px 4px #f6f1f1;
+    margin-bottom: 30px;
+    transition: background-color .5s linear;
+
+}
+
+[data-section="things-to-do"] .cards:hover{
+    background-color: #f2fbff;
+}
+
+
+[data-section="things-to-do"] .cards .right-content{
+    background: url('/images/uswwc.jpg') no-repeat;
+    background-size: cover;
+    height: 120px;
+}
+
+[data-section="things-to-do"] .cards h5 {
+    color: #5656df
+}
+
+[data-section="things-to-do"] .cards .side-notes p{
+    margin: 0;
+}
+
+@media screen and (min-width: 40em) {
+    [data-section="things-to-do"] .map-wrapper.custom {
+        position: fixed;
+        top: 0;
+        margin-left: 58.3333%;
+        width: 41.6666%;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    [data-section="things-to-do"] .map-wrapper.custom {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50%;
+
+    }
+}
+
+@media screen and (max-width: 39.9375em) {
+    [data-section="things-to-do"] #map{
+        width: 96%;
+    }
+}

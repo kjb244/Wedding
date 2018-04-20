@@ -12,12 +12,13 @@
     background-color: #f2fbff;
 }
 
-
-[data-section="things-to-do"] .cards .right-content{
-    background: url('/images/uswwc.jpg') no-repeat;
-    background-size: cover;
-    height: 120px;
+[data-section="things-to-do"] .cards .icon{
+    color: #2199e8;
+    width: 100%;
+    text-align: center;
 }
+
+
 
 [data-section="things-to-do"] .cards h5 {
     color: #5656df

@@ -37,14 +37,14 @@
              | filter: foodTypeDropDownFilter"
                  ng-mouseover="hoverOnCard(rec.heading.text)">
                 <div class="cards row">
-                    <div class="left-content small-8 medium-7 columns">
+                    <div class="left-content small-9 columns">
                         <h5>
                             <a href="{{rec.heading.link}}">{{rec.heading.text}}</a>
                         </h5>
                         <p>{{rec.para}}</p>
                     </div>
-                    <div class="right-content small-4 medium-5 image-container columns">
-
+                    <div class="right-content small-3 columns">
+                        <i class="fa fa-4x icon" ng-class="{'fa-beer': rec.type === 'beer', 'fa-cutlery': rec.type === 'food', 'fa-map': rec.type === 'activities'}"></i>
                     </div>
                     <div class="footer-content small-12 columns">
                         <div ng-repeat="rec2 in rec.sideNotes" class="side-notes">

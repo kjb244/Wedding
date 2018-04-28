@@ -7,8 +7,10 @@
         </ul>
     </div>
     <div class="show-for-small-only">
-        <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
-            <button class="menu-icon" ng-init="menuClick=false" ng-click="menuClick = !menuClick" type="button" data-toggle></button>
+        <div class="title-bar" data-responsive-toggle="" data-hide-for="medium">
+            <button class="menu-button" ng-class="{'active': menuClick}" ng-init="menuClick=false" ng-click="menuClick = !menuClick" type="button" data-toggle>
+                <span></span>
+            </button>
             <div class="title-bar-title">{{copy.navBar.heading.who}}</div>
         </div>
 

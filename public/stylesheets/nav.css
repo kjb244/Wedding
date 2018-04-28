@@ -36,6 +36,72 @@
     display: inline-block;
 }
 
+[data-section="menu"] nav .show-for-small-only .title-bar{
+    display: flex;
+    align-items:center;
+}
+
+[data-section="menu"] nav .show-for-small-only .menu-button{
+    height: 35px;
+    width: 35px;
+    margin-right: 10px;
+}
+
+[data-section="menu"] nav .show-for-small-only .menu-button:focus{
+    outline-width: 0px !important;
+}
+
+[data-section="menu"] nav .show-for-small-only .menu-button span{
+    margin-right: 10px;
+}
+
+[data-section="menu"] nav .show-for-small-only .menu-button span,
+[data-section="menu"] nav .show-for-small-only .menu-button span:before,
+[data-section="menu"] nav .show-for-small-only .menu-button span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: gray;
+    position: absolute;
+    display: block;
+    content: '';
+}
+
+[data-section="menu"] nav .show-for-small-only .menu-button span:before {
+    top: -10px;
+}
+
+[data-section="menu"] nav .show-for-small-only .menu-button span:after {
+    bottom: -10px;
+}
+
+[data-section="menu"] nav .show-for-small-only .menu-button span,
+[data-section="menu"] nav .show-for-small-only .menu-button  span:before,
+[data-section="menu"] nav .show-for-small-only .menu-button span:after {
+    transition: transform 500ms ease-in-out,
+    top 500ms ease-in-out,
+    background-color 500ms ease-in-out;
+
+}
+
+[data-section="menu"] nav .show-for-small-only .menu-button.active span {
+    background-color: transparent;
+}
+
+[data-section="menu"] nav .show-for-small-only .menu-button.active span:before,
+[data-section="menu"] nav .show-for-small-only .menu-button.active span:after {
+    top: 0;
+}
+
+[data-section="menu"] nav .show-for-small-only .menu-button.active span:before {
+    transform: rotate(45deg);
+}
+
+[data-section="menu"] nav .show-for-small-only .menu-button.active span:after {
+    transform: rotate(-45deg);
+}
+
 [data-section="menu"] nav .show-for-medium ul li {
     list-style-type: none;
 }

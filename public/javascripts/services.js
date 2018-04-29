@@ -65,7 +65,6 @@ app.service('utilityFunctions', function(){
           yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
           element = element.offsetParent;
       }
-
       return { x: xPosition, y: yPosition };
   }
 

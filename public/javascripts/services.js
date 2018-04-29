@@ -106,16 +106,12 @@ app.service("ajaxFetch", function($http) {
     type = type || 'GET';
     data = data || {};
 
-    if('GET' === type){
+    if ('GET' === type){
       return $http.get(endpoint, {params:  data }  );
     }
     else if ('POST' === type){
-
-
       return $http.post(endpoint, { 'data': data} , { headers: { 'Content-Type': 'application/json' } } );
     }
-
-    
   }
 
 });

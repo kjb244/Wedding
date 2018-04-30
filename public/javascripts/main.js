@@ -42,7 +42,6 @@ app.controller("ctrlMain", function($scope,ajaxFetch, angularStore) {
     }
 
 
-
 });
 
 

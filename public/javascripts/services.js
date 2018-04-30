@@ -98,7 +98,6 @@ app.service('utilityFunctions', function(){
 
 });
 
-
 app.service("ajaxFetch", function($http) {
   this.getData= function(endpoint, type, data){
     type = type || 'GET';

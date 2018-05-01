@@ -101,8 +101,6 @@ app.directive('modalOverlayDir', function($timeout){
 
 
 
-
-
 app.directive('scheduleDir', function($timeout){
     return {
         restrict: 'EA',

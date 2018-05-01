@@ -4,20 +4,33 @@
     background-image: url('/images/KR_Sitting.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: bottom;
     height: 400px;
     width: 100%;
+}
 
-
+@media screen and (min-width: 40em) {
+    [data-section="home" ] .img-container{
+        background-position: inherit;
+    }
 }
 
 [data-section="home" ] .heading{
     position: absolute;
-    top: 0;
+    top: 10px;
+    width: 100%;
+    display: none;
+}
+
+@media screen and (min-width: 40em) {
+    [data-section="home" ] .heading{
+        display: block;
+    }
 }
 
 
-[data-section="home" ] .card .header h4{
-    color: #ff6756;
+[data-section="home" ] .card .header h3{
+    color: white;
 }
 
 [data-section="home" ] .card .header{

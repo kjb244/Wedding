@@ -7,7 +7,7 @@ body{
 }
 
 
-body h4, body h6, body h5,body p, body a, body label, body select{
+body h4, body h6, body h5 body h4,body p, body a, body label, body select{
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
 }
@@ -15,6 +15,9 @@ body h4, body h6, body h5,body p, body a, body label, body select{
 body p{
     font-weight: 300;
     font-size: 14px;
+}
+body h3{
+    font-size: 24px;
 }
 body h4{
     font-size: 18px;

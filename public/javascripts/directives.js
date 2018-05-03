@@ -79,8 +79,9 @@ app.directive('modalOverlayDir', function($timeout){
                     return true;
                 }
 
-                $scope.showModal=true;
                 document.querySelector('body').classList.add('hide-scroll');
+                $scope.showModal=true;
+                
             },1000);
 
         },

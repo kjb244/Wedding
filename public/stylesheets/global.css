@@ -1,5 +1,6 @@
 body.hide-scroll {
     overflow-y: hidden;
+    position: fixed;
 }
 
 body{

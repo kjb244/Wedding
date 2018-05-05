@@ -155,6 +155,7 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
 
             function loadGoogleMaps(){
                 var locations = [];
+                var userZoomed = false;
                 copy.cards.map(function(data){
                     var arr = [];
                     arr.push(data.heading.text);
@@ -177,6 +178,17 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
                         position: google.maps.ControlPosition.LEFT_BOTTOM
                     }
                 });
+
+                //once user clicks on zoom icons then set flag
+                google.maps.event.addListenerOnce(map, 'mousemove', function(){
+                    google.maps.event.addListener(map, 'zoom_changed', function(){
+                        if(!$scope.hoveringOnCard && !userZoomed){
+                            userZoomed = true;
+                        }
+                        
+                    });
+
+                  });
 
                 var infowindow = new google.maps.InfoWindow();
 
@@ -203,10 +215,17 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
                         return function() {
 
                             setTimeout(function () {
-                                map.setCenter(marker.getPosition())
+                                
+                                var currentBounds = map.getBounds();
+                                var point = new google.maps.LatLng(locations[i][1], locations[i][2]);
+                                var containedInWindow = currentBounds.contains(point);
+                                var zoomOut = locations[i][3];
                                 infowindow.setContent(locations[i][0]);
                                 infowindow.open(map, marker);
-                                if(locations[i][3] ){
+                                //if user has zoomed it then don't mess with zoom level
+                                if (userZoomed) return false;
+                                //if zoomOut then set zoom level
+                                if(zoomOut){
                                     if(screenSize === 'small' || screenSize === 'medium'){
                                         map.setZoom(10);
                                     }
@@ -214,9 +233,18 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
                                         map.setZoom(11);
                                     }
                                 }
+                                //else set to default
                                 else{
                                     map.setZoom(14);
                                 }
+
+                                //point not in window then recenter
+                                if(!containedInWindow){
+                                    map.setCenter(marker.getPosition());
+                                }
+                                //hovering is done
+                                $scope.hoveringOnCard = false;
+                 
                             },0);
 
                         }
@@ -253,7 +281,7 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
 
 
 
-                    window.addEventListener('scroll', scrollMove);
+                window.addEventListener('scroll', scrollMove);
 
 
                 //window.addEventListener('touchmove', scrollMove);
@@ -267,6 +295,7 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
                 var currMarker = $scope.googleMapMarkers.filter(function(rec){
                     return rec.title === header;
                 })[0];
+                $scope.hoveringOnCard = true;
                 google.maps.event.trigger(currMarker, 'click');
             }
 

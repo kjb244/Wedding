@@ -17,7 +17,7 @@
             </select>
             <label ng-show="showLocationDropDown">{{copy.routes.thingsToDo.dropDown.location.label}}</label>
             <select ng-show="showLocationDropDown" name="locationDropDown" id="locationDropDown"
-                    ng-model="locationDropDown" ng-change=""
+                    ng-model="locationDropDown" ng-change="locationChange()"
                     ng-options="type for type in copy.routes.thingsToDo.dropDown.location.select">
 
             </select>

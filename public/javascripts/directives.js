@@ -179,6 +179,8 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
                     }
                 });
 
+                $scope.map = map;
+
                 //once user clicks on zoom icons then set flag
                 google.maps.event.addListenerOnce(map, 'mousemove', function(){
                     google.maps.event.addListener(map, 'zoom_changed', function(){
@@ -312,6 +314,17 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
                 else if (sc.activityDropDown === 'Food'){
                     sc.showFoodTypeDropDown = true;
                 }
+
+                //if we aren't showing location dropdown then clear all polygons drawn
+                if(!sc.showLocationDropDown && $scope.lastPolygonMap){
+                    $scope.lastPolygonMap.setMap(null);
+                }
+                //if we are showing location dropdown and our select list has been touched
+                //previously then draw polygon on map
+                else if(sc.showLocationDropDown && $scope.lastPolygonMap){
+                    var map = $scope.map;
+                    $scope.lastPolygonMap.setMap(map);
+                }
             }
 
 
@@ -338,6 +351,64 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
                     }
                 }
                 return true;
+            }
+
+            $scope.locationChange = function(){
+                var map = $scope.map;
+                var location = $scope.locationDropDown;
+                var colors = {
+                    strokeColor: '#bfbfda',
+                    strokeOpacity: 0.8,
+                    strokeWeight: 3,
+                    fillColor: '#bfbfda',
+                    fillOpacity: 0.35
+                }
+                var paths = {
+                    southend: {paths: [
+                            {lat: 35.220600, lng: -80.857803},
+                            {lat: 35.187370, lng: -80.881721},
+                            {lat: 35.203827, lng: -80.858633},
+                            {lat: 35.213925, lng: -80.848986}
+                        ]},
+                    noda: {paths: [
+                            {lat: 35.234829, lng: -80.829981},
+                            {lat: 35.230728, lng: -80.826462},
+                            {lat: 35.249860, lng: -80.792480},
+                            {lat: 35.251578, lng: -80.808531}
+                        ]},
+                    plaza: {paths: [
+                            {lat: 35.224697, lng: -80.820816},
+                            {lat: 35.222397, lng: -80.794380},
+                            {lat: 35.217980, lng: -80.796440},
+                            {lat: 35.220785, lng: -80.821245}
+                        ]}
+                };
+
+                var polygonObj;
+                var pathMatch = Object.keys(paths).filter(function(el){
+                    return el.toLowerCase().indexOf(location.toLowerCase()) > -1 ||
+                        location.toLowerCase().indexOf(el.toLowerCase()) > -1;
+                })
+
+                if(pathMatch.length){
+                    polygonObj = angular.extend({}, colors, paths[pathMatch[0]]);
+                }
+
+                //clear last drawing
+                if($scope.lastPolygonMap){
+                    $scope.lastPolygonMap.setMap(null);
+                }
+
+                //if we haven't mapped the polygon to a location then exit
+                if(!pathMatch.length){
+                    return false;
+                }
+
+                //draw on map
+                var polygonMap = new google.maps.Polygon(polygonObj);
+                polygonMap.setMap(map);
+                //store last entry
+                $scope.lastPolygonMap = polygonMap;
             }
 
         }

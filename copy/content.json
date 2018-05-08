@@ -137,8 +137,7 @@
             "paras": [
               "After the ceremony, we will start the celebrations with cocktails and live music. Guests will have full access to the first floor exhibits of the museum during these hours."
             ],
-            "aside": {
-            }
+            "aside": {}
           }
         },
         {
@@ -153,10 +152,14 @@
             "paras": [
               "Guest will enjoy a full Southern BBQ dinner in the Harris Hall of the museum. Post dinner be prepared to dance the night away!"
             ],
-            "aside": {
-            }
+            "aside": {}
           }
         }
+      ]
+    },
+    "registry": {
+      "paras": [
+        "In lieu of gifts please dontate to charities"
       ]
     },
     "rsvp": {

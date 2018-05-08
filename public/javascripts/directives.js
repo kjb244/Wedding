@@ -124,6 +124,22 @@ app.directive('scheduleDir', function($timeout){
 });
 
 
+app.directive('registryDir', function(){
+    return {
+        restrict: 'EA',
+        scope: true,
+        templateUrl: 'directive_templates/registry.html',
+        link: function($scope, elem, attrs){
+        
+        },
+        controller: function($scope){
+        
+        }
+    };
+});
+
+
+
 app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
     return {
         restrict: 'EA',
@@ -507,11 +523,13 @@ app.directive('rsvpDir', function(ajaxFetch, utilityFunctions, $timeout){
           $scope.lookupByEmail = function(){
             var email = $scope.formData.email;
             $scope.toggleSpinner = true;
+            $scope.emailNotFound = false;
             $timeout(function(){
                 ajaxFetch.getData('/lookupByEmail', 'GET', {email: email})
                     .then(function(res) {
                         $scope.toggleSpinner = false;
                         $scope.formData.rsvpFormArray = [];
+                        if (!res.data.length) $scope.emailNotFound = true;
                         res.data.map(function(e){
                             if (e.dateUpdate) $scope.invitationComplete = true;
                             $scope.formData.rsvpFormArray.push(

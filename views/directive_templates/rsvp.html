@@ -8,6 +8,7 @@
             <input type="email" required placeholder="lookup by email" name="email" ng-model="formData.email"/>
             <a class="button" ng-click="lookupByEmail()" ng-disabled="rsvpForm.email.$invalid">Lookup</a>
         </div>
+        <div ng-show="emailNotFound" class="email-not-found">Email not found</div>
 
 
 

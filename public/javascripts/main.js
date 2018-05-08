@@ -23,6 +23,10 @@ app.config(function($routeProvider) {
         templateUrl: 'route_templates/route-things-to-do.html',
         controller: 'ctrlMain'
     })
+    .when('/registry', {
+        templateUrl: 'route_templates/route-registry.html',
+        controller: 'ctrlMain'
+    })
     .when('/rsvp', {
         templateUrl: 'route_templates/route-rsvp.html',
         controller: 'ctrlMain'

@@ -449,7 +449,7 @@ app.directive('spinnerOverlayDir', function(){
             spinnerOverlaySpinner.classList.add('hide');
             spinnerOverlaySpinner.style.cssText = 'height: 100%; position: fixed; top: 0; left: 0; width: 100%;';
             var spinnerOverlaySpinnerChild = document.createElement('div');
-            spinnerOverlaySpinnerChild.innerHTML = '<div class="wrapper" style="margin: auto; width: 80%; background-color: white; padding: 30px; border-radius: 5px; "><div class="loader"></div></div>';
+            spinnerOverlaySpinnerChild.innerHTML = '<div class="wrapper" style="margin: auto; width: 80%; background-color: white; padding: 30px; border-radius: 5px; "><div class="loader"></div><div class="loading-text" style="text-align: center; margin-top: 10px;">Loading...</div></div></div>';
             spinnerOverlaySpinnerChild.style.cssText = 'position: absolute; width:100%; color: #7676d0';
             spinnerOverlaySpinner.appendChild(spinnerOverlaySpinnerChild);
             document.body.appendChild(spinnerOverlaySpinner);
@@ -461,10 +461,13 @@ app.directive('spinnerOverlayDir', function(){
             $scope.$watch('toggle', function(newVal){
                 var spinnerModal = document.querySelector('[data="spinner-modal"]');
                 var spinnerOverlay = document.querySelector('[data="spinner-overlay"]');
+                var spinnerLoadingText = spinnerModal.querySelector('.loading-text');
                 if (spinnerModal === null || spinnerOverlay === null) return false;
                 if (newVal === true){
                     spinnerModal.classList.remove('hide');
                     spinnerOverlay.classList.remove('hide');
+                    //add in animation class
+                    spinnerLoadingText.classList.add('loading-text-animation');
                     var windowHeight = window.innerHeight;
                     var wrapperHeight = document.querySelector('[data="spinner-modal"] .wrapper').clientHeight;
                     var topPos = (windowHeight - wrapperHeight) /2;
@@ -474,7 +477,7 @@ app.directive('spinnerOverlayDir', function(){
                 else{
                     spinnerModal.classList.add('hide');
                     spinnerOverlay.classList.add('hide');
-
+                    spinnerLoadingText.classList.remove('loading-text-animation');
                 }
             });
 

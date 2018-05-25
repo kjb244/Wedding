@@ -8,10 +8,24 @@ app.directive('navBarDir', function($timeout){
     link: function($scope, elem, attrs){
 
     },
-    controller: function($scope){
+    controller: function($scope, angularStore){
+        var copy = angularStore.getContent('copy');
+        copy = copy.navBar;
         $scope.menuChangeClick = function(inp){
             var oldMenu = $scope.menuChange;
             $scope.menuChange = inp;
+
+            var oldMenuPos = copy.links.map(function(e){ return e.route}).indexOf(oldMenu);
+            var newMenuPos = copy.links.map(function(e){ return e.route}).indexOf(inp);
+            if(oldMenuPos - newMenuPos !== 0){
+                if(oldMenuPos < newMenuPos){
+                    $scope.menuChangeDirection = 'right';
+                }
+                else{
+                    $scope.menuChangeDirection = 'left';
+                }
+            }
+
             $scope.menuClick = !$scope.menuClick;
             if(oldMenu === inp) return;
             var body = document.querySelector('body');

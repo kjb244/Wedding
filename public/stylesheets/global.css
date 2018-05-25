@@ -149,21 +149,42 @@ body h6{
 }
 
 
-.animate-switch.ng-enter {
-    margin-right: -120%;
+.animate-switch-container.right .animate-switch.ng-enter {
+     margin-right: -140%;
 
-}
+ }
 
-.animate-switch.ng-leave{
+.animate-switch-container.right .animate-switch.ng-leave{
     margin-left: 0;
 }
 
 
-.animate-switch.ng-enter.ng-enter-active {
+.animate-switch-container.right .animate-switch.ng-enter.ng-enter-active {
     margin-right: 0;
 }
 
-.animate-switch.ng-leave.ng-leave-active {
+.animate-switch-container.right .animate-switch.ng-leave.ng-leave-active {
     opacity: 0;
     margin-left: -100%;
+}
+
+.animate-switch-container.left .animate-switch.ng-enter {
+    margin-left: -100%;
+    order: 1;
+
+}
+
+.animate-switch-container.left .animate-switch.ng-leave{
+    margin-right: 0;
+    order: 2;
+}
+
+
+.animate-switch-container.left .animate-switch.ng-enter.ng-enter-active {
+    margin-left: 0;
+}
+
+.animate-switch-container.left .animate-switch.ng-leave.ng-leave-active {
+    opacity: 0;
+    margin-right: -140%;
 }

@@ -186,5 +186,5 @@ body h6{
 
 .animate-switch-container.left .animate-switch.ng-leave.ng-leave-active {
     opacity: 0;
-    margin-right: -140%;
+    margin-right: -100%;
 }

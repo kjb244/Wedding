@@ -9,9 +9,10 @@ app.directive('navBarDir', function($timeout){
 
     },
     controller: function($scope, angularStore){
-        var copy = angularStore.getContent('copy');
-        copy = copy.navBar;
+
         $scope.menuChangeClick = function(inp){
+            var copy = angularStore.getContent('copy');
+            copy = copy.navBar;
             var oldMenu = $scope.menuChange;
             $scope.menuChange = inp;
 

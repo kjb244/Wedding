@@ -144,6 +144,7 @@ body h6{
 
 .animate-switch.ng-enter, .animate-switch.ng-leave {
     transition: all linear .8s;
+    transition-delay: 150ms;
     position: absolute;
     top: 0;
     left: 0;

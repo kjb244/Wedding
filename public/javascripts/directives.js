@@ -27,7 +27,7 @@ app.directive('navBarDir', function($timeout){
                 }
             }
 
-            $scope.menuClick = !$scope.menuClick;
+            //$scope.menuClick = !$scope.menuClick;
             if(oldMenu === inp) return;
             var body = document.querySelector('body');
             body.classList.add('hide-scroll');

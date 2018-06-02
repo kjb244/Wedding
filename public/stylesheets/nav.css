@@ -115,7 +115,6 @@
     overflow: hidden;
     transition: max-height .4s ease-in, opacity .6s ease-in;
     padding: 0 !important;
-    position: absolute;
     z-index: 10;
 }
 

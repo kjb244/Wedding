@@ -144,13 +144,13 @@ body h6{
 }
 
 .animate-switch.ng-animate {
-    transition: all ease-out .6s;
+    transition: all linear .6s;
     flex: 100%;
 }
 
 
 .animate-switch-container.right .animate-switch.ng-enter {
-     margin-right: -140%;
+     margin-right: -100%;
 
  }
 

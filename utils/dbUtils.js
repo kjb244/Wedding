@@ -44,6 +44,7 @@ class dbUtils{
                    console.log(`update query error: ${err}`);
                 }
                 console.log(`update query ran successfully`);
+                client.end();
                 resolve(result.rowCount);
             });
 

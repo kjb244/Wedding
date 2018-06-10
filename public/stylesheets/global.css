@@ -198,48 +198,48 @@ body h6{
     opacity: 0;
 }
 
-@media screen and (min-width: 634em) {
+@media screen and (min-width: 64em) {
 
-    .animate-switch-container.right .animate-switch.ng-enter{
+    .animate-switch-container .animate-switch.right.ng-enter{
         opacity: 0;
         left: 1600px;
         width: 100%;
     }
 
-    .animate-switch-container.right .animate-switch.ng-enter.ng-enter-active{
+    .animate-switch-container .animate-switch.right.ng-enter.ng-enter-active{
         left: 0;
         opacity: 1;
     }
 
-    .animate-switch-container.right .animate-switch.ng-leave{
+    .animate-switch-container .animate-switch.right.ng-leave{
         opacity: 1;
         left: 0;
     }
 
-    .animate-switch-container.right .animate-switch.ng-leave.ng-leave-active{
+    .animate-switch-container .animate-switch.right.ng-leave.ng-leave-active{
         left: -1600px;
         right: 1600px;
         opacity: 0;
     }
 
 
-    .animate-switch-container.left .animate-switch.ng-enter{
+    .animate-switch-container .animate-switch.left.ng-enter{
         opacity: 0;
         left: -1600px;
         width: 100%;
     }
 
-    .animate-switch-container.left .animate-switch.ng-enter.ng-enter-active{
+    .animate-switch-container .animate-switch.left.ng-enter.ng-enter-active{
         left: 0;
         opacity: 1;
     }
 
-    .animate-switch-container.left .animate-switch.ng-leave{
+    .animate-switch-container .animate-switch.left.ng-leave{
         opacity: 1;
         left: 0;
     }
 
-    .animate-switch-container.left .animate-switch.ng-leave.ng-leave-active{
+    .animate-switch-container .animate-switch.left.ng-leave.ng-leave-active{
         left: 1600px;
         right: -1600px;
         opacity: 0;

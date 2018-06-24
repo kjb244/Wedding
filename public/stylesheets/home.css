@@ -15,27 +15,7 @@
     }
 }
 
-[data-section="home" ] .heading{
-    position: absolute;
-    top: 10px;
-    width: 100%;
-    display: none;
-}
 
-@media screen and (min-width: 40em) {
-    [data-section="home" ] .heading{
-        display: block;
-    }
-}
-
-
-[data-section="home" ] .card .header h3{
-    color: white;
-}
-
-[data-section="home" ] .card .header{
-    text-align: center;
-}
 
 [data-section="home" ] .bottom-card{
     margin-top: -50px;

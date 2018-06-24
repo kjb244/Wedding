@@ -6,34 +6,14 @@ app.directive('navBarDir', function($timeout){
     scope: false,
     templateUrl: 'directive_templates/nav-bar.html',
     link: function($scope, elem, attrs){
-
+        setTimeout(function(){ $(document).foundation()},200);
     },
-    controller: function($scope, angularStore){
-
-        $scope.menuChangeClick = function(inp){
-            var copy = angularStore.getContent('copy');
-            copy = copy.navBar;
-            var oldMenu = $scope.menuChange;
-            $scope.menuChange = inp;
-
-            var oldMenuPos = copy.links.map(function(e){ return e.route}).indexOf(oldMenu);
-            var newMenuPos = copy.links.map(function(e){ return e.route}).indexOf(inp);
-            if(oldMenuPos - newMenuPos !== 0){
-                if(oldMenuPos < newMenuPos){
-                    $scope.menuChangeDirection = 'right';
-                }
-                else{
-                    $scope.menuChangeDirection = 'left';
-                }
-            }
-
-            //$scope.menuClick = !$scope.menuClick;
-            if(oldMenu === inp) return;
-            var body = document.querySelector('body');
-            body.classList.add('hide-scroll');
-            $timeout(function(){
-                body.classList.remove('hide-scroll');
-            },700);
+    controller: function($scope){
+        $scope.menuChangeClick = function(route){
+            var as = document.querySelector('.animate-switch');
+            $('#offCanvasLeft').foundation('close');
+            window.location.hash = '#/' + route;
+            //as.style.minHeight = window.innerHeight + 10 + 'px';
         }
 
     }

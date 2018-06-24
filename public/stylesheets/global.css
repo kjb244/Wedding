@@ -135,7 +135,7 @@ body h6{
 }
 
 .animate-switch{
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 75px);
     overflow-y: hidden;
 }
 

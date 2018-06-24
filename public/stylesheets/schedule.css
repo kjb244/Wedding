@@ -9,7 +9,7 @@
 
 [data-section="schedule"] .wrapper-show-hide-node.ng-hide-remove{
 
-    animation: opacityZeroToHundred 2s ease-out;
+    animation: opacityZeroToHundred 1s ease-out;
 }
 
 @keyframes opacityZeroToHundred {
@@ -29,57 +29,36 @@
     height: 81px;
     padding: 10px;
 }
-[data-section="schedule"] .sub-details{
-    margin-top: 20px;
+
+[data-section="schedule"] .header-tabs{
+    margin-bottom: 15px;
 }
 
-[data-section="schedule"] .sub-details p{
-    margin: 0;
-}
-
-[data-section="schedule"] .sub-details .data{
-    display: flex;
-    justify-content: space-between;
-}
-
-
-[data-section="schedule"] .sub-details .line-spacer{
-    border-top: 1px solid #c5bbbb;
-    margin-bottom: 10px;
-}
-
-[data-section="schedule"] .sub-details .node-wrapper{
-    position: relative;
-}
-
-[data-section="schedule"] .sub-details .node{
+[data-section="schedule"] .header-tabs .columns{
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-[data-section="schedule"] .sub-details .node.black::before{
-    content: '';
-    left: calc(50% - 12px);
-    top: -15px;
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background-color: #777171;
-    display: inline-block;
-
+[data-section="schedule"] .header-tabs a{
+    margin: 5px 0;
 }
 
-[data-section="schedule"] .sub-details .node.clear::before{
-    content: '';
-    left: calc(50% - 12px);
-    top: -15px;
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 1px solid black;
+[data-section="schedule"] .header-tabs .custom-button{
+    padding: 6px;
+}
+
+[data-section="schedule"] .header-tabs .custom-button:not(.selected){
     background-color: white;
+}
 
+[data-section="schedule"] .header-tabs .custom-button:not(.selected):hover{
+    background-color: #cfbfbf;
+    color: #5d5151;
+    transition: background-color .5s ease-out;
+
+}
+
+[data-section="schedule"] .header-tabs .custom-button.selected{
+    color: white;
+    background-color: #337ab7;
 }

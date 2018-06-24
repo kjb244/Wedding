@@ -1,4 +1,13 @@
 <section>
+    <div class="row collapse header-tabs">
+
+        <div class="small-12 columns">
+
+            <a ng-repeat="rec in copy.routes.schedule.nodes" class="custom-button" ng-class="{'selected': $index === currIndex}"  href="javascript:void(0)" ng-click="subMenuClick($index)">{{rec.sub.title}} - {{rec.sub.subTitle}} {{rec.sub.subSubTitle}}</a>
+
+        </div>
+    </div>
+
     <div class="header-details">
         <div class="row details" ng-repeat="rec in copy.routes.schedule.nodes">
             <div class="parent-wrapper-show-hide-node" ng-show="showHideNode($index)">
@@ -22,16 +31,6 @@
             </div>
         </div>
     </div>
-    <div class="row sub-details">
-        <div class="line-spacer small-12 columns"></div>
-        <div class="small-12 columns data">
-            <div ng-repeat="rec in copy.routes.schedule.nodes" class="node-wrapper">
-                <div class="node" ng-class="{black: currIndex == $index, clear: currIndex !== $index}">
-                    <a href="javascript:void(0)" ng-click="subMenuClick($index)">{{rec.sub.title}}</a>
-                    <p>{{rec.sub.subTitle}}</p>
-                    <p>{{rec.sub.subSubTitle}}</p>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
 </section>

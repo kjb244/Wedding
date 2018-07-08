@@ -44,15 +44,20 @@ router.post('/submitRSVPData', function(req, res){
     const data = req.body.data;
     const email = data.email;
     const formData = data.rsvpFormArray;
-    let promises = [];
-    for(let i=0; i<formData.length; i++){
-      promises.push(dbutils.updateByEmail(email,formData[i]));
-    }
-    Promise.all(promises).then(function(payload){
-      const rowsUpdated = payload.reduce((accum, val) => accum + val );
-      console.log(rowsUpdated);
-      res.json({rowsUpdated});
+
+    dbutils.updateByEmail(email,formData[0]).then(function(payload){
+       if(formData.length > 1){
+           dbutils.updateByEmail(email,formData[1]).then(function(payload2){
+               res.json({rowsUpdated: payload + payload2});
+           })
+       }
+       else{
+           res.json({rowsUpdated: payload});
+       }
     });
+
+
+
 
 
 });

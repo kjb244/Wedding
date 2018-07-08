@@ -21,6 +21,10 @@
     margin-top: -50px;
 }
 
+[data-section="home" ] .bottom-card h4{
+    color: purple;
+    text-align: center;
+}
 
 [data-section="home" ] .bottom-card .container {
     padding: 20px;

@@ -13,12 +13,14 @@
 }
 
 [data-section="things-to-do"] .cards .icon{
-    color: #2199e8;
+    color: gray;
     width: 100%;
     text-align: center;
 }
 
-
+[data-section="things-to-do"] h4{
+    color: purple;
+}
 
 [data-section="things-to-do"] .cards h5 {
     color: #5656df

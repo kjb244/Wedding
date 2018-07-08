@@ -6,7 +6,7 @@
 
         <div class="lookup-container">
             <input type="email" required placeholder="lookup by email" name="email" ng-model="formData.email"/>
-            <a class="button" ng-click="lookupByEmail()" ng-disabled="rsvpForm.email.$invalid">Lookup</a>
+            <button type="button" class="button" ng-click="lookupByEmail()" ng-disabled="rsvpForm.email.$invalid">Lookup</button>
         </div>
         <div ng-show="emailNotFound" class="email-not-found">Email not found</div>
 

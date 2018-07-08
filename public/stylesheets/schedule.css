@@ -7,6 +7,10 @@
     padding: 20px;
 }
 
+[data-section="schedule"] .header-details h4{
+    color: purple;
+}
+
 [data-section="schedule"] .wrapper-show-hide-node.ng-hide-remove{
 
     animation: opacityZeroToHundred 1s ease-out;
@@ -45,6 +49,7 @@
 
 [data-section="schedule"] .header-tabs .custom-button{
     padding: 6px;
+    color: purple;
 }
 
 [data-section="schedule"] .header-tabs .custom-button:not(.selected){
@@ -60,5 +65,5 @@
 
 [data-section="schedule"] .header-tabs .custom-button.selected{
     color: white;
-    background-color: #337ab7;
+    background-color: purple;
 }

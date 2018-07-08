@@ -7,17 +7,25 @@
     padding: 0;
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    background-color: #5e5a65;
 }
 
 [data-section="menu"] nav .title-bar .title{
     margin-left: 15px;
 }
 
+[data-section="menu"] nav .title-bar .title h4{
+    font-family: 'Bree Serif', serif;
+    margin: 0;
+    font-size: 22px;
+    margin-top: -2px;
+    color: #d1b9d1;
+}
+
 [data-section="menu"] nav .title-bar button{
     height: 100%;
     margin: 0;
-    background-color: #566d7c;
+
     padding: 20px;
     transition: background-color .2s ease-in;
 }

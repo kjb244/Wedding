@@ -5,6 +5,7 @@
 [data-section="rsvp"] .header p{
     text-align: center;
     font-size: 25px;
+    color: purple;
 }
 
 
@@ -62,6 +63,7 @@
     font-size: 20px;
     text-align: center;
     margin: 0;
+    color: purple;
 }
 
 [data-section="rsvp"] .guest-info-sub{

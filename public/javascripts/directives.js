@@ -68,7 +68,7 @@ app.directive('modalOverlayDir', function($timeout){
         link: function($scope, elem, attrs){
             $scope.showModal = false;
             $timeout(function(){
-                if(window.location.origin.indexOf('localhost') > -1){
+                if(window.location.origin.indexOf('localhost') < -1){
                     document.querySelector('body .overlay').classList.add('hidden');
                     document.querySelector('body').classList.remove('hide-scroll')
                     return true;
@@ -509,13 +509,18 @@ app.directive('rsvpDir', function(ajaxFetch, utilityFunctions, $timeout){
               })
           }
           $scope.submitData = function(){
-              ajaxFetch.getData('/submitRSVPData', 'POST', $scope.formData)
-                  .then(function(res){
-                    if (res.data.rowsUpdated) {
-                        $scope.invitationComplete = true;
-                        utilityFunctions.scrollTop();
-                    }
-                  })
+              $scope.toggleSpinner = true;
+              $timeout(function() {
+                  ajaxFetch.getData('/submitRSVPData', 'POST', $scope.formData)
+                      .then(function (res) {
+                          $scope.toggleSpinner = false;
+                          console.log(res.data);
+                          if (res.data.rowsUpdated) {
+                              $scope.invitationComplete = true;
+                              utilityFunctions.scrollTop();
+                          }
+                      })
+              },1000);
           }
 
           $scope.lookupByEmail = function(){

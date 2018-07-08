@@ -1,6 +1,7 @@
 'use strict';
 
 const pg = require('pg');
+console.log('db pool size' + pg.defaults.poolSize);
 const conStringLocal = "postgres://postgres:sdf!@localhost:5432/wedding";
 const conString = process.env.DATABASE_URL || conStringLocal;
 let client = null;
@@ -18,6 +19,7 @@ class dbUtils{
             const currDate = new Date();
             let queryString = '';
             let queryArr = null;
+            let resultObj = null;
 
             if (payload.readOnly === false) {
                 queryString = `update wedding_list 
@@ -39,18 +41,14 @@ class dbUtils{
                 queryArr = [payload.attending, payload.attending == true ? (payload.dietaryRestrictions || null) : null, currDate, email || '', payload.firstName || '', payload.lastName || ''];
             }
             console.log(`before running update query: ${queryString} ${queryArr}`);
-            client.query(queryString, queryArr, function(err, result){
-                if (err) {
-                   console.log(`update query error: ${err}`);
-                }
-                console.log(`update query ran successfully`);
-                let resultObj = result;
+            query = client.query(queryString, queryArr);
+
+
+            query.on('end', function(result){
                 client.end();
-                resolve(resultObj.rowCount);
-            });
-
-
-
+                console.log(`after running update with rowcount updated of ${result.rowCount}`);
+                resolve(result.rowCount);
+            })
         });
     }
 

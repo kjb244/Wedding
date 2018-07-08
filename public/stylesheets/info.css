@@ -7,6 +7,9 @@
     border-bottom: 1px solid #d7c3c3;
 }
 
+[data-section="info"] .content h4{
+    color: purple;
+}
 
 
 

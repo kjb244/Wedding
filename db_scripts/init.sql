@@ -13,6 +13,10 @@ CREATE TABLE wedding_list
 insert into wedding_list(firstname, lastname, email) values ('kevin', 'bacino', 'kevin.bacino@gmail.com');
 insert into wedding_list(firstname, lastname, email) values (null, null, 'kevin.bacino@gmail.com');
 
+insert into wedding_list(firstname, lastname, email) values ('test', 'er', 'test@test.com');
+
+commit;
+
 drop table if exists wedding_list_audits;
 
 create table wedding_list_audits (

@@ -14,7 +14,6 @@ let config = {
     idleTimeoutMillis: 3000
 };
 
-console.log(config);
 
 
 class dbUtils{

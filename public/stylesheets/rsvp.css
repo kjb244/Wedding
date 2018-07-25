@@ -2,10 +2,14 @@
     width: 100%;
 }
 
-[data-section="rsvp"] .header p{
+[data-section="rsvp"] .header p:not(.invitation-complete){
     text-align: center;
     font-size: 25px;
     color: purple;
+}
+
+[data-section="rsvp"] .header p.rsvp-text{
+    font-size:20px;
 }
 
 

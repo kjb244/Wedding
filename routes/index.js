@@ -48,12 +48,35 @@ router.post('/submitRSVPData', function(req, res){
     dbutils.updateByEmail(email,formData[0]).then(function(payload){
        if(formData.length > 1){
            dbutils.updateByEmail(email,formData[1]).then(function(payload2){
-               res.json({rowsUpdated: payload + payload2});
-           })
+               if(formData.length > 2){
+                   dbutils.updateByEmail(email,formData[2]).then(function(payload3){
+                       if(formData.length > 3){
+                           dbutils.updateByEmail(email,formData[3]).then(function(payload4){
+                               res.json({rowsUpdated: payload + payload2 + payload3 + payload4});
+                           }).catch(function(err){
+                               console.log('update error' + err);
+                           });
+                       }
+                       else{
+                           res.json({rowsUpdated: payload + payload2 + payload3});
+                       }
+                   }).catch(function(err){
+                       console.log('update error' + err);
+                   });
+               }
+               else{
+                   res.json({rowsUpdated: payload + payload2});
+               }
+
+           }).catch(function(err){
+               console.log('update error' + err);
+           });
        }
        else{
            res.json({rowsUpdated: payload});
        }
+    }).catch(function(err){
+        console.log('update error' + err);
     });
 
 

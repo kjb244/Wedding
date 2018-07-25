@@ -163,7 +163,7 @@
     },
     "rsvp": {
       "heading": "We hope you can attend!",
-      "addAnother": "Add Another Person",
+      "rsvpText": "Please RSVP by 09/27/2018",
       "inputFirst": {
         "placeholder": "first name*"
       },

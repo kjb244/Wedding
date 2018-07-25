@@ -2,8 +2,8 @@
     <div spinner-overlay-dir toggle=toggleSpinner></div>
     <div class="header">
         <p>{{copy.routes.rsvp.heading}}</p>
+        <p class="rsvp-text">{{copy.routes.rsvp.rsvpText}}</p>
         <p ng-show="invitationComplete" class="invitation-complete">Invitation Complete!</p>
-
         <div class="lookup-container">
             <input type="email" required placeholder="lookup by email" name="email" ng-model="formData.email"/>
             <button type="button" class="button" ng-click="lookupByEmail()" ng-disabled="rsvpForm.email.$invalid">Lookup</button>

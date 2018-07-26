@@ -135,7 +135,7 @@ app.directive('registryDir', function(){
 
 
 
-app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
+app.directive('cardsWithMapDir', function(angularStore, utilityFunctions, $timeout){
     return {
         restrict: 'EA',
         scope: false,
@@ -271,7 +271,7 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
                 //autoCenter();
             },500);
 
-            elem.ready(function(){
+            $timeout(function(){
                 var firstCard = document.querySelector('.cards');
                 var firstCardTop;
                 if(!angularStore.getContent('cardTop')){
@@ -300,7 +300,7 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions){
                 //window.addEventListener('touchmove', scrollMove);
                 //window.addEventListener('touchstart', scrollMove);
 
-            })
+            },1);
 
         },
         controller: function($scope){

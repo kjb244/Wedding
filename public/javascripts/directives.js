@@ -207,6 +207,17 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions, $timeo
 
                 var marker, i;
 
+                function pinSymbol(color) {
+                    return {
+                        path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z M -2,-30 a 2,2 0 1,1 4,0 2,2 0 1,1 -4,0',
+                        fillColor: color,
+                        fillOpacity: 1,
+                        strokeColor: '#000',
+                        strokeWeight: 2,
+                        scale: 1,
+                    };
+                }
+
                 for (i = 0; i < locations.length; i++) {
                     var mapObj = {
                         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
@@ -214,11 +225,7 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions, $timeo
                         title: locations[i][0]
                     }
                     if(locations[i][0].indexOf('Holiday') > -1) {
-                        mapObj.icon = {
-                            url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
-                            scaledSize: new google.maps.Size(40, 40), // scaled size
-
-                        }
+                        mapObj.icon = pinSymbol('#00FF1A');
                     }
                     marker = new google.maps.Marker(mapObj);
                     $scope.googleMapMarkers.push(marker);
@@ -373,7 +380,7 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions, $timeo
                     strokeWeight: 3,
                     fillColor: '#bfbfda',
                     fillOpacity: 0.35
-                }
+                };
                 var paths = {
                     southend: {paths: [
                             {lat: 35.220600, lng: -80.857803},
@@ -514,7 +521,6 @@ app.directive('rsvpDir', function(ajaxFetch, utilityFunctions, $timeout){
                   ajaxFetch.getData('/submitRSVPData', 'POST', $scope.formData)
                       .then(function (res) {
                           $scope.toggleSpinner = false;
-                          console.log(res.data);
                           if (res.data.rowsUpdated) {
                               $scope.invitationComplete = true;
                               utilityFunctions.scrollTop();

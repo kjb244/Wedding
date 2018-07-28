@@ -83,7 +83,7 @@ app.directive('modalOverlayDir', function($timeout){
         controller: function($scope){
             $scope.inputs = [];
             $scope.submitModal = function(){
-                if ($scope.inputs[0] === 'test') {
+                if ($scope.inputs[0] === 'Halloween') {
                     document.querySelector('body .overlay').classList.add('hidden');
                     document.querySelector('body').classList.remove('hide-scroll');
                     $scope.showModal=false;

@@ -62,7 +62,7 @@
         {
           "heading": "Attire",
           "paras": [
-            "Semi-formal"
+            "Semi-formal for ceremony. Halloween costumes encouraged for reception!"
           ]
         },
         {
@@ -74,13 +74,13 @@
         {
           "heading": "Event Parking",
           "paras": [
-            "On the day of the ceremony, the museum will validate all night parking for guests who park at the Seventh Street Garage after 5 p.m. For hotel parking, guests will be charged at the prevailing rate of $18.00/day for self-parking and $24.00/day for valet parking. However, there are numerous cheaper garages and lots very close to the hotel."
+            "On the day of the ceremony, the museum will validate all night parking for guests who park at the Seventh Street Garage after 5 p.m. For hotel parking, guests will be charged at the prevailing rate of $18.00/day for self-parking and $24.00/day for valet parking. However, there are numerous cheaper garages and parking lots very close to the hotel."
           ]
         },
         {
           "heading": "Accomodations",
           "paras": [
-            "We have blocked a book of discounted rooms in Uptown Charlotte at the Holiday Inn Charlotte Center City under 'Bacino/Gonzales' (<a href='https://goo.gl/maps/YnH4QPgH7t12' id='holidayInnHotel' target='_blank' >View on Map</a>). The hotel is just around the corner from the ceremony/reception (Levine Museum). Please use the link below or call the hotel at <a href='tel:7043355400'>704.335.5400</a> (mention our names) to reserve your room.<br> <a href='https://www.holidayinn.com/redirect?path=hd&brandCode=HI&localeCode=en&regionCode=1&hotelCode=CLTDT&_PMID=99801505&GPC=GBW&viewfullsite=true' id='reserveRoom' target='_blank'>Reserve Room Bacino/Gonzales</a>",
+            "We have booked a block of discounted rooms in Uptown Charlotte at the Holiday Inn Charlotte Center City under 'Bacino/Gonzales' (<a href='https://goo.gl/maps/YnH4QPgH7t12' id='holidayInnHotel' target='_blank' >View on Map</a>). The hotel is just around the corner from the ceremony/reception (Levine Museum). Please use the link below or call the hotel at <a href='tel:7043355400'>704.335.5400</a> (mention our names) to reserve your room.<br> <a href='https://www.holidayinn.com/redirect?path=hd&brandCode=HI&localeCode=en&regionCode=1&hotelCode=CLTDT&_PMID=99801505&GPC=GBW&viewfullsite=true' id='reserveRoom' target='_blank'>Reserve Room Bacino/Gonzales</a>",
             "Note that you must book by <b>9/26/2018</b> to get the group rate."
           ]
         },
@@ -134,7 +134,7 @@
             "image": "",
             "heading": "Cocktail Hour",
             "paras": [
-              "After the ceremony, we will start the celebrations with cocktails and live music. Guests will have full access to the first floor exhibits of the museum during the cocktail hour and reception."
+              "After the ceremony, we will start the celebrations with cocktails and live music. Guests will have full access to the first floor exhibits of the museum during the cocktail hour and reception. Feel free to change into Halloween attire after the ceremony!"
             ],
             "aside": {}
           }
@@ -157,8 +157,23 @@
       ]
     },
     "registry": {
+      "heading": "In lieu of gifts, we ask that you consider a donation in our names to one of our favorite charities.",
       "paras": [
-        "In lieu of gifts, we ask that you consider a donation in our names to one of our favorite charities."
+        {
+          "link": "http://www.wfae.org/",
+          "text": "WFAE",
+          "description": "Our local NPR news station"
+        },
+        {
+          "link": "https://www.secondharvestmetrolina.org/",
+          "text": "Second Harvest Food Bank of Metrolina ",
+          "description": "Local agency that provides education, advocacy, and partnerships to eliminate hunger through the distribution of food to those in need"
+        },
+        {
+          "link": "https://humanesocietyofcharlotte.org/",
+          "text": "Humane Society of Charlotte",
+          "description": "Community resource dedicated to connecting animals with loving families"
+        }
       ]
     },
     "rsvp": {
@@ -218,7 +233,7 @@
             "text": "7th Street Market",
             "link": "http://www.7thstreetpublicmarket.com/"
           },
-          "para": "Charlotte's own bustling food destination in the heart of the city! Great coffee, food, and even a few bars inside with tvs.",
+          "para": "Charlotte's own bustling food destination in the heart of the city! Great coffee, food, and even a few bars inside with TVs.",
           "sideNotes": [
             {
               "heading": "Walkable from hotel",
@@ -287,7 +302,7 @@
             "text": "Price's Chicken Coop",
             "link": "http://www.priceschickencoop.com/"
           },
-          "para": "Classic fried chkicken joint that's been around since the 60s. You almost go back in time when you go there since the workers dress in all white and they require cash only.",
+          "para": "Classic fried chicken joint that's been around since the 60s. You almost go back in time when you go there since the workers dress in all white and they require cash only.",
           "sideNotes": [
             {
               "heading": "Walkable from hotel",
@@ -330,7 +345,7 @@
           "type": "food",
           "foodType": "Southern",
           "heading": {
-            "text": "Roosters",
+            "text": "Rooster's",
             "link": "https://roosterskitchen.com/"
           },
           "para": "Southern comfort food in the heart of Uptown.",
@@ -383,7 +398,7 @@
           "sideNotes": [
             {
               "heading": "Walkable from hotel",
-              "text": "Yes (25 min). Can also take the light rail."
+              "text": "Yes (25 min). Can also take the light rail"
             },
             {
               "heading": "Time Required",
@@ -448,11 +463,11 @@
             "text": "Old Mecklenburg Brewery",
             "link": "http://www.oldemeckbrew.com/"
           },
-          "para": "Huge German style Biergarten with both a nice indoor and outdoor area. One of the largest breweries in Charlotte. Beer of choice: Copper Ale.",
+          "para": "Huge German style Biergarten with both a nice indoor and outdoor area. The first brewery in Charlotte. Beer of choice: Copper Ale.",
           "sideNotes": [
             {
               "heading": "Walkable from hotel",
-              "text": "No, but can take the light rail."
+              "text": "No, but can take the light rail"
             },
             {
               "heading": "Time Required",
@@ -475,7 +490,7 @@
           "sideNotes": [
             {
               "heading": "Walkable from hotel",
-              "text": "No, but can take light rail."
+              "text": "No, but can take light rail"
             },
             {
               "heading": "Time Required",

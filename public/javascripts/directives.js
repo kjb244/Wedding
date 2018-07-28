@@ -279,19 +279,21 @@ app.directive('cardsWithMapDir', function(angularStore, utilityFunctions, $timeo
             },500);
 
             $timeout(function(){
-                var firstCard = document.querySelector('.cards');
-                var firstCardTop;
-                if(!angularStore.getContent('cardTop')){
-                    angularStore.setContent('cardTop', firstCard.getBoundingClientRect().top);
-                }
-                firstCardTop = angularStore.getContent('cardTop');
+
 
                 function scrollMove(){
                     if(screenSize === 'small') return false;
                     var st = window.pageYOffset || document.documentElement.scrollTop;
                     var map = document.querySelector('.map-wrapper');
                     if(!map) return false;
-                    if(st > firstCardTop){
+
+                    var firstCard = document.querySelector('.cards');
+                    var top = 100;
+                    if(firstCard){
+                        top = firstCard.getBoundingClientRect().top;
+                    }
+
+                    if(top < 15){
                         map.classList.add('custom');
                     }
                     else{

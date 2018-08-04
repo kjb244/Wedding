@@ -134,9 +134,9 @@ class dbUtils{
             pool.connect(function (err, client, done) {
 
 
-                client.query('select firstname, lastname, email, attending,  dateupdate\n' +
+                client.query('select firstname, lastname, email, attending,  dateupdate, coalesce(dateupdate,to_timestamp(\'05 Dec 2000\', \'DD Mon YYYY\'))\n' +
                     'from wedding_list\n' +
-                    'order by dateupdate\n' +
+                    'order by 6 desc, id\n' +
                     ' limit 200', [], function (err, res) {
                     done();
                     if (err) {
@@ -145,10 +145,10 @@ class dbUtils{
                     } else {
                         const rows = res.rows;
                         const arr = [];
+
                         rows.map(function (row) {
                             let dt = row.dateupdate || '';
                             dt = dt.toString().substring(0,15);
-
                             arr.push(
                                 {
                                     firstName: row.firstname || 'guest',

@@ -1,0 +1,13 @@
+{{#each payload}}
+    <div class="row" style="margin-bottom: 10px;">
+        <div class="small-12 columns">
+            <p>{{@index}}</p>
+        </div>
+        {{#each this}}
+            <div class="small-12 columns">
+                <p><b>{{@key}}</b>:{{this}}</p>
+            </div>
+        {{/each}}
+        </div>
+    </div>
+{{/each}}

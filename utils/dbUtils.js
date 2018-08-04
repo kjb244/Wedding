@@ -120,6 +120,55 @@ class dbUtils{
 
     }
 
+
+    getAllData(pw){
+        pw = pw || '';
+
+        return new Promise(function(resolve, reject) {
+            if (pw !== process.env.GETDATA_PW){
+                reject();
+            }
+
+            console.log(`making get all data call from db`);
+            let pool = new pg.Pool(config);
+            pool.connect(function (err, client, done) {
+
+
+                client.query('select firstname, lastname, email, attending,  dateupdate\n' +
+                    'from wedding_list\n' +
+                    'order by dateupdate\n' +
+                    ' limit 200', [], function (err, res) {
+                    done();
+                    if (err) {
+                        console.log(`get all data call from db failed`);
+                        reject();
+                    } else {
+                        const rows = res.rows;
+                        const arr = [];
+                        rows.map(function (row) {
+                            let dt = row.dateupdate || '';
+                            dt = dt.toString().substring(0,15);
+
+                            arr.push(
+                                {
+                                    firstName: row.firstname || 'guest',
+                                    lastName: row.lastname || 'guest',
+                                    email: row.email,
+                                    attending: row.attending === true ? 'Attending': 'Not Attending',
+                                    rsvped: dt.length ? dt: 'not yet'
+                                }
+                            );
+                        });
+                        console.log(`get all data call successfull from db`);
+                        resolve(arr);
+                    }
+                });
+            });
+        })
+
+
+    }
+
 }
 
 

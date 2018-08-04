@@ -40,6 +40,16 @@ router.get('/lookupByEmail', function(req, res){
 
 });
 
+router.get('/allData', function(req, res){
+   let pw = req.query['password'] || '';
+   let prom = dbutils.getAllData(pw);
+   prom.then(function(payload){
+       res.render('partials/getAllData', {payload: payload});
+   }).catch(function(err){
+       res.json({'error': 'error'});
+   })
+});
+
 router.post('/submitRSVPData', function(req, res){
     const data = req.body.data;
     const email = data.email;

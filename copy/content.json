@@ -72,13 +72,13 @@
       },
       "morePics": [
         {
-          "background": "/images/KR1.jpg"
+          "background": "/images/kr_1.jpg"
         },
         {
-          "background": "/images/KR2.jpg"
+          "background": "/images/kr_2.jpg"
         },
         {
-          "background": "/images/KR3.jpg"
+          "background": "/images/kr_3.jpg"
         }
       ]
     },

@@ -27,7 +27,10 @@
     </div>
 
     <div class="row more-pics">
-        <div class="small-12 large-6 columns" ng-repeat = "rec in copy.routes.aboutUs.morePics">
+        <div class="small-12 columns">
+            <p class="heading">{{copy.routes.aboutUs.morePics.heading}}</p>
+        </div>
+        <div class="small-12 large-6 columns" ng-repeat = "rec in copy.routes.aboutUs.morePics.details">
             <div class="image-holder-more-pics" data-background="{{rec.background}}"></div>
         </div>
     </div>

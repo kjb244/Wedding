@@ -68,19 +68,22 @@
           "heading": "Robyn's Profile"
         },
         "pickupLineHeading": "Kevin's Pickup Line",
-        "pickupLine": "Hey, What was living in Vermont like? I've always been curious about those \"northern\" New England states, but have never been to them. I'm sure the winters were delightful!"
+        "pickupLine": "Hey, What was living in Vermont like? I've always been curious about those \"northern\" New England states, but have never been to them. I'm sure the winters were delightful! - It took her 5 days to respond, but was well worth the wait!"
       },
-      "morePics": [
-        {
-          "background": "/images/kr_1.jpg"
-        },
-        {
-          "background": "/images/kr_2.jpg"
-        },
-        {
-          "background": "/images/kr_3.jpg"
-        }
-      ]
+      "morePics": {
+        "heading": "Additional Pictures",
+        "details": [
+          {
+            "background": "/images/kr_1.jpg"
+          },
+          {
+            "background": "/images/kr_2.jpg"
+          },
+          {
+            "background": "/images/kr_3.jpg"
+          }
+        ]
+      }
     },
     "info": {
       "content": [

@@ -36,7 +36,7 @@
     margin-top: 20px;
 }
 
-[data-section="about-us"] .pick-up-line .heading{
+[data-section="about-us"] .pick-up-line .heading, [data-section="about-us"] .more-pics .heading{
     font-weight: bold;
 }
 [data-section="about-us"] .more-pics .columns{

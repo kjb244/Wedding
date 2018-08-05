@@ -26,6 +26,10 @@
         "route": "info"
       },
       {
+        "name": "About Us",
+        "route": "about-us"
+      },
+      {
         "name": "Schedule",
         "route": "schedule"
       },
@@ -50,6 +54,33 @@
         "heading": "Hello!",
         "subHeading": "Welcome to our wedding website! You should find all information you need to share our special day with us."
       }
+    },
+    "aboutUs": {
+      "heading": "About Us",
+      "details": {
+        "heading": "Traditional Millennials - Met online!",
+        "leftContent": {
+          "background": "/images/KevinProfile.jpg",
+          "heading": "Kevin's Profile"
+        },
+        "rightContent": {
+          "background": "/images/RobynProfile.jpg",
+          "heading": "Robyn's Profile"
+        },
+        "pickupLineHeading": "Kevin's Pickup Line",
+        "pickupLine": "Hey, What was living in Vermont like? I've always been curious about those \"northern\" New England states, but have never been to them. I'm sure the winters were delightful!"
+      },
+      "morePics": [
+        {
+          "background": "/images/KR1.jpg"
+        },
+        {
+          "background": "/images/KR2.jpg"
+        },
+        {
+          "background": "/images/KR3.jpg"
+        }
+      ]
     },
     "info": {
       "content": [

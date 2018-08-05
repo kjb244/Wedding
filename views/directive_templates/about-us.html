@@ -1,0 +1,35 @@
+<section>
+    <div class="row heading-container">
+        <div class="small-12 columns heading">
+            <h3>{{copy.routes.aboutUs.heading}}</h3>
+        </div>
+        <div class="small-12 columns detail-heading">
+            <h5>{{copy.routes.aboutUs.details.heading}}</h5>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-6 small-12 columns  image-container">
+            <p>{{copy.routes.aboutUs.details.leftContent.heading}}</p>
+            <div class="image-holder-left" data-background="{{copy.routes.aboutUs.details.leftContent.background}}"></div>
+        </div>
+        <div class="large-6 small-12 columns image-container">
+            <p>{{copy.routes.aboutUs.details.rightContent.heading}}</p>
+            <div class="image-holder-left" data-background="{{copy.routes.aboutUs.details.rightContent.background}}"></div>
+        </div>
+    </div>
+
+    <div class="row pick-up-line">
+        <div class="small-12 columns">
+            <p class="heading">{{copy.routes.aboutUs.details.pickupLineHeading}}</p>
+            <p>{{copy.routes.aboutUs.details.pickupLine}}</p>
+        </div>
+    </div>
+
+    <div class="row more-pics">
+        <div class="small-12 large-6 columns" ng-repeat = "rec in copy.routes.aboutUs.morePics">
+            <div class="image-holder-more-pics" data-background="{{rec.background}}"></div>
+        </div>
+    </div>
+
+</section>

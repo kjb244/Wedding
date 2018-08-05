@@ -39,7 +39,7 @@
     }
 }
 
-@media screen and (min-width: 64em) {
+`
     [data-section="things-to-do"] .map-wrapper.custom {
         position: fixed;
         top: 0;

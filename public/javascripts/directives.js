@@ -34,6 +34,26 @@ app.directive('storyCardsDir', function(){
     };
 });
 
+app.directive('aboutUsDir', function($timeout){
+    return {
+        restrict: 'EA',
+        scope: false,
+        templateUrl: 'directive_templates/about-us.html',
+        link: function($scope, elem, attrs){
+            $timeout(function(){
+                elem.find('[data-background]').each(function(i,el){
+                    var background = el.getAttribute('data-background');
+                    el.style.backgroundImage = "url('" + background + "')";
+                });
+            },1)
+
+        },
+        controller: function($scope){
+
+        }
+    };
+});
+
 app.directive('infoDir', function(){
     return {
         restrict: 'EA',

@@ -1,0 +1,44 @@
+[data-section="about-us"] .heading-container .heading, [data-section="about-us"] .heading-container .detail-heading{
+    text-align: center;
+}
+
+[data-section="about-us"] .image-container p{
+    font-weight: bold;
+}
+
+[data-section="about-us"] [data-background]{
+    height: 370px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+@media screen and (min-width: 40em) {
+    [data-section="about-us"] [data-background]{
+        height: 490px;
+
+    }
+
+}
+
+@media screen and (min-width: 64em) {
+    [data-section="about-us"] [data-background]{
+        height: 405px;
+    }
+}
+
+[data-section="about-us"] .image-container{
+    margin-top: 20px;
+
+}
+
+[data-section="about-us"] .pick-up-line{
+    margin-top: 20px;
+}
+
+[data-section="about-us"] .pick-up-line .heading{
+    font-weight: bold;
+}
+[data-section="about-us"] .more-pics .columns{
+    margin-bottom: 10px;
+}

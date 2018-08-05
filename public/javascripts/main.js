@@ -11,6 +11,10 @@ app.config(function($routeProvider) {
         templateUrl: 'route_templates/route-home.html',
         controller: 'ctrlMain'
     })
+    .when('/about-us', {
+        templateUrl: 'route_templates/route-about-us.html',
+        controller: 'ctrlMain'
+    })
     .when('/info', {
         templateUrl: 'route_templates/route-info.html',
         controller: 'ctrlMain'

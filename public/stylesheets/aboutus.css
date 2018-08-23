@@ -10,7 +10,6 @@
     height: 370px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: center;
 
 }
 
@@ -42,4 +41,8 @@
 }
 [data-section="about-us"] .more-pics .columns{
     margin-bottom: 10px;
+}
+
+[data-section="about-us"] .image-holder-more-pics{
+    background-position-x: center;
 }

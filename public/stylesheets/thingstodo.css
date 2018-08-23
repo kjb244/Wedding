@@ -34,30 +34,10 @@
     [data-section="things-to-do"] .map-wrapper.custom {
         position: fixed;
         top: 0;
-        margin-left: 58.3333%;
-        width: 41.6666%;
-    }
-}
-
-@media screen and (min-width: 64em) {
-    [data-section="things-to-do"] .map-wrapper.custom {
-        position: fixed;
-        top: 0;
         right: 0;
-        width: 50%;
-
     }
 }
 
-@media screen and (min-width: 75em) {
-    [data-section="things-to-do"] .map-wrapper.custom {
-        position: fixed;
-        top: 0;
-        right: 10%;
-        width: 40%;
-
-    }
-}
 
 @media screen and (max-width: 39.9375em) {
     [data-section="things-to-do"] #map{

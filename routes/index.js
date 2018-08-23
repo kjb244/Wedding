@@ -44,12 +44,13 @@ router.get('/allData', function(req, res){
    let pw = req.query['password'] || '';
    let prom = dbutils.getAllData(pw);
    prom.then(function(payload){
-       const attending = payload.reduce((accum, e) => {
-           accum += e.attending === 'Attending' ? 1 : 0;
+       const stats = payload.reduce((accum, e) => {
+           accum.attending += (e.attending  ? 1 : 0);
+           accum.notAttending += (e.attending === false && e.rsvped !== false ? 1 : 0);
+           accum.notRsvped += (e.rsvped === false ? 1 : 0);
            return accum;
-       },0);
-       const notAttending = payload.length - attending;
-       res.render('partials/getAllData', {payload: payload, stats: {attending, notAttending}});
+       },{attending: 0, notAttending: 0, notRsvped: 0});
+       res.render('partials/getAllData', {payload, stats});
    }).catch(function(err){
        res.json({'error': 'error'});
    })

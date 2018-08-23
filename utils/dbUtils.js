@@ -154,8 +154,8 @@ class dbUtils{
                                     firstName: row.firstname || 'guest',
                                     lastName: row.lastname || 'guest',
                                     email: row.email,
-                                    attending: row.attending === true ? 'Attending': 'Not Attending',
-                                    rsvped: dt.length ? dt: 'not yet'
+                                    attending: row.attending === true,
+                                    rsvped: dt.length ? dt: false
                                 }
                             );
                         });
